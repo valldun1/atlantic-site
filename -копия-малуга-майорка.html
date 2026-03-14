@@ -33,6 +33,205 @@
 
 </head>
 <body>
+<style>.dropdown-menu {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .dropdown-menu > li {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 14px;
+    border-right: 1px solid #444;
+    transition: color 0.3s ease;
+  }
+
+  .dropdown-menu > li > a:hover {
+    color: #fff;
+    background-color: #3a3a3a;
+  }
+
+  .dropdown-menu > li > button {
+    display: none;
+  }
+
+  .dropdown-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1f1f;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .dropdown-submenu li {
+    display: block;
+  }
+
+  .dropdown-submenu a {
+    display: block;
+    padding: 12px 20px;
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-submenu a:hover {
+    color: #fff;
+    background-color: #3a3a3a;
+    padding-left: 30px;
+  }
+
+  .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+  }
+
+  .dropdown-menu > li:hover > a {
+    color: #fff;
+    background-color: #3a3a3a;
+  }
+
+  /* Mobile menu toggle */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #b8b8b8;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 20px;
+  }
+
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .dropdown-menu.active {
+      max-height: 500px;
+    }
+
+    .dropdown-menu > li {
+      width: 100%;
+    }
+
+    .dropdown-menu > li > a {
+      border-right: none;
+      border-bottom: 1px solid #444;
+    }
+
+    .dropdown-submenu {
+      position: static;
+      display: none;
+      box-shadow: none;
+      background-color: #2a2a2a;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .dropdown-submenu.active {
+      display: block;
+      max-height: 500px;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }</style>
+<ul class="dropdown-menu" id="mainMenu">
+  <li><a href="index.html">Главная</a></li>
+  
+  <li>
+    <a href="yacht-charter.html">Наш флот</a>
+    <button class="dropdown-toggle">▼</button>
+    <ul class="dropdown-submenu">
+      <li><a href="dufour405.html">Dufour 405</a></li>
+      <li><a href="lucia40.html">lucia 40</a></li>
+      <li><a href="dufour44.html">Dufour 44</a></li>
+      <li><a href="lipari41.html">lipari 41</a></li>
+      <li><a href="oceanis-473.html">Oceanis 473</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="nashi-bazy.html">Места базирования</a>
+    <button class="dropdown-toggle">▼</button>
+    <ul class="dropdown-submenu">
+      <li><a href="kanarskie-ostrova.html">Канарские острова</a></li>
+      <li><a href="mariny-v-chernogorii.html">Черногория</a></li>
+      <li><a href="marina-karibes.html">Карибские острова</a></li>
+      <li><a href="rekomenduemye-mariny.html">Рекомендуемые марины</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="marchrut.html">Маршруты</a>
+    <button class="dropdown-toggle">▼</button>
+    <ul class="dropdown-submenu">
+      <li><a href="plan-2025.html">Переходы 2025</a></li>
+      <li><a href="plan-2026.html">Переходы 2026</a></li>
+      <li><a href="plan-2024.html">Переходы 2024</a></li>
+      <li><a href="график-маршрутов-2023.html">График маршрутов 2023</a></li>
+      <li><a href="kopiya-grafik-marshrutov-2019.html">График маршрутов 2019</a></li>
+      <li><a href="malaga-mallorca.html">Малага - Майорка</a></li>
+      <li><a href="marina-karibes.html">Карибские острова</a></li>
+      <li><a href="sailing.html">Парусный спорт</a></li>
+      <li><a href="yachtingtravel.html">Яхтинг путешествия</a></li>
+    </ul>
+  </li>
+
+  <li><a href="contact.html">Контакты</a></li>
+  <li><a href="prajs.html">Прайс</a></li>
+</ul>
+<script>// Dropdown menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.dropdown-menu > li');
+    
+    menuItems.forEach(item => {
+      const toggle = item.querySelector('.dropdown-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const submenu = item.querySelector('.dropdown-submenu');
+          if (submenu) {
+            submenu.classList.toggle('active');
+          }
+        });
+      }
+    });
+
+    // Close submenus when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown-menu')) {
+        document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+          submenu.classList.remove('active');
+        });
+      }
+    });
+  });</script>
+
 <div id="root"></div>
 <script>
     window.__LOCALE__ = 'en';
