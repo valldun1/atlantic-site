@@ -6,7 +6,7 @@
 <head>
   
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Wix.com Website Builder"/>
 
@@ -227,169 +227,72 @@
 <style id="stylableCss_rjdm3"></style>
 <style id="compCssMappers_rjdm3">#rjdm3{--shc-mutated-brightness:128,128,128;width:auto;min-height:500px;}#pageBackground_rjdm3{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_12));--bg-gradient:none;}#comp-lcb2adcx{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-ju2ckwyh{--shc-mutated-brightness:17,20,22;}#comp-ju2ckwyq{--height:32px;--width:20px;}#comp-ju2ckwz6{--text-direction:var(--wix-opt-in-direction);}#comp-ju2ckwzm{--height:385px;--width:980px;}#comp-lcb2adcx1{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-jvuy0im2{--text-direction:var(--wix-opt-in-direction);}#comp-lcb2adcy{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-jvv45uvv{--height:316px;--width:447px;}#comp-jvv5vyc2{--min-height:330px;--text-direction:var(--wix-opt-in-direction);}#comp-jvv47omp{--height:310px;--width:410px;}#comp-jvv66375{--text-direction:var(--wix-opt-in-direction);}#comp-lcb2adcy1{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-jvv6l07k{--text-direction:var(--wix-opt-in-direction);}#comp-jvv6izd7{--text-direction:var(--wix-opt-in-direction);}#comp-jvv70lii{--height:317px;--width:412px;}#comp-lcb2adcy2{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-k494b09b{--height:600px;--width:600px;}</style>
 
+
 <style>
-/* ===== RESPONSIVE FIXES FOR MOBILE ===== */
+/* ===== SOFT RESPONSIVE FIXES ===== */
+/* This CSS improves mobile readability WITHOUT breaking the Wix layout */
 
-/* Ensure viewport is properly set */
+/* Ensure proper viewport scaling */
 html, body {
-  width: 100% !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box !important;
-}
-
-/* Fix all containers to be responsive */
-[id*="Container"], 
-[class*="container"],
-[class*="Container"],
-#site-root,
-#SITE_CONTAINER,
-.wix-container,
-[role="main"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* Make all images responsive */
+/* Allow images to scale responsively */
 img {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Fix sections and rows */
-section, 
-[role="region"],
-.section,
-[id*="Section"],
-[class*="Section"] {
-  width: 100% !important;
-  max-width: 100% !important;
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
 }
 
-/* Fix text sizing for mobile */
+/* Make text readable on mobile without breaking layout */
 @media (max-width: 768px) {
+  /* Slightly increase base font size for readability */
   body {
-    font-size: 14px !important;
+    font-size: 15px;
   }
   
-  h1 {
-    font-size: 24px !important;
+  /* Make headings readable */
+  h1 { font-size: 22px !important; line-height: 1.3; }
+  h2 { font-size: 19px !important; line-height: 1.3; }
+  h3 { font-size: 17px !important; line-height: 1.3; }
+  
+  /* Make buttons and links easier to tap */
+  button, a[role="button"], [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
   }
   
-  h2 {
-    font-size: 20px !important;
-  }
-  
-  h3 {
-    font-size: 18px !important;
-  }
-  
-  h4, h5, h6 {
-    font-size: 16px !important;
-  }
-  
-  p {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-  }
-  
-  /* Make buttons and links bigger for touch */
-  button, a, [role="button"] {
-    min-height: 44px !important;
-    min-width: 44px !important;
-    padding: 12px 16px !important;
-    font-size: 16px !important;
-  }
-  
-  /* Fix padding and margins for small screens */
-  [id*="Container"],
-  [class*="container"],
-  section,
-  [role="region"] {
-    padding: 16px !important;
-    margin: 0 !important;
-  }
-  
-  /* Ensure no horizontal overflow */
-  body, html, #SITE_CONTAINER, #site-root {
-    overflow-x: hidden !important;
-  }
-  
-  /* Make tables responsive */
-  table {
-    width: 100% !important;
-    font-size: 12px !important;
-  }
-  
-  /* Fix forms for mobile */
+  /* Improve form input sizes */
   input, textarea, select {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 12px !important;
-    font-size: 16px !important;
-    border: 1px solid #ccc !important;
-    border-radius: 4px !important;
+    font-size: 16px;
+    min-height: 44px;
   }
 }
 
-/* Ensure menu doesn't break layout */
-.atlantic-menu-container {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-/* Prevent Wix elements from breaking layout */
-[class*="wix"],
-[data-testid*="wix"] {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* Fix any element with fixed width */
-[style*="width: 9999px"],
-[style*="width:9999px"] {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-/* Ensure proper scaling on all devices */
+/* Very small phones */
 @media (max-width: 480px) {
   body {
-    font-size: 13px !important;
+    font-size: 14px;
   }
   
-  h1 {
-    font-size: 20px !important;
-  }
-  
-  h2 {
-    font-size: 18px !important;
-  }
-  
-  button, a, [role="button"] {
-    min-height: 48px !important;
-    padding: 14px 12px !important;
-    font-size: 14px !important;
-  }
+  h1 { font-size: 20px !important; }
+  h2 { font-size: 18px !important; }
+  h3 { font-size: 16px !important; }
 }
 
-/* Tablet adjustments */
-@media (min-width: 769px) and (max-width: 1024px) {
-  body {
-    font-size: 15px !important;
-  }
-  
-  [id*="Container"],
-  [class*="container"] {
-    padding: 20px !important;
-  }
+/* Ensure menu doesn't break */
+.atlantic-menu-container {
+  overflow: hidden;
+}
+
+/* Fix any element that might cause horizontal scroll */
+* {
+  box-sizing: border-box;
 }
 </style>
 </head>
