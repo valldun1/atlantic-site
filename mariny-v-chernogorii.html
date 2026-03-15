@@ -6,7 +6,7 @@
 <head>
   
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Wix.com Website Builder"/>
 
@@ -226,6 +226,171 @@
 <style id="stylableCss_yn3pf"></style>
 <style id="compCssMappers_yn3pf">#yn3pf{--shc-mutated-brightness:128,128,128;width:auto;min-height:1016px;}#pageBackground_yn3pf{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_12));--bg-gradient:none;}#comp-lcb2ad7t{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-jt93ip05{--shc-mutated-brightness:17,20,22;}#comp-jt93mhwq{--height:40px;--width:33px;--mask-image:url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='http://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");--mask-position:0% 0%;--mask-size:100% 100%;--mask-repeat:no-repeat;}#comp-kadzq2ur{--text-direction:var(--wix-opt-in-direction);}#comp-jt93poe6{--text-direction:var(--wix-opt-in-direction);}#comp-jt93wtk9{--text-direction:var(--wix-opt-in-direction);}#comp-jt9441j1{--text-direction:var(--wix-opt-in-direction);}#comp-jt94fsng{--text-direction:var(--wix-opt-in-direction);}#comp-jt94na6b{--text-direction:var(--wix-opt-in-direction);}#comp-jt95n9cw{--text-direction:var(--wix-opt-in-direction);}#comp-jtuq82au{--text-direction:var(--wix-opt-in-direction);}#comp-jt93v3va{--height:184px;--width:460px;}#comp-jt9419ur{--height:184px;--width:461px;}#comp-jt94c21h{--height:184px;--width:460px;}#comp-jt94kub6{--height:184px;--width:460px;}#comp-jt95km4o{--height:184px;--width:460px;}</style>
 
+<style>
+/* ===== RESPONSIVE FIXES FOR MOBILE ===== */
+
+/* Ensure viewport is properly set */
+html, body {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* Fix all containers to be responsive */
+[id*="Container"], 
+[class*="container"],
+[class*="Container"],
+#site-root,
+#SITE_CONTAINER,
+.wix-container,
+[role="main"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Make all images responsive */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Fix sections and rows */
+section, 
+[role="region"],
+.section,
+[id*="Section"],
+[class*="Section"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Fix text sizing for mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px !important;
+  }
+  
+  h1 {
+    font-size: 24px !important;
+  }
+  
+  h2 {
+    font-size: 20px !important;
+  }
+  
+  h3 {
+    font-size: 18px !important;
+  }
+  
+  h4, h5, h6 {
+    font-size: 16px !important;
+  }
+  
+  p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Make buttons and links bigger for touch */
+  button, a, [role="button"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 12px 16px !important;
+    font-size: 16px !important;
+  }
+  
+  /* Fix padding and margins for small screens */
+  [id*="Container"],
+  [class*="container"],
+  section,
+  [role="region"] {
+    padding: 16px !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure no horizontal overflow */
+  body, html, #SITE_CONTAINER, #site-root {
+    overflow-x: hidden !important;
+  }
+  
+  /* Make tables responsive */
+  table {
+    width: 100% !important;
+    font-size: 12px !important;
+  }
+  
+  /* Fix forms for mobile */
+  input, textarea, select {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+  }
+}
+
+/* Ensure menu doesn't break layout */
+.atlantic-menu-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Prevent Wix elements from breaking layout */
+[class*="wix"],
+[data-testid*="wix"] {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix any element with fixed width */
+[style*="width: 9999px"],
+[style*="width:9999px"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Ensure proper scaling on all devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px !important;
+  }
+  
+  h1 {
+    font-size: 20px !important;
+  }
+  
+  h2 {
+    font-size: 18px !important;
+  }
+  
+  button, a, [role="button"] {
+    min-height: 48px !important;
+    padding: 14px 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 15px !important;
+  }
+  
+  [id*="Container"],
+  [class*="container"] {
+    padding: 20px !important;
+  }
+}
+</style>
 </head>
 <body class='' >
 <style>
