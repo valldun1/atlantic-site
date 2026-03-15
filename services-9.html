@@ -288,6 +288,318 @@
 </head>
 <body class='' >
 <style>
+  /* Hide all Wix navigation elements */
+  [data-testid="navbar"],
+  [data-testid="header"],
+  .header,
+  .nav,
+  nav,
+  [role="navigation"],
+  .wix-nav,
+  .wix-menu,
+  .wixui-nav,
+  .wixui-header,
+  [class*="navigation"],
+  [class*="navbar"],
+  [class*="header"],
+  [id*="navigation"],
+  [id*="navbar"],
+  [id*="header"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Force menu to be visible and on top */
+  .dropdown-menu {
+    display: flex !important;
+    gap: 0 !important;
+    align-items: center !important;
+    background-color: #2a2a2a !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    height: auto !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .dropdown-menu > li {
+    position: relative !important;
+    display: inline-block !important;
+    flex: 0 1 auto !important;
+  }
+
+  .dropdown-menu > li > a {
+    display: block !important;
+    padding: 15px 20px !important;
+    color: #b8b8b8 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    border-right: 1px solid #444 !important;
+    transition: color 0.3s ease !important;
+    white-space: nowrap !important;
+  }
+
+  .dropdown-menu > li > a:hover {
+    color: #fff !important;
+    background-color: #3a3a3a !important;
+  }
+
+  .dropdown-menu > li > button {
+    display: none !important;
+  }
+
+  .dropdown-submenu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: #1f1f1f !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 250px !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    z-index: 1000000 !important;
+  }
+
+  .dropdown-submenu li {
+    display: block !important;
+  }
+
+  .dropdown-submenu a {
+    display: block !important;
+    padding: 12px 20px !important;
+    color: #b8b8b8 !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+  }
+
+  .dropdown-submenu a:hover {
+    color: #fff !important;
+    background-color: #3a3a3a !important;
+    padding-left: 30px !important;
+  }
+
+  .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block !important;
+  }
+
+  .dropdown-menu > li:hover > a {
+    color: #fff !important;
+    background-color: #3a3a3a !important;
+  }
+
+  /* Add padding to body to account for fixed menu */
+  body {
+    padding-top: 50px !important;
+  }
+
+  /* Mobile menu toggle button */
+  .menu-toggle {
+    display: none !important;
+    background: none !important;
+    border: none !important;
+    color: #b8b8b8 !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+    padding: 12px 20px !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    z-index: 1000000 !important;
+    height: 50px !important;
+    width: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .menu-toggle:hover {
+    color: #fff !important;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 769px) {
+    .dropdown-menu {
+      flex-direction: row !important;
+      position: fixed !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+
+    .menu-toggle {
+      display: none !important;
+    }
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      flex-direction: column !important;
+      position: fixed !important;
+      top: 50px !important;
+      left: 0 !important;
+      right: 0 !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
+      transition: max-height 0.3s ease !important;
+      width: 100% !important;
+      background-color: #2a2a2a !important;
+      border-top: 1px solid #444 !important;
+    }
+
+    .dropdown-menu.active {
+      max-height: calc(100vh - 50px) !important;
+      overflow-y: auto !important;
+    }
+
+    .dropdown-menu > li {
+      width: 100% !important;
+      display: block !important;
+    }
+
+    .dropdown-menu > li > a {
+      border-right: none !important;
+      border-bottom: 1px solid #444 !important;
+      padding: 15px 20px !important;
+    }
+
+    .dropdown-submenu {
+      position: static !important;
+      display: none !important;
+      box-shadow: none !important;
+      background-color: #1f1f1f !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
+      transition: max-height 0.3s ease !important;
+    }
+
+    .dropdown-submenu.active {
+      display: block !important;
+      max-height: 500px !important;
+    }
+
+    .dropdown-submenu a {
+      padding-left: 40px !important;
+    }
+
+    .menu-toggle {
+      display: flex !important;
+    }
+  }
+</style>
+
+<!-- Hamburger menu button -->
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+<ul class="dropdown-menu" id="mainMenu">
+  <li><a href="index.html">Главная</a></li>
+  
+  <li>
+    <a href="yacht-charter.html">Наш флот</a>
+    <button class="dropdown-toggle" aria-label="Toggle submenu">▼</button>
+    <ul class="dropdown-submenu">
+      <li><a href="dufour405.html">Dufour 405</a></li>
+      <li><a href="lucia40.html">lucia 40</a></li>
+      <li><a href="dufour44.html">Dufour 44</a></li>
+      <li><a href="lipari41.html">lipari 41</a></li>
+      <li><a href="oceanis-473.html">Oceanis 473</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="nashi-bazy.html">Места базирования</a>
+    <button class="dropdown-toggle" aria-label="Toggle submenu">▼</button>
+    <ul class="dropdown-submenu">
+      <li><a href="kanarskie-ostrova.html">Канарские острова</a></li>
+      <li><a href="mariny-v-chernogorii.html">Черногория</a></li>
+      <li><a href="marina-karibes.html">Карибские острова</a></li>
+      <li><a href="rekomenduemye-mariny.html">Рекомендуемые марины</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="marchrut.html">Маршруты</a>
+    <button class="dropdown-toggle" aria-label="Toggle submenu">▼</button>
+    <ul class="dropdown-submenu">
+      <li><a href="plan-2025.html">Переходы 2025</a></li>
+      <li><a href="plan-2026.html">Переходы 2026</a></li>
+      <li><a href="plan-2024.html">Переходы 2024</a></li>
+      <li><a href="график-маршрутов-2023.html">График маршрутов 2023</a></li>
+      <li><a href="kopiya-grafik-marshrutov-2019.html">График маршрутов 2019</a></li>
+      <li><a href="malaga-mallorca.html">Малага - Майорка</a></li>
+      <li><a href="marina-karibes.html">Карибские острова</a></li>
+      <li><a href="sailing.html">Парусный спорт</a></li>
+      <li><a href="yachtingtravel.html">Яхтинг путешествия</a></li>
+    </ul>
+  </li>
+
+  <li><a href="contact.html">Контакты</a></li>
+  <li><a href="prajs.html">Прайс</a></li>
+</ul>
+
+<script>
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
+    const menuItems = document.querySelectorAll('.dropdown-menu > li');
+    
+    // Toggle main menu on mobile
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mainMenu.classList.toggle('active');
+      });
+    }
+
+    // Handle submenu toggles
+    menuItems.forEach(item => {
+      const toggle = item.querySelector('.dropdown-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const submenu = item.querySelector('.dropdown-submenu');
+          if (submenu) {
+            submenu.classList.toggle('active');
+          }
+        });
+      }
+
+      // Close menu when clicking a link
+      const link = item.querySelector('a:not(.dropdown-toggle)');
+      if (link) {
+        link.addEventListener('click', function() {
+          mainMenu.classList.remove('active');
+          document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+            submenu.classList.remove('active');
+          });
+        });
+      }
+    });
+
+    // Close submenus when clicking outside on desktop
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown-menu') && !e.target.closest('.menu-toggle')) {
+        document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+          submenu.classList.remove('active');
+        });
+      }
+    });
+  });
+</script>
+
+<style>
   /* Force menu to be visible and on top */
   .dropdown-menu {
     display: flex !important;
@@ -435,81 +747,6 @@
     }
   }
 </style>
-
-<ul class="dropdown-menu" id="mainMenu">
-  <li><a href="index.html">Главная</a></li>
-  
-  <li>
-    <a href="yacht-charter.html">Наш флот</a>
-    <button class="dropdown-toggle">▼</button>
-    <ul class="dropdown-submenu">
-      <li><a href="dufour405.html">Dufour 405</a></li>
-      <li><a href="lucia40.html">lucia 40</a></li>
-      <li><a href="dufour44.html">Dufour 44</a></li>
-      <li><a href="lipari41.html">lipari 41</a></li>
-      <li><a href="oceanis-473.html">Oceanis 473</a></li>
-    </ul>
-  </li>
-
-  <li>
-    <a href="nashi-bazy.html">Места базирования</a>
-    <button class="dropdown-toggle">▼</button>
-    <ul class="dropdown-submenu">
-      <li><a href="kanarskie-ostrova.html">Канарские острова</a></li>
-      <li><a href="mariny-v-chernogorii.html">Черногория</a></li>
-      <li><a href="marina-karibes.html">Карибские острова</a></li>
-      <li><a href="rekomenduemye-mariny.html">Рекомендуемые марины</a></li>
-    </ul>
-  </li>
-
-  <li>
-    <a href="marchrut.html">Маршруты</a>
-    <button class="dropdown-toggle">▼</button>
-    <ul class="dropdown-submenu">
-      <li><a href="plan-2025.html">Переходы 2025</a></li>
-      <li><a href="plan-2026.html">Переходы 2026</a></li>
-      <li><a href="plan-2024.html">Переходы 2024</a></li>
-      <li><a href="график-маршрутов-2023.html">График маршрутов 2023</a></li>
-      <li><a href="kopiya-grafik-marshrutov-2019.html">График маршрутов 2019</a></li>
-      <li><a href="malaga-mallorca.html">Малага - Майорка</a></li>
-      <li><a href="marina-karibes.html">Карибские острова</a></li>
-      <li><a href="sailing.html">Парусный спорт</a></li>
-      <li><a href="yachtingtravel.html">Яхтинг путешествия</a></li>
-    </ul>
-  </li>
-
-  <li><a href="contact.html">Контакты</a></li>
-  <li><a href="prajs.html">Прайс</a></li>
-</ul>
-
-<script>
-  // Dropdown menu functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuItems = document.querySelectorAll('.dropdown-menu > li');
-    
-    menuItems.forEach(item => {
-      const toggle = item.querySelector('.dropdown-toggle');
-      if (toggle) {
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          const submenu = item.querySelector('.dropdown-submenu');
-          if (submenu) {
-            submenu.classList.toggle('active');
-          }
-        });
-      }
-    });
-
-    // Close submenus when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.dropdown-menu')) {
-        document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
-          submenu.classList.remove('active');
-        });
-      }
-    });
-  });
-</script>
 
 <script type="text/javascript">
     var bodyCacheable = true;
