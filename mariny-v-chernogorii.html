@@ -6,7 +6,7 @@
 <head>
   
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Wix.com Website Builder"/>
 
@@ -227,38 +227,81 @@
 <style id="compCssMappers_yn3pf">#yn3pf{--shc-mutated-brightness:128,128,128;width:auto;min-height:1016px;}#pageBackground_yn3pf{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_12));--bg-gradient:none;}#comp-lcb2ad7t{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-jt93ip05{--shc-mutated-brightness:17,20,22;}#comp-jt93mhwq{--height:40px;--width:33px;--mask-image:url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='http://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");--mask-position:0% 0%;--mask-size:100% 100%;--mask-repeat:no-repeat;}#comp-kadzq2ur{--text-direction:var(--wix-opt-in-direction);}#comp-jt93poe6{--text-direction:var(--wix-opt-in-direction);}#comp-jt93wtk9{--text-direction:var(--wix-opt-in-direction);}#comp-jt9441j1{--text-direction:var(--wix-opt-in-direction);}#comp-jt94fsng{--text-direction:var(--wix-opt-in-direction);}#comp-jt94na6b{--text-direction:var(--wix-opt-in-direction);}#comp-jt95n9cw{--text-direction:var(--wix-opt-in-direction);}#comp-jtuq82au{--text-direction:var(--wix-opt-in-direction);}#comp-jt93v3va{--height:184px;--width:460px;}#comp-jt9419ur{--height:184px;--width:461px;}#comp-jt94c21h{--height:184px;--width:460px;}#comp-jt94kub6{--height:184px;--width:460px;}#comp-jt95km4o{--height:184px;--width:460px;}</style>
 
 
-<style>
-/* ===== SOFT RESPONSIVE FIXES ===== */
-/* This CSS improves mobile readability WITHOUT breaking the Wix layout */
 
-/* Ensure proper viewport scaling */
+<style>
+/* ===== FINAL RESPONSIVE FIX ===== */
+/* This CSS ensures full-width display on mobile devices */
+
+/* Force full-width display on all devices */
 html, body {
   margin: 0;
   padding: 0;
-}
-
-/* Allow images to scale responsively */
-img {
+  width: 100%;
   max-width: 100%;
-  height: auto;
-}
-
-/* Prevent horizontal overflow */
-html, body {
   overflow-x: hidden;
 }
 
-/* Make text readable on mobile without breaking layout */
+/* Fix Wix main container to be responsive */
+#SITE_CONTAINER,
+#site-root,
+[id*="SITE_CONTAINER"],
+[id*="site-root"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix all containers to not have fixed widths */
+[id*="Container"],
+[class*="container"],
+[class*="Container"],
+.wix-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Ensure no element causes horizontal overflow */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Allow images and media to scale */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix sections and rows */
+section, [role="region"], .section {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Mobile-specific improvements */
 @media (max-width: 768px) {
-  /* Slightly increase base font size for readability */
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
   body {
     font-size: 15px;
   }
   
-  /* Make headings readable */
   h1 { font-size: 22px !important; line-height: 1.3; }
   h2 { font-size: 19px !important; line-height: 1.3; }
   h3 { font-size: 17px !important; line-height: 1.3; }
+  
+  /* Ensure menu doesn't break layout */
+  .atlantic-menu-container {
+    width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
   
   /* Make buttons and links easier to tap */
   button, a[role="button"], [role="button"] {
@@ -266,7 +309,6 @@ html, body {
     min-width: 44px;
   }
   
-  /* Improve form input sizes */
   input, textarea, select {
     font-size: 16px;
     min-height: 44px;
@@ -284,14 +326,13 @@ html, body {
   h3 { font-size: 16px !important; }
 }
 
-/* Ensure menu doesn't break */
-.atlantic-menu-container {
-  overflow: hidden;
-}
-
-/* Fix any element that might cause horizontal scroll */
-* {
-  box-sizing: border-box;
+/* Prevent Wix fixed-width styles from breaking layout */
+[style*="width: 9999px"],
+[style*="width:9999px"],
+[style*="max-width: 9999px"],
+[style*="max-width:9999px"] {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 </style>
 </head>

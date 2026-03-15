@@ -6,7 +6,7 @@
 <head>
   
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Wix.com Website Builder"/>
 
@@ -229,38 +229,81 @@
 <style id="compCssMappers_xf1sb">#xf1sb{--shc-mutated-brightness:128,128,128;width:auto;min-height:1094px;}#pageBackground_xf1sb{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_12));--bg-gradient:none;}#comp-lcb2adal{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-jryr1trb{--shc-mutated-brightness:17,20,22;}#comp-jryr1trf{--height:32px;--width:20px;}#comp-jryr1trs{--text-direction:var(--wix-opt-in-direction);}#comp-jryr1ts8{--text-direction:var(--wix-opt-in-direction);}#comp-jrzgexyw{--text-direction:var(--wix-opt-in-direction);}#comp-jrzgjfwl{--text-direction:var(--wix-opt-in-direction);}#comp-jrzgktzx{--text-direction:var(--wix-opt-in-direction);}#comp-jrzgx7v2{--text-direction:var(--wix-opt-in-direction);}#comp-jryr1tss{--height:180px;--width:295px;}#comp-jryr1ttd{--height:180px;--width:295px;}#comp-jrzh83q8{--height:180px;--width:295px;}#comp-jrzh8kay{--height:180px;--width:295px;}#comp-jrzh9ods{--height:180px;--width:295px;}</style>
 
 
-<style>
-/* ===== SOFT RESPONSIVE FIXES ===== */
-/* This CSS improves mobile readability WITHOUT breaking the Wix layout */
 
-/* Ensure proper viewport scaling */
+<style>
+/* ===== FINAL RESPONSIVE FIX ===== */
+/* This CSS ensures full-width display on mobile devices */
+
+/* Force full-width display on all devices */
 html, body {
   margin: 0;
   padding: 0;
-}
-
-/* Allow images to scale responsively */
-img {
+  width: 100%;
   max-width: 100%;
-  height: auto;
-}
-
-/* Prevent horizontal overflow */
-html, body {
   overflow-x: hidden;
 }
 
-/* Make text readable on mobile without breaking layout */
+/* Fix Wix main container to be responsive */
+#SITE_CONTAINER,
+#site-root,
+[id*="SITE_CONTAINER"],
+[id*="site-root"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix all containers to not have fixed widths */
+[id*="Container"],
+[class*="container"],
+[class*="Container"],
+.wix-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Ensure no element causes horizontal overflow */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Allow images and media to scale */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix sections and rows */
+section, [role="region"], .section {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Mobile-specific improvements */
 @media (max-width: 768px) {
-  /* Slightly increase base font size for readability */
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
   body {
     font-size: 15px;
   }
   
-  /* Make headings readable */
   h1 { font-size: 22px !important; line-height: 1.3; }
   h2 { font-size: 19px !important; line-height: 1.3; }
   h3 { font-size: 17px !important; line-height: 1.3; }
+  
+  /* Ensure menu doesn't break layout */
+  .atlantic-menu-container {
+    width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
   
   /* Make buttons and links easier to tap */
   button, a[role="button"], [role="button"] {
@@ -268,7 +311,6 @@ html, body {
     min-width: 44px;
   }
   
-  /* Improve form input sizes */
   input, textarea, select {
     font-size: 16px;
     min-height: 44px;
@@ -286,14 +328,13 @@ html, body {
   h3 { font-size: 16px !important; }
 }
 
-/* Ensure menu doesn't break */
-.atlantic-menu-container {
-  overflow: hidden;
-}
-
-/* Fix any element that might cause horizontal scroll */
-* {
-  box-sizing: border-box;
+/* Prevent Wix fixed-width styles from breaking layout */
+[style*="width: 9999px"],
+[style*="width:9999px"],
+[style*="max-width: 9999px"],
+[style*="max-width:9999px"] {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 </style>
 </head>

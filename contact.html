@@ -3,7 +3,7 @@
 <head>
   
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Wix.com Website Builder"/>
 
@@ -245,38 +245,81 @@
 <style id="compCssMappers_c1lmq">#c1lmq{--shc-mutated-brightness:128,128,128;width:auto;min-height:40px;}#pageBackground_c1lmq{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_12));--bg-gradient:none;}#comp-lcb2add0{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#Cntnrf{--shc-mutated-brightness:17,20,22;}#WPht3{--height:32px;--width:20px;}#WRchTxtr{--text-direction:var(--wix-opt-in-direction);}#WPht7{--height:385px;--width:980px;}#Cntnr1{--shc-mutated-brightness:17,20,22;}#WRchTxtp{--min-height:240px;--text-direction:var(--wix-opt-in-direction);}#LnkBr2{--item-size:25px;--item-margin-block:0;--item-margin-inline:0px 3px;--item-display:inline-block;--direction:var(--wix-opt-in-direction, ltr);width:81px;height:25px;}#comp-lcb2add01{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-kegseb64{--fnt:normal normal normal 13px/1.3em 'open sans',sans-serif;--fntlbl:normal normal normal 13px/1.3em 'open sans',sans-serif;--direction:var(--wix-opt-in-direction, ltr);--align:start;--labelDirection:inherit;--inputDirection:inherit;--errorDirection:inherit;--requiredIndicationDisplay:inline;--labelMarginBottom:5px;--textPadding:3px;--textPadding_start:5px;--textPadding_end:3px;--labelPadding_start:0px;--labelPadding_end:20px;height:auto;--inputHeight:26px;}#comp-kegseb6m1{--fnt:normal normal normal 13px/1.3em 'open sans',sans-serif;--fntlbl:normal normal normal 13px/1.3em 'open sans',sans-serif;--direction:var(--wix-opt-in-direction, ltr);--align:start;--labelDirection:inherit;--inputDirection:inherit;--errorDirection:inherit;--requiredIndicationDisplay:inline;--labelMarginBottom:5px;--textPadding:3px;--textPadding_start:5px;--textPadding_end:3px;--labelPadding_start:0px;--labelPadding_end:20px;height:auto;--inputHeight:26px;}#comp-kegseb6q{--fnt:normal normal normal 13px/1.3em 'open sans',sans-serif;--fntlbl:normal normal normal 13px/1.3em 'open sans',sans-serif;--direction:var(--wix-opt-in-direction, ltr);--align:start;--labelDirection:inherit;--inputDirection:inherit;--errorDirection:inherit;--requiredIndicationDisplay:inline;--labelMarginBottom:5px;--textPadding:3px;--textPadding_start:5px;--textPadding_end:3px;--labelPadding_start:0px;--labelPadding_end:20px;height:auto;--inputHeight:26px;}#comp-kegseb6z{--direction:var(--wix-opt-in-direction, ltr);--labelDirection:inherit;--inputDirection:inherit;--errorDirection:inherit;--align:start;--textPaddingTop:3px;--textPaddingStart:5px;--textPaddingEnd:10px;--labelMarginBottom:5px;--requiredIndicationDisplay:inline;--labelPadding_start:0px;--labelPadding_end:20px;height:auto;--inputHeight:130px;}#comp-kegseb7f{--text-direction:var(--wix-opt-in-direction);}#comp-kegseb771{--shc-mutated-brightness:17,20,22;--margin-start:0px;--margin-end:0px;--fnt:italic normal normal 18px/1.3em 'open sans',sans-serif;direction:var(--wix-opt-in-direction, ltr);--label-align:center;--label-text-align:center;}</style>
 
 
-<style>
-/* ===== SOFT RESPONSIVE FIXES ===== */
-/* This CSS improves mobile readability WITHOUT breaking the Wix layout */
 
-/* Ensure proper viewport scaling */
+<style>
+/* ===== FINAL RESPONSIVE FIX ===== */
+/* This CSS ensures full-width display on mobile devices */
+
+/* Force full-width display on all devices */
 html, body {
   margin: 0;
   padding: 0;
-}
-
-/* Allow images to scale responsively */
-img {
+  width: 100%;
   max-width: 100%;
-  height: auto;
-}
-
-/* Prevent horizontal overflow */
-html, body {
   overflow-x: hidden;
 }
 
-/* Make text readable on mobile without breaking layout */
+/* Fix Wix main container to be responsive */
+#SITE_CONTAINER,
+#site-root,
+[id*="SITE_CONTAINER"],
+[id*="site-root"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix all containers to not have fixed widths */
+[id*="Container"],
+[class*="container"],
+[class*="Container"],
+.wix-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Ensure no element causes horizontal overflow */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Allow images and media to scale */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix sections and rows */
+section, [role="region"], .section {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Mobile-specific improvements */
 @media (max-width: 768px) {
-  /* Slightly increase base font size for readability */
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
   body {
     font-size: 15px;
   }
   
-  /* Make headings readable */
   h1 { font-size: 22px !important; line-height: 1.3; }
   h2 { font-size: 19px !important; line-height: 1.3; }
   h3 { font-size: 17px !important; line-height: 1.3; }
+  
+  /* Ensure menu doesn't break layout */
+  .atlantic-menu-container {
+    width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
   
   /* Make buttons and links easier to tap */
   button, a[role="button"], [role="button"] {
@@ -284,7 +327,6 @@ html, body {
     min-width: 44px;
   }
   
-  /* Improve form input sizes */
   input, textarea, select {
     font-size: 16px;
     min-height: 44px;
@@ -302,14 +344,13 @@ html, body {
   h3 { font-size: 16px !important; }
 }
 
-/* Ensure menu doesn't break */
-.atlantic-menu-container {
-  overflow: hidden;
-}
-
-/* Fix any element that might cause horizontal scroll */
-* {
-  box-sizing: border-box;
+/* Prevent Wix fixed-width styles from breaking layout */
+[style*="width: 9999px"],
+[style*="width:9999px"],
+[style*="max-width: 9999px"],
+[style*="max-width:9999px"] {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 </style>
 </head>
