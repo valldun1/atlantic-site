@@ -21,23 +21,114 @@
       new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');
     }
   </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TouristInformationCenter",
-  "name": "Atlantic Sail",
-  "description": "Яхтенный чартер с профессиональным капитаном. Канарские острова, Средиземноморье, Атлантика, Карибы.",
-  "url": "https://atlanticsail.net",
-  "telephone": "+34605675361",
-  "email": "info@atlanticsail.net",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Las Palmas de Gran Canaria",
-    "addressCountry": "ES"
-  },
-  "sameAs": [
-    "https://www.youtube.com/@capitankosta",
-    "https://www.instagram.com/capitankosta/"
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://atlanticsail.net/#organization",
+      "name": "Atlantic Sail",
+      "description": "Профессиональный яхтенный чартер с опытным капитаном. Канарские острова, Средиземноморье, Карибы, трансатлантические переходы.",
+      "url": "https://atlanticsail.net",
+      "telephone": "+34605675361",
+      "email": "info@atlanticsail.net",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Las Palmas de Gran Canaria",
+        "addressRegion": "Gran Canaria",
+        "addressCountry": "ES"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Валентин",
+        "jobTitle": "Капитан и основатель Atlantic Sail",
+        "description": "Профессиональный капитан с 2011 года. 250 000 морских миль, 11 трансатлантических переходов.",
+        "sameAs": ["https://t.me/captainatlanticbot"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Яхтенные маршруты Atlantic Sail",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Канарские острова — недельный маршрут",
+            "description": "Аренда яхты с капитаном по Канарским островам. Гран-Канария, Тенерифе, Лансароте.",
+            "price": "500",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "500",
+              "priceCurrency": "EUR",
+              "unitText": "место в каюте за неделю"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Трансатлантический переход Канары — Карибы",
+            "description": "Переход Лас-Пальмас → Кабо Верде → Барбадос → Мартиника. 2800 морских миль.",
+            "price": "2500",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Яхтинг в Черногории",
+            "description": "Неделя по Черногории: Тиват, Котор, Будва, Герцег Нови.",
+            "price": "600",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Средиземноморье — переходы",
+            "description": "Маршруты Испания-Майорка-Италия-Мальта-Черногория с профессиональным капитаном.",
+            "price": "600",
+            "priceCurrency": "EUR"
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.youtube.com/@capitankosta",
+        "https://www.instagram.com/capitankosta/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько стоит аренда яхты с капитаном?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стоимость места на яхте: Канарские острова от 500 €/неделю, Средиземноморье 600-800 €/переход, трансатлантика от 2500 €. Включает яхту, капитана, страховку и завтраки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужен ли опыт для яхтинга с Atlantic Sail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет, опыт не нужен. Капитан берёт на себя управление яхтой. Маршруты доступны для новичков. По желанию — обучение основам парусного хождения в море."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие яхты есть в флоте Atlantic Sail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Флот: катамаран Lipari 41 (4 каюты), яхта Oceanis 473 (4 каюты), катамаран Bali 4.6 (4 каюты), яхта Dufour 405 (3 каюты). Все с навигацией океанского класса."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как забронировать место на яхте?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напишите в Telegram @CaptainAtlanticBot или WhatsApp +34 605-675-361. Бот ответит на вопросы о маршрутах и ценах круглосуточно."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -88,7 +179,8 @@
       <a href="marina.html">Все марины</a>
     </div>
   </li>
-  <li><a href="prajs.html">Прайс</a></li>
+  <li><a href="prajs.html">Прайс</a>
+      <a href="faq.html">FAQ</a></li>
   <li><a href="contact.html">Контакты</a></li>
 </ul>
 
@@ -141,7 +233,8 @@
     <a href="marina-karibes.html">Карибы</a>
   </div>
 </div>
-<div class="as-mob-item"><a href="prajs.html">Прайс</a></div>
+<div class="as-mob-item"><a href="prajs.html">Прайс</a>
+      <a href="faq.html">FAQ</a></div>
 <div class="as-mob-item"><a href="contact.html">Контакты</a></div>
 <div class="as-mob-actions">
   <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram">
@@ -350,6 +443,7 @@
       <a href="https://www.instagram.com/capitankosta/" target="_blank">Instagram</a>
       <a href="contact.html">Контакты</a>
       <a href="prajs.html">Прайс</a>
+      <a href="faq.html">FAQ</a>
     </div>
   </div>
 </footer>
