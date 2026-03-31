@@ -33,6 +33,8 @@ h1,h2,h3,h4{font-family:var(--f);font-weight:600;line-height:1.25}
 .as-btn-tg{display:flex;align-items:center;gap:0.3rem;background:var(--gold);color:#fff;font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.36rem 0.75rem;border-radius:2px;transition:all var(--tr);white-space:nowrap}
 .as-btn-tg:hover{background:var(--gold-d)}
 .as-btn-tg svg{width:11px;height:11px}
+.as-btn-wa{display:flex;align-items:center;gap:0.3rem;background:#25D366;color:#fff;font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.36rem 0.75rem;border-radius:2px;transition:all var(--tr);white-space:nowrap}
+.as-btn-wa:hover{background:#1ebe5d}
 .as-btn-translate{background:none;border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:0.66rem;letter-spacing:0.07em;padding:0.3rem 0.55rem;border-radius:2px;cursor:pointer;font-family:var(--f);transition:all var(--tr)}
 .as-btn-translate:hover{background:rgba(201,168,76,0.08)}
 
@@ -196,3 +198,21 @@ h1,h2,h3,h4{font-family:var(--f);font-weight:600;line-height:1.25}
   .as-grid-4{grid-template-columns:repeat(2,1fr)}
   .as-card-body{padding:0.8rem}
 }
+
+/* REVIEWS */
+.as-review-card{background:#fff;border-radius:8px;padding:1.5rem;box-shadow:0 2px 12px rgba(26,47,69,0.07);display:flex;flex-direction:column;gap:1rem}
+.as-review-stars{color:var(--gold);font-size:1rem;letter-spacing:2px}
+.as-review-text{color:var(--gray);font-size:0.87rem;line-height:1.65;font-style:italic;flex:1}
+.as-review-name{font-weight:600;color:var(--navy);font-size:0.88rem}
+.as-review-trip{font-size:0.78rem;color:var(--gold-d)}
+
+/* REQUEST FORM */
+.as-request-form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:0.8rem}
+.as-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.as-input{width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(26,47,69,0.15);border-radius:6px;font-family:inherit;font-size:0.88rem;color:var(--navy);background:#fff;box-sizing:border-box;transition:border-color 0.2s}
+.as-input:focus{outline:none;border-color:var(--gold)}
+.as-select{appearance:none;cursor:pointer}
+.as-textarea{min-height:100px;resize:vertical}
+.as-btn-primary{background:var(--navy);color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:0.9rem;font-weight:600;padding:0.85rem 2rem;border-radius:4px;transition:background 0.2s}
+.as-btn-primary:hover{background:var(--gold-d)}
+@media(max-width:600px){.as-form-grid{grid-template-columns:1fr}}
