@@ -61,11 +61,11 @@ h1,h2,h3,h4{font-family:var(--f);font-weight:600;line-height:1.25}
 .as-page-hero p{color:rgba(26,47,69,0.6);font-size:0.85rem}
 
 /* MAIN HERO */
-.as-hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.as-hero{position:relative;min-height:62vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
 .as-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:heroZoom 12s ease-out forwards}
 .as-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1) 0%,rgba(26,58,92,0.04) 50%,rgba(26,58,92,0.78) 100%)}
 @keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1)}}
-.as-hero-content{position:relative;z-index:2;padding:0 1.2rem 4rem;max-width:800px}
+.as-hero-content{position:relative;z-index:2;padding:0 1.2rem 3rem;max-width:800px}
 .as-hero-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#ffd98a;margin-bottom:0.6rem;font-weight:500}
 .as-hero-title{font-size:clamp(2rem,6vw,4.2rem);font-weight:300;color:#fff;line-height:1.1;margin-bottom:0.7rem}
 .as-hero-title em{font-style:italic;color:#ffd98a;font-weight:300}
