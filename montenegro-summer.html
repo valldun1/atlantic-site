@@ -4,12 +4,13 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Яхтинг в Черногории | Atlantic Sail | Atlantic Sail</title>
-  <meta name="description" content="Аренда яхт с капитаном. Атлантика, Канары, Средиземноморье, Карибы."/>
+  <meta name="description" content="Яхтенные рейсы по Черногории каждую неделю июнь–сентябрь 2026. Котор, Будва, Герцег Нови. 3 яхты, 3 капитана. Место в каюте от 700 €. Бронируй сейчас!"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="shortcut icon" href="favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
   <link rel="stylesheet" href="style.css"/>
   <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -29,7 +30,7 @@
 </script>
   <link rel="canonical" href="https://atlanticsail.net/montenegro-summer.html"/>
   <meta property="og:title" content="Яхтинг в Черногории | Atlantic Sail | Atlantic Sail"/>
-  <meta property="og:description" content="Аренда яхт с капитаном. Атлантика, Канары, Средиземноморье, Карибы."/>
+  <meta property="og:description" content="Яхтенные рейсы по Черногории каждую неделю июнь–сентябрь 2026. Котор, Будва, Герцег Нови. 3 яхты, 3 капитана. Место в каюте от 700 €. Бронируй сейчас!"/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
   <meta property="og:url" content="https://atlanticsail.net/montenegro.html"/>
@@ -187,12 +188,13 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Яхтинг в Черногории | Atlantic Sail | Atlantic Sail</title>
-  <meta name="description" content="Аренда яхт с капитаном. Атлантика, Канары, Средиземноморье, Карибы."/>
+  <meta name="description" content="Яхтенные рейсы по Черногории каждую неделю июнь–сентябрь 2026. Котор, Будва, Герцег Нови. 3 яхты, 3 капитана. Место в каюте от 700 €. Бронируй сейчас!"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="shortcut icon" href="favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
   <link rel="stylesheet" href="style.css"/>
   <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -212,7 +214,7 @@
 </script>
   <link rel="canonical" href="https://atlanticsail.net/montenegro.html"/>
   <meta property="og:title" content="Яхтинг в Черногории | Atlantic Sail | Atlantic Sail"/>
-  <meta property="og:description" content="Аренда яхт с капитаном. Атлантика, Канары, Средиземноморье, Карибы."/>
+  <meta property="og:description" content="Яхтенные рейсы по Черногории каждую неделю июнь–сентябрь 2026. Котор, Будва, Герцег Нови. 3 яхты, 3 капитана. Место в каюте от 700 €. Бронируй сейчас!"/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
   <meta property="og:url" content="https://atlanticsail.net/montenegro.html"/>
@@ -378,9 +380,14 @@
 }
 .mne-hero-bg {
   position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(201,168,76,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(13,107,184,0.15) 0%, transparent 60%);
+  background-image: url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=1400&q=70&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+.mne-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(10,22,40,0.85) 0%, rgba(26,58,92,0.75) 45%, rgba(13,38,64,0.85) 100%);
 }
 .mne-waves {
   position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
@@ -754,6 +761,29 @@
     <p class="mne-label">Маршрут</p>
     <h2 class="mne-title">Неделя по <em>Адриатике</em></h2>
     <div class="mne-divider"></div>
+    <!-- Галерея мест -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin:2rem 0;">
+      <img src="https://images.unsplash.com/photo-1601134467661-3d775b999c4b?w=600&q=80&fit=crop" 
+           alt="Котор старый город — яхтинг Черногория" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:6px;" loading="lazy"/>
+      <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=600&q=80&fit=crop" 
+           alt="Боко-Которский залив с яхты" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:6px;" loading="lazy"/>
+      <img src="https://images.unsplash.com/photo-1566847438217-76e82d383f84?w=600&q=80&fit=crop" 
+           alt="Катамаран под парусами Адриатика" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:6px;" loading="lazy"/>
+      <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=600&q=80&fit=crop" 
+           alt="Закат на яхте Черногория" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:6px;" loading="lazy"/>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80&fit=crop" 
+           alt="Голубое море Адриатика" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:6px;" loading="lazy"/>
+      <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=600&q=80&fit=crop" 
+           alt="Экипаж на яхте — яхтинг Черногория 2026" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:6px;" loading="lazy"/>
+    </div>
+    @media(max-width:600px){.mne-photo-grid{grid-template-columns:repeat(2,1fr)!important}}
+
     <div class="mne-route-stops">
       <div class="mne-stop">Тиват</div><div class="mne-stop-arr">→</div>
       <div class="mne-stop">Пераст</div><div class="mne-stop-arr">→</div>
