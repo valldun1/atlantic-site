@@ -50,24 +50,28 @@
   // Найти: открой таблицу → URL вида docs.google.com/spreadsheets/d/SHEET_ID/edit
   const SHEET_ID = "15uqQA-ankTrNN8U52t9E53dlhPHMof0yb5-2_OFpj7Y";
   const SHEET_NAME = "track";
-  const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_NAME}`;
+  const JSON_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
   // ─────────────────────────────────────────────────────────
 
   let map, polyline, marker;
 
   async function loadTrack() {
     try {
-      const res = await fetch(CSV_URL);
-      if (!res.ok) throw new Error("Не удалось загрузить CSV");
+      const res = await fetch(JSON_URL);
+      if (!res.ok) throw new Error("Не удалось загрузить данные");
       const text = await res.text();
-      const rows = text.trim().split("\n").slice(1); // пропускаем заголовок
+      // gviz возвращает JSONP: google.visualization.Query.setResponse({...})
+      const jsonStr = text.match(/google\.visualization\.Query\.setResponse\((.+)\);?$/s)?.[1];
+      if (!jsonStr) throw new Error("Не удалось распарсить ответ");
+      const json = JSON.parse(jsonStr);
+      const rows = json.table.rows;
 
       const points = rows
         .map(row => {
-          // CSV может содержать кавычки
-          const cols = row.replace(/"/g, "").split(",");
-          const lat = parseFloat(cols[1]);
-          const lon = parseFloat(cols[2]);
+          const cells = row.c;
+          if (!cells || cells.length < 3) return null;
+          const lat = parseFloat(cells[1]?.v);
+          const lon = parseFloat(cells[2]?.v);
           return isNaN(lat) || isNaN(lon) ? null : { lat, lng: lon };
         })
         .filter(Boolean);
