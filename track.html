@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atlantic Sail — Трек</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; background: #0a1628; color: #fff; }
@@ -31,6 +31,9 @@
       font-size: 13px;
       color: #7a9cc0;
       pointer-events: none;
+      line-height: 1.8;
+      text-align: center;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -68,6 +71,8 @@
 
       const byKostya = [];
       const byYura = [];
+      let lastKostya = null;
+      let lastYura = null;
 
       rows.forEach(row => {
         const cells = row.c;
@@ -75,10 +80,16 @@
         const lat = parseFloat(cells[1]?.v);
         const lon = parseFloat(cells[2]?.v);
         const captain = cells[3]?.v || "kostya";
+        const timestamp = cells[0]?.v || "";
         if (isNaN(lat) || isNaN(lon)) return;
         const point = { lat, lng: lon };
-        if (captain === "yura") byYura.push(point);
-        else byKostya.push(point);
+        if (captain === "yura") {
+          byYura.push(point);
+          lastYura = { lat, lon, timestamp };
+        } else {
+          byKostya.push(point);
+          lastKostya = { lat, lon, timestamp };
+        }
       });
 
       const points = [...byKostya, ...byYura];
@@ -122,11 +133,16 @@
       points.forEach(p => bounds.extend(p));
       if (points.length > 0) map.fitBounds(bounds);
 
+      function formatPos(data, name, icon) {
+        if (!data) return `${icon} ${name}: нет данных`;
+        const ts = data.timestamp ? ` · ${data.timestamp.slice(11,16)} UTC` : "";
+        return `${icon} ${name}: ${data.lat.toFixed(4)}, ${data.lon.toFixed(4)}${ts}`;
+      }
+
       document.getElementById("info").textContent =
-        `⚓ Костя: ${byKostya.length} | 🚢 Юра: ${byYura.length}`;
-      const last = points[points.length - 1];
-      document.getElementById("status").textContent =
-        `📍 Последняя: ${last?.lat.toFixed(4)}, ${last?.lng.toFixed(4)}`;
+        `⚓ Костя: ${byKostya.length} pts  🚢 Юра: ${byYura.length} pts`;
+      document.getElementById("status").innerHTML =
+        `${formatPos(lastKostya, "Костя", "🔵")}<br>${formatPos(lastYura, "Юра", "🟠")}`;
 
     } catch (e) {
       console.error(e);
