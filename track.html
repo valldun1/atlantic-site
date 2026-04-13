@@ -3,381 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Капитан в море — Atlantic Sail</title>
-  <link rel="canonical" href="https://atlanticsail.net/track.html" />
-
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-
+  <title>Atlantic Sail — Трек</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
-
-    :root {
-      --ocean: #0a1628;
-      --deep: #0d1f3c;
-      --wave: #1a3a5c;
-      --accent: #00c6ff;
-      --gold: #f4c542;
-      --text: #e8f4f8;
-      --muted: #7a9bb5;
-    }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--ocean);
-      color: var(--text);
-      font-family: 'Syne', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── HEADER ── */
-    header {
-      padding: 18px 24px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(0,198,255,0.15);
-      background: linear-gradient(180deg, rgba(10,22,40,1) 0%, rgba(10,22,40,0.8) 100%);
-      position: relative;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .logo-mark {
-      width: 36px; height: 36px;
-      border: 2px solid var(--accent);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
-    }
-    .logo-text {
-      font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--text);
-    }
-    .logo-sub {
-      font-size: 10px; color: var(--muted); letter-spacing: 0.08em;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .status-bar {
-      display: flex; align-items: center; gap: 12px;
-    }
-    .pulse-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 0 rgba(0,198,255,0.6);
-      animation: pulse 2s infinite;
-    }
-    .pulse-dot.offline { background: var(--muted); animation: none; box-shadow: none; }
-    @keyframes pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(0,198,255,0.6); }
-      70%  { box-shadow: 0 0 0 8px rgba(0,198,255,0); }
-      100% { box-shadow: 0 0 0 0 rgba(0,198,255,0); }
-    }
-    .status-text {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px; color: var(--accent); letter-spacing: 0.05em;
-    }
-    .status-text.offline { color: var(--muted); }
-
-    /* ── MAP ── */
-    #map {
-      flex: 1;
-      min-height: calc(100vh - 160px);
-      z-index: 1;
-    }
-
-    /* Leaflet dark tiles */
-    .leaflet-tile-pane { filter: brightness(0.75) saturate(0.8) hue-rotate(195deg); }
-
-    /* ── INFO PANEL ── */
-    .info-panel {
-      position: absolute;
-      bottom: 80px; left: 20px;
-      z-index: 100;
-      background: rgba(10,22,40,0.92);
-      border: 1px solid rgba(0,198,255,0.25);
-      border-radius: 12px;
+    body { font-family: sans-serif; background: #0a1628; color: #fff; }
+    #header {
       padding: 16px 20px;
-      min-width: 220px;
-      backdrop-filter: blur(12px);
+      background: #0d1f3c;
+      border-bottom: 1px solid #1e3a5f;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .info-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px; color: var(--muted);
-      text-transform: uppercase; letter-spacing: 0.1em;
-      margin-bottom: 4px;
-    }
-    .info-value {
-      font-size: 15px; font-weight: 700; color: var(--text);
-      margin-bottom: 12px;
-    }
-    .info-value:last-child { margin-bottom: 0; }
-    .info-coord {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px; color: var(--accent);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      padding: 12px 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      border-top: 1px solid rgba(0,198,255,0.1);
-      background: var(--ocean);
-      position: relative; z-index: 10;
-    }
-    .update-info {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px; color: var(--muted);
-    }
-    .update-info span { color: var(--accent); }
-    .back-link {
-      font-size: 12px; color: var(--muted); text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: var(--accent); }
-
-    /* ── BOAT ICON ── */
-    .boat-icon { font-size: 22px; }
-
-    /* ── NO DATA STATE ── */
-    .no-data {
+    #header h1 { font-size: 18px; font-weight: 600; }
+    #header span { font-size: 13px; color: #7a9cc0; }
+    #map { width: 100%; height: calc(100vh - 60px); }
+    #status {
       position: absolute;
-      top: 50%; left: 50%; transform: translate(-50%, -50%);
-      z-index: 200;
-      text-align: center;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(13,31,60,0.9);
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 13px;
+      color: #7a9cc0;
       pointer-events: none;
     }
-    .no-data-emoji { font-size: 48px; margin-bottom: 12px; }
-    .no-data-text { font-size: 16px; font-weight: 700; color: var(--muted); }
-    .no-data-sub { font-size: 12px; color: rgba(122,155,181,0.6); margin-top: 4px;
-      font-family: 'JetBrains Mono', monospace; }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="/" class="logo">
-    <div class="logo-mark">⚓</div>
-    <div>
-      <div class="logo-text">Atlantic Sail</div>
-      <div class="logo-sub">live track</div>
-    </div>
-  </a>
-  <div class="status-bar">
-    <div class="pulse-dot" id="pulseDot"></div>
-    <div class="status-text" id="statusText">обновление...</div>
-  </div>
-</header>
-
-<div style="position:relative; flex:1; display:flex; flex-direction:column;">
-  <div id="map"></div>
-
-  <div class="info-panel" id="infoPanel" style="display:none;">
-    <div class="info-label">последняя точка</div>
-    <div class="info-value" id="lastTime">—</div>
-    <div class="info-label">координаты</div>
-    <div class="info-value info-coord" id="lastCoord">—</div>
-    <div class="info-label">точек в треке</div>
-    <div class="info-value" id="pointCount">—</div>
-  </div>
-
-  <div class="no-data" id="noData">
-    <div class="no-data-emoji">⛵</div>
-    <div class="no-data-text">Капитан в порту</div>
-    <div class="no-data-sub">трек появится когда яхта выйдет в море</div>
-  </div>
+<div id="header">
+  <span>⛵</span>
+  <h1>Atlantic Sail</h1>
+  <span id="info">Загрузка трека...</span>
 </div>
 
-<footer>
-  <div class="update-info">обновление каждые <span>60 сек</span> · следующее через <span id="countdown">60</span>с</div>
-  <a href="/" class="back-link">← atlanticsail.net</a>
-</footer>
+<div id="map"></div>
+<div id="status">🛰 Загрузка данных...</div>
 
 <script>
-// ══════════════════════════════════════════════
-// КОНФИГ — поменять на свои данные
-// ══════════════════════════════════════════════
-const CONFIG = {
-  // Google Sheets: Файл → Поделиться → Опубликовать в интернете → CSV
-  // Формат таблицы: колонки lat | lon | time | note
-  SHEET_CSV_URL: 'https://docs.google.com/spreadsheets/d/ТВОЙ_ID/export?format=csv&gid=0',
+  // ── НАСТРОЙКИ ─────────────────────────────────────────────
+  // Замени SHEET_ID на ID своей таблицы "Atlantic Tracker"
+  // Найти: открой таблицу → URL вида docs.google.com/spreadsheets/d/SHEET_ID/edit
+  const SHEET_ID = "15uqQA-ankTrNN8U52t9E53dlhPHMof0yb5-2_OFpj7Y";
+  const SHEET_NAME = "track";
+  const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_NAME}`;
+  // ─────────────────────────────────────────────────────────
 
-  UPDATE_INTERVAL: 60, // секунд
-  DEFAULT_CENTER: [28.15, -15.43], // Лас-Пальмас
-  DEFAULT_ZOOM: 7,
-};
-// ══════════════════════════════════════════════
+  let map, polyline, marker;
 
-// Инициализация карты
-const map = L.map('map', {
-  center: CONFIG.DEFAULT_CENTER,
-  zoom: CONFIG.DEFAULT_ZOOM,
-  zoomControl: true,
-});
+  async function loadTrack() {
+    try {
+      const res = await fetch(CSV_URL);
+      if (!res.ok) throw new Error("Не удалось загрузить CSV");
+      const text = await res.text();
+      const rows = text.trim().split("\n").slice(1); // пропускаем заголовок
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap',
-  maxZoom: 18,
-}).addTo(map);
+      const points = rows
+        .map(row => {
+          // CSV может содержать кавычки
+          const cols = row.replace(/"/g, "").split(",");
+          const lat = parseFloat(cols[1]);
+          const lon = parseFloat(cols[2]);
+          return isNaN(lat) || isNaN(lon) ? null : { lat, lng: lon };
+        })
+        .filter(Boolean);
 
-// Иконка яхты
-const boatIcon = L.divIcon({
-  html: '<div style="font-size:26px;filter:drop-shadow(0 0 6px #00c6ff);">⛵</div>',
-  iconSize: [30, 30],
-  iconAnchor: [15, 15],
-  className: '',
-});
+      if (points.length === 0) {
+        document.getElementById("status").textContent = "📭 Точек пока нет";
+        document.getElementById("info").textContent = "Точек: 0";
+        return;
+      }
 
-const dotIcon = L.divIcon({
-  html: '<div style="width:8px;height:8px;background:#00c6ff;border-radius:50%;opacity:0.6;border:1px solid rgba(0,198,255,0.3)"></div>',
-  iconSize: [8, 8],
-  iconAnchor: [4, 4],
-  className: '',
-});
+      // Трек — линия
+      polyline = new google.maps.Polyline({
+        path: points,
+        geodesic: true,
+        strokeColor: "#4a9eff",
+        strokeOpacity: 0.9,
+        strokeWeight: 3,
+        map,
+      });
 
-let trackLayer = null;
-let markers = [];
-let boatMarker = null;
-let countdown = CONFIG.UPDATE_INTERVAL;
+      // Последняя точка — маркер
+      const last = points[points.length - 1];
+      marker = new google.maps.Marker({
+        position: last,
+        map,
+        title: "Последняя позиция",
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          fillColor: "#ff6b35",
+          fillOpacity: 1,
+          strokeColor: "#fff",
+          strokeWeight: 2,
+        },
+      });
 
-// ── Загрузка данных ──
-async function loadTrack() {
-  try {
-    const res = await fetch(CONFIG.SHEET_CSV_URL + '&_=' + Date.now());
-    const text = await res.text();
-    const points = parseCSV(text);
-    renderTrack(points);
-  } catch (e) {
-    setStatus(false);
-    console.error('Ошибка загрузки трека:', e);
-  }
-}
+      // Подогнать вид под трек
+      const bounds = new google.maps.LatLngBounds();
+      points.forEach(p => bounds.extend(p));
+      map.fitBounds(bounds);
 
-function parseCSV(text) {
-  const lines = text.trim().split('\n').slice(1); // пропускаем заголовок
-  return lines
-    .map(line => {
-      const [lat, lon, time, note] = line.split(',').map(s => s.replace(/"/g,'').trim());
-      const la = parseFloat(lat), lo = parseFloat(lon);
-      if (isNaN(la) || isNaN(lo)) return null;
-      return { lat: la, lon: lo, time: time || '', note: note || '' };
-    })
-    .filter(Boolean);
-}
+      document.getElementById("info").textContent = `Точек: ${points.length}`;
+      document.getElementById("status").textContent =
+        `📍 Последняя: ${last.lat.toFixed(4)}, ${last.lng.toFixed(4)}`;
 
-function renderTrack(points) {
-  // Очищаем старое
-  if (trackLayer) map.removeLayer(trackLayer);
-  markers.forEach(m => map.removeLayer(m));
-  if (boatMarker) map.removeLayer(boatMarker);
-  markers = [];
-
-  if (!points.length) {
-    document.getElementById('noData').style.display = 'block';
-    document.getElementById('infoPanel').style.display = 'none';
-    setStatus(false);
-    return;
-  }
-
-  document.getElementById('noData').style.display = 'none';
-  document.getElementById('infoPanel').style.display = 'block';
-
-  // Линия трека
-  const latlngs = points.map(p => [p.lat, p.lon]);
-  trackLayer = L.polyline(latlngs, {
-    color: '#00c6ff',
-    weight: 2.5,
-    opacity: 0.7,
-    dashArray: '6 4',
-  }).addTo(map);
-
-  // Точки (все кроме последней)
-  points.slice(0, -1).forEach(p => {
-    const m = L.marker([p.lat, p.lon], { icon: dotIcon })
-      .addTo(map);
-    if (p.time || p.note) {
-      m.bindPopup(`<b>${p.time}</b>${p.note ? '<br>' + p.note : ''}`, { className: 'dark-popup' });
+    } catch (e) {
+      console.error(e);
+      document.getElementById("status").textContent = "❌ Ошибка загрузки трека";
     }
-    markers.push(m);
-  });
-
-  // Последняя точка — яхта
-  const last = points[points.length - 1];
-  boatMarker = L.marker([last.lat, last.lon], { icon: boatIcon })
-    .addTo(map)
-    .bindPopup(`<b>Текущее положение</b><br>${last.time}<br>${last.note}`, { className: 'dark-popup' });
-
-  // Обновляем инфо-панель
-  document.getElementById('lastTime').textContent = last.time || 'нет данных';
-  document.getElementById('lastCoord').textContent =
-    `${last.lat.toFixed(4)}° N  ${last.lon.toFixed(4)}° E`;
-  document.getElementById('pointCount').textContent = points.length;
-
-  // Центрируем на треке
-  if (points.length === 1) {
-    map.setView([last.lat, last.lon], 10);
-  } else {
-    map.fitBounds(trackLayer.getBounds(), { padding: [40, 40] });
   }
 
-  setStatus(true);
-}
-
-function setStatus(online) {
-  const dot = document.getElementById('pulseDot');
-  const txt = document.getElementById('statusText');
-  if (online) {
-    dot.className = 'pulse-dot';
-    txt.className = 'status-text';
-    txt.textContent = 'в эфире';
-  } else {
-    dot.className = 'pulse-dot offline';
-    txt.className = 'status-text offline';
-    txt.textContent = 'нет данных';
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 5,
+      center: { lat: 28.1, lng: -15.4 }, // Gran Canaria по умолчанию
+      mapTypeId: "hybrid",
+      styles: [
+        { elementType: "labels.text.fill", stylers: [{ color: "#8ec3e0" }] },
+        { featureType: "water", elementType: "geometry", stylers: [{ color: "#0a1e35" }] },
+      ],
+    });
+    loadTrack();
   }
-}
 
-// ── Таймер обратного отсчёта ──
-function startCountdown() {
-  countdown = CONFIG.UPDATE_INTERVAL;
-  const el = document.getElementById('countdown');
-  const timer = setInterval(() => {
-    countdown--;
-    el.textContent = countdown;
-    if (countdown <= 0) {
-      clearInterval(timer);
-      loadTrack().then(() => startCountdown());
-    }
-  }, 1000);
-}
-
-// ── Старт ──
-loadTrack().then(() => startCountdown());
+  // Автообновление каждые 5 минут
+  setInterval(() => {
+    if (polyline) polyline.setMap(null);
+    if (marker) marker.setMap(null);
+    loadTrack();
+  }, 5 * 60 * 1000);
 </script>
 
-<!-- Тёмный стиль для попапов Leaflet -->
-<style>
-.dark-popup .leaflet-popup-content-wrapper {
-  background: #0d1f3c;
-  border: 1px solid rgba(0,198,255,0.3);
-  color: #e8f4f8;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  border-radius: 8px;
-}
-.dark-popup .leaflet-popup-tip { background: #0d1f3c; }
-</style>
+<!--
+  Замени YOUR_GOOGLE_MAPS_API_KEY на свой ключ Google Maps JavaScript API.
+  Получить бесплатно: https://console.cloud.google.com → APIs → Maps JavaScript API
+  Ограничь ключ доменом atlanticsail.net для безопасности.
+-->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5lsK0jjMceIO43iC3v_JS-nec6r1lzig&callback=initMap"
+  async defer>
+</script>
 
 </body>
 </html>
