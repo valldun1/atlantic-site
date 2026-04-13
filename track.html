@@ -82,40 +82,45 @@
         return;
       }
 
-      // Трек — линия
-      polyline = new google.maps.Polyline({
-        path: points,
-        geodesic: true,
-        strokeColor: "#4a9eff",
-        strokeOpacity: 0.9,
-        strokeWeight: 3,
-        map,
-      });
+      function drawTrack(pts, color, label) {
+        if (pts.length === 0) return;
+        new google.maps.Polyline({
+          path: pts,
+          geodesic: true,
+          strokeColor: color,
+          strokeOpacity: 0.9,
+          strokeWeight: 3,
+          map,
+        });
+        const last = pts[pts.length - 1];
+        new google.maps.Marker({
+          position: last,
+          map,
+          title: label,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 8,
+            fillColor: color,
+            fillOpacity: 1,
+            strokeColor: "#fff",
+            strokeWeight: 2,
+          },
+        });
+      }
 
-      // Последняя точка — маркер
-      const last = points[points.length - 1];
-      marker = new google.maps.Marker({
-        position: last,
-        map,
-        title: "Последняя позиция",
-        icon: {
-          path: google.maps.SymbolPath.CIRCLE,
-          scale: 8,
-          fillColor: "#ff6b35",
-          fillOpacity: 1,
-          strokeColor: "#fff",
-          strokeWeight: 2,
-        },
-      });
+      drawTrack(byKostya, "#4a9eff", "Костя");
+      drawTrack(byYura, "#ff6b35", "Юра");
 
-      // Подогнать вид под трек
+      // Подогнать вид
       const bounds = new google.maps.LatLngBounds();
       points.forEach(p => bounds.extend(p));
-      map.fitBounds(bounds);
+      if (points.length > 0) map.fitBounds(bounds);
 
-      document.getElementById("info").textContent = `Точек: ${points.length}`;
+      document.getElementById("info").textContent =
+        `⚓ Костя: ${byKostya.length} | 🚢 Юра: ${byYura.length}`;
+      const last = points[points.length - 1];
       document.getElementById("status").textContent =
-        `📍 Последняя: ${last.lat.toFixed(4)}, ${last.lng.toFixed(4)}`;
+        `📍 Последняя: ${last?.lat.toFixed(4)}, ${last?.lng.toFixed(4)}`;
 
     } catch (e) {
       console.error(e);
