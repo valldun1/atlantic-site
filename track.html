@@ -60,21 +60,27 @@
       const res = await fetch(JSON_URL);
       if (!res.ok) throw new Error("Не удалось загрузить данные");
       const text = await res.text();
-      // gviz возвращает JSONP: google.visualization.Query.setResponse({...})
       const jsonStr = text.match(/google\.visualization\.Query\.setResponse\((.+)\);?$/s)?.[1];
       if (!jsonStr) throw new Error("Не удалось распарсить ответ");
       const json = JSON.parse(jsonStr);
       const rows = json.table.rows;
 
-      const points = rows
-        .map(row => {
-          const cells = row.c;
-          if (!cells || cells.length < 3) return null;
-          const lat = parseFloat(cells[1]?.v);
-          const lon = parseFloat(cells[2]?.v);
-          return isNaN(lat) || isNaN(lon) ? null : { lat, lng: lon };
-        })
-        .filter(Boolean);
+      const byKostya = [];
+      const byYura = [];
+
+      rows.forEach(row => {
+        const cells = row.c;
+        if (!cells || cells.length < 3) return;
+        const lat = parseFloat(cells[1]?.v);
+        const lon = parseFloat(cells[2]?.v);
+        const captain = cells[3]?.v || "kostya";
+        if (isNaN(lat) || isNaN(lon)) return;
+        const point = { lat, lng: lon };
+        if (captain === "yura") byYura.push(point);
+        else byKostya.push(point);
+      });
+
+      const points = [...byKostya, ...byYura];
 
       if (points.length === 0) {
         document.getElementById("status").textContent = "📭 Точек пока нет";
@@ -111,7 +117,6 @@
       drawTrack(byKostya, "#4a9eff", "Костя");
       drawTrack(byYura, "#ff6b35", "Юра");
 
-      // Подогнать вид
       const bounds = new google.maps.LatLngBounds();
       points.forEach(p => bounds.extend(p));
       if (points.length > 0) map.fitBounds(bounds);
