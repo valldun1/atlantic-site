@@ -1,198 +1,134 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<title>Яхтинг Канарские острова | Лас-Пальмас | Atlantic Sail</title>
-<meta content="Маршруты по Канарским островам: Гран-Канария, Тенерифе, Лансароте. База в Лас-Пальмасе. Круглый год." name="description"/>
-<meta content="яхтинг Канарские острова, аренда яхты Лас-Пальмас, чартер Тенерифе" name="keywords"/>
-<meta content="Яхтинг Канарские острова | Лас-Пальмас | Atlantic Sail" property="og:title"/>
-<meta content="Маршруты по Канарским островам: Гран-Канария, Тенерифе, Лансароте. База в Лас-Пальмасе. Круглый год." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://atlanticsail.net/img/20160604_195317.jpg" property="og:image"/>
-<meta content="index, follow" name="robots"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');
-    }
-  </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "Яхтинг на Канарских островах",
-  "description": "Гран-Канария, Тенерифе, Лансароте, Фуэртевентура. Круглый год из Лас-Пальмаса.",
-  "offers": {"@type": "Offer", "price": "500", "priceCurrency": "EUR"},
-  "provider": {"@type": "TravelAgency", "name": "Atlantic Sail", "url": "https://atlanticsail.net"}
-}
-</script>
-  <link rel="canonical" href="https://atlanticsail.net/kanarskie-ostrova.html"/>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-  <link rel="shortcut icon" href="favicon.svg"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Яхтинг на Канарских островах 2026 | Лас-Пальмас, Тенерифе | Atlantic Sail</title>
+<meta name="description" content="Маршруты на яхте по Канарским островам: Гран-Канария, Тенерифе, Ла-Гомера, Лансароте, Фуэртевентура, Грасиоза. Зимняя база Atlantic Sail, от 650 € место."/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="shortcut icon" href="favicon.svg"/>
+<link rel="canonical" href="https://atlanticsail.net/kanarskie-ostrova.html"/>
+<meta property="og:title" content="Яхтинг на Канарских островах 2026 | Лас-Пальмас, Тенерифе | Atlantic Sail"/>
+<meta property="og:description" content="Маршруты на яхте по Канарским островам: Гран-Канария, Тенерифе, Ла-Гомера, Лансароте, Фуэртевентура, Грасиоза. Зимняя база Atlantic Sail, от 650 € место."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
+<meta property="og:url" content="https://atlanticsail.net/kanarskie-ostrova.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
+<link rel="stylesheet" href="style.css"/>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');}</script>
+<style>
+.r26-grid{display:flex;flex-direction:column;gap:0}
+.r26-card{position:relative;overflow:hidden;border-bottom:1px solid rgba(26,47,69,0.1);background:#fff;cursor:default;transition:background 0.2s}
+.r26-card:hover{background:#f7fbff}
+.r26-header{display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:1rem;padding:1.1rem 1.5rem}
+.r26-dates{font-size:.82rem;font-weight:700;color:#c9a84c;white-space:nowrap}
+.r26-route-name{font-size:.92rem;font-weight:600;color:#1a2f45}
+.r26-route-short{font-size:.78rem;color:#5a7a8a;margin-top:.15rem}
+.r26-price{font-size:1rem;font-weight:700;color:#1a2f45;white-space:nowrap;text-align:right}
+.r26-price span{font-size:.72rem;font-weight:400;color:#5a7a8a;display:block}
+.r26-popup{display:none;position:absolute;left:0;right:0;top:100%;z-index:100;background:#fff;box-shadow:0 8px 32px rgba(26,47,69,.18);border-top:2px solid #c9a84c;animation:fadeDown .18s ease}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.r26-card:hover .r26-popup{display:flex}
+.r26-popup-img{width:260px;flex-shrink:0;object-fit:cover}
+.r26-popup-body{padding:1.4rem 1.6rem;flex:1}
+.r26-popup-title{font-size:.95rem;font-weight:700;color:#1a2f45;margin-bottom:.6rem}
+.r26-popup-desc{font-size:.84rem;color:#3a5a6a;line-height:1.65;margin-bottom:.8rem}
+.r26-popup-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.r26-tag{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:#9a7830;font-size:.72rem;font-weight:600;padding:.2rem .6rem;border-radius:20px}
+.r26-section-title{padding:.8rem 1.5rem;background:#1a2f45;color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+@media(max-width:768px){.r26-header{grid-template-columns:1fr auto}.r26-dates{grid-column:1/-1}.r26-popup{position:static;display:none;flex-direction:column}.r26-popup-img{width:100%;height:160px}.r26-card.open .r26-popup{display:flex}}
+</style>
 </head>
 <body>
 <header class="as-header">
-<a class="as-logo" href="index.html">
-<span class="as-logo-icon">⚓</span>
-    Atlantic <span>Sail</span>
-</a>
+<a class="as-logo" href="index.html"><span class="as-logo-icon">⚓</span>Atlantic <span>Sail</span></a>
 <ul class="as-nav">
 <li><a href="index.html">Главная</a></li>
-<li>
-<span>Наш флот <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="lipari41.html">Катамаран Липари 41</a>
-<a href="oceanis-473.html">Океанис 473 Клипер</a>
-<a href="dufour405.html">Дюфур 405</a>
-<a href="lucia40.html">Люсия 40</a>
-</div>
-</li>
-<li>
-<span>Маршруты <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="plan-2026.html">Переходы 2026</a>
-<a href="plan-2025.html">Переходы 2025</a>
-<a href="plan-2024.html">Переходы 2024</a>
-<a href="kanarskie-ostrova.html">Канарские острова</a>
-<a href="caribs.html">Карибские острова</a>
-<a href="malaga-mallorca.html">Малага — Майорка</a>
-<a href="montenegro.html">Черногория</a>
-<a href="croatia.html">Хорватия</a>
-<a href="sailing.html">Парусный спорт</a>
-<a href="yachtingtravel.html">Яхтинг путешествия</a>
-<a href="otchet-o-perehodah.html">Отчёт о переходах</a>
-</div>
-</li>
-<li>
-<span>Базирование <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="rekomenduemye-mariny.html">Канарские острова</a>
-<a href="mariny-v-chernogorii.html">Черногория</a>
-<a href="marina-karibes.html">Карибы</a>
-</div>
-</li>
+<li><span>Наш флот <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="lipari41.html">Катамаран Липари 41</a><a href="oceanis-473.html">Океанис 473 Клипер</a><a href="dufour405.html">Дюфур 405</a><a href="lucia40.html">Люсия 40</a></div></li>
+<li><span>Маршруты <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="plan-2026.html">Переходы 2026</a><a href="plan-2025.html">Переходы 2025</a><a href="plan-2024.html">Переходы 2024</a><a href="kanarskie-ostrova.html">Канарские острова</a><a href="caribs.html">Карибские острова</a><a href="malaga-mallorca.html">Малага — Майорка</a><a href="montenegro.html">Черногория</a><a href="montenegro-summer.html">🇲🇪 Лето 2026</a><a href="sailing.html">Парусный спорт</a><a href="otchet-o-perehodah.html">Отчёт о переходах</a></div></li>
+<li><span>Базирование <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="rekomenduemye-mariny.html">Канарские острова</a><a href="mariny-v-chernogorii.html">Черногория</a><a href="marina-karibes.html">Карибы</a></div></li>
 <li><a href="prajs.html">Прайс</a></li>
 <li><a href="contact.html">Контакты</a></li>
 </ul>
 <div class="as-header-right">
-<div class="as-translate-wrap">
-<button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button>
-<div id="google_translate_element"></div>
-</div>
-<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg> Написать</a>
+<div class="as-translate-wrap"><button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button><div id="google_translate_element"></div></div>
+<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg> Написать</a>
 <button class="as-hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </div>
 </header>
 <div class="as-mobile-menu" id="mobMenu">
-<div class="as-mob-item">
-<a href="index.html">Главная</a>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Наш флот ▾</span>
-<div class="as-mob-sub">
-<a href="lipari41.html">Катамаран Липари 41</a>
-<a href="oceanis-473.html">Океанис 473 Клипер</a>
-<a href="dufour405.html">Дюфур 405</a>
-<a href="lucia40.html">Люсия 40</a>
-</div>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Маршруты ▾</span>
-<div class="as-mob-sub">
-<a href="plan-2026.html">Переходы 2026</a>
-<a href="plan-2025.html">Переходы 2025</a>
-<a href="plan-2024.html">Переходы 2024</a>
-<a href="kanarskie-ostrova.html">Канарские острова</a>
-<a href="caribs.html">Карибские острова</a>
-<a href="malaga-mallorca.html">Малага — Майорка</a>
-<a href="montenegro.html">Черногория</a>
-<a href="croatia.html">Хорватия</a>
-<a href="sailing.html">Парусный спорт</a>
-<a href="otchet-o-perehodah.html">Отчёт о переходах</a>
-</div>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Базирование ▾</span>
-<div class="as-mob-sub">
-<a href="rekomenduemye-mariny.html">Канарские острова</a>
-<a href="mariny-v-chernogorii.html">Черногория</a>
-<a href="marina-karibes.html">Карибы</a>
-</div>
-</div>
+<div class="as-mob-item"><a href="index.html">Главная</a></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Наш флот ▾</span><div class="as-mob-sub"><a href="lipari41.html">Катамаран Липари 41</a><a href="oceanis-473.html">Океанис 473 Клипер</a><a href="dufour405.html">Дюфур 405</a><a href="lucia40.html">Люсия 40</a></div></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Маршруты ▾</span><div class="as-mob-sub"><a href="plan-2026.html">Переходы 2026</a><a href="plan-2025.html">Переходы 2025</a><a href="plan-2024.html">Переходы 2024</a><a href="kanarskie-ostrova.html">Канарские острова</a><a href="caribs.html">Карибские острова</a><a href="montenegro.html">Черногория</a><a href="montenegro-summer.html">🇲🇪 Лето 2026</a></div></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Базирование ▾</span><div class="as-mob-sub"><a href="rekomenduemye-mariny.html">Канарские острова</a><a href="mariny-v-chernogorii.html">Черногория</a><a href="marina-karibes.html">Карибы</a></div></div>
 <div class="as-mob-item"><a href="prajs.html">Прайс</a></div>
 <div class="as-mob-item"><a href="contact.html">Контакты</a></div>
-<div class="as-mob-actions">
-<a class="as-btn as-btn-telegram" href="https://t.me/captainatlanticbot" target="_blank">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg>
-    Написать капитану
-  </a>
+<div class="as-mob-actions"><a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>Написать капитану</a></div>
 </div>
+<div class="as-page-hero"><h1>Канарские <em>острова</em></h1><p>Гран-Канария · Тенерифе · Гомера · Лансароте · Фуэртевентура</p></div>
+<section class="as-section" style="padding-top:1.5rem"><div class="as-container"><div class="as-content">
+<div style="background:var(--ocean);border-left:3px solid var(--gold);padding:.9rem 1rem;border-radius:0 4px 4px 0;margin-bottom:1.5rem;font-size:.88rem">
+  <strong>📅 Сезон:</strong> декабрь – май (зимняя база)<br>
+  <strong>🗺️ Маршруты:</strong> Гран-Канария → Тенерифе → Гомера / Лансароте / Фуэртевентура<br>
+  <strong>✈️ Аэропорт:</strong> Лас-Пальмас (LPA) — главный хаб флота<br>
+  <strong>💰 Стоимость:</strong> от <strong style="color:var(--gold-d)">650 € / место / неделя</strong>
 </div>
-<div class="as-page-hero">
-<h1>Канарские <em>острова</em></h1>
-<p>Маршруты по Канарским островам</p>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=440&q=80&fit=crop" alt="Канарские острова пассаты яхта" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:6px;margin:1rem 0"/>
+<p>Канарские острова — зимняя база Atlantic Sail. Пассаты с северо-востока, +20°C зимой, 250 солнечных дней. Переходы по архипелагу — серьёзные морские маршруты в открытом океане. Зоны усиления ветра между островами — рифы берём заранее.</p>
+<h2 style="font-size:1.05rem;font-weight:700;color:#1a2f45;border-bottom:2px solid var(--gold);padding-bottom:.4rem;margin:2rem 0 1rem">Гран-Канария — старт</h2>
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">⚓</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Лас-Пальмас · Главная база флота 🏠</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">Самая большая яхтенная марина Гран-Канарии (1363 места). Отсюда стартует ARC — крупнейший трансатлантический переход мира. Старый город Вегета — барочный собор, дом-музей Колумба. Пляж Лас-Кантерас — 3 км городского пляжа. Рынок Санта-Каталина — лучший ром и сыры.</div></div>
 </div>
-<section class="as-section">
-<div class="as-container">
-<div class="as-content">
-<h2>Канарские острова Юго Запад</h2>
-<h2>Суббота</h2>
-<h2>Маршрут яхт по Канарским островам</h2>
-<h2>(1 - 2 недели)</h2>
-<p>Заезд на яхту, размещение, закупка основных продуктов и воды на все время аренды яхты. Это важно сделать именно в субботу, в Испании магазины в воскресенье не работают. Ночевка на яхте в базовой марине. Марина находится в центре города.  Рядом на набережной лучшие рестораны и кафешки города. Город начал развиваться со времен Колумба, поэтому очень старых архитектурных памятников вы не найдете. Лас Пальмас это столица острова Гран Канария и каждые два года он становится столицей Канарсого архипелага, чередуя это почетное звание со столицей острова Тенерифе городом Санта Круз. Рядом с мариной находится небольшой пляж с мелким чистым песком. В зимнее время напротив пляжа разрешено ставить яхты на якорь. Еще один пляж Лас Кантерас расположен в 20-30 минутах хотьбы, этот пляж открыт для океанского ветра и волн поэтому здесь часто тренируются серфингисты.</p>
-<h2>Воскресенье</h2>
-<h2>60 миль</h2>
-<p>Путешествие на яхте на соседний остров Тенерифе в центральную марину города Санта Круз. Этот переход  на яхте займет 8-10 часов и если есть желание попасть в марину в светлое время суток, то выходить надо пораньше. Возле яхтенной стоянки в Санта Крузе расположен пассажирский порт сюда регулярно пристают паромы, а немного в стороне стоят пассажирские лайнеры поэтому возле марины всегда много суеты. Почти на территории марины расположен пункт проката автомашин, если есть желание проехать по острову, то его можно сразу осуществить. От марины на центральную улицу города ведет пешеходный мостик. Все магазины, рестораны и кафе расположены в городе, там же вы найдете небольшой парк и детскую площадку. По площади столица острова Тенерифе не уступает столице острова Гран Канария. Это большой современный промышленный город. Для интересующихся местными деликатесами будет интересно утром в понедельник сходить на местный рынок.</p>
-<h2>Понедельник</h2>
-<h2>35 миль.</h2>
-<p>Небольшой по океанским меркам переход яхты на юг острова в марину Сан Мигель. Этот переход, как правило, сопровождается попутным ветром, но на подходе к марине ветер усиливается. Вход в марину достаточно узкий, но зато от сильного ветра всю марину защищает высокий волнолом. Здесь всегда ветер. Остров имеет 9 климатических зон, поэтому вы сразу почувствуете разницу между севером и югом, хотя это еще не совсем юг острова. Рядом с мариной расположены гольф поля и южный аэропорт. В марине регулярно работает одно кафе в здании капитании и иногда небольшой бар в центральной части. Рядом расположен небольшой городок в котором почти все кафе и рестораны оставляют желать лучшего. Но если вы не поленитесь взять такси, то за 10 минут сможете попасть в прекрасный ресторан расположенный внутри банановой плантации El GUARGACHO.  Это мясной ресторан с большим количеством различных блюд, огромными порциями, вкусным домашним вином и удивительно лояльными ценами. Места под пальмами почти всегда есть поэтому можно не резервировать столики заранее. Очень рекомендуем.</p>
-<h2>Вторник</h2>
-<h2>20 морских миль.</h2>
-<p>Совсем небольшой переход на яхте из весны в лето. Южная часть острова Тенерифе защищена от преобладающих и почти постоянно дующих северо- восточных ветров вулканом Тельда высотой 4 км. Здесь всегда тепло и эта часть острова излюбленное место туристов. Яхтенных марин здесь много, но желательно бронировать места заранее. Если не повезет и вам не предоставят место в марине, то можно встать на якоре. Так как ветра здесь обычно почти нет якорная стоянка достаточно безопасна, хотя большая океанская волна заходя сюда совсем краешком может раскачивать яхту достаточно сильно. На берегу типичная курортная зона с отелями, ресторанами и магазинами. Вся береговая линия состоит из пляжей здесь все для туристов пиво, воды, кафе, рестораны и дискотеки.</p>
-<h2>Среда</h2>
-<h2>20-25 морских миль.</h2>
-<p>Не выходя из зоны ветровой тени не поднимая паруса вы можете попасть на недольшой остров Ла Гомера. Круиз на яхте до соседнего острова не займет много времени. Но не торопитесь идти полным ходом прямо в марину города Сан Себастьян столицу острва Ла Гомера. Посмотрите с моря на остров Тенерифе и оглядитесь вокруг. Между островами вы обязательно увидете несколько больших прогулочных катамаранов и гулетов. Это экскурсии, идите прямо к ним. Отдыхающих в отелях везут смотреть на китов. Здесь почти всегда можно встретить несколько семейств китов, а уж дельфинов тут вообще сложно пересчитать. Киты лежат на воде и греются на солнышке. Подходить надо на малом ходу, что бы не спугнуть стаю. Купаться с китами категорически запрещено, штраф за такое легкомыслие поражает воображение и сильно бьет по карману. Не растягивайте переход на весь день, на острове Ла Гомера много интересного. Здесь Колумб пополнял запасы пресной воды, а так же очередной раз женился или завел роман с дочкой или женой губернатора. Если встанете в марине города Сан Себастьян возле паромного причала, то там же найдете пункт проката машин. Настоятельно рекомендуем прокатится по острову, это обязательно сделать в светлое время суток. В центре острова вы найдете заповедник с реликтовыми лесами, кажется, что попадаешь в сказку. В некоторых местах все деревья облеплены мхом до такой степени, что не видно веток. В центре небольшая кафешка где совершенно спокойно бродят ведьмы с зелеными или фиолетовыми волосами. Виды природы острова очень красивы, а из некоторых верхних точек просматриваются острова Ла Пальма, Гран Канария и Тенерифе.</p>
-<h2>Четверг</h2>
-<h2>80 миль.</h2>
-<p>Это будет настоящий океанское путешествие на парусной яхте. Вы пройдете зону акселерации там ветер усиливается в несколько раз. Это не шторм или ураган, просто ветер проходя между высокими вулканическими островами усиливается как в аэродинамической трубе. Дуть будет сильно, видимой зоны где усиливается ветер можно не заметить. Разница в сиюминутном ветре может быть от 10 до 40 узлов. Это место потеряных мачт, берите рифы заранее, а лучше идите сразу с зарифленными парусами. Исключения бывают, но редко. Обучение на яхте в этом районе достаточно рисковано для новичков, но вполне подойдет для повышения квалификации. Переход яхтдостаточно длинный, но благодаря сильному ветру и практически галфинду это расстояние преодолевается за 8-10 часов. На острове Гран Канария вы попадете опять в лето. Это южная сторона острова, здесь почти всегда жарко и нет ветра. Марин на этой стороне острова много, если не заказали место заранее где то да поставят, а не будет мест можно постоять на якоре. Здесь нет сплошной туристической береговой зоны, но так же как на юге Тенерифе отели сменяют друг друга. Из достопримечательностей здесь есть Палмитос парк с замечательным представлением морских львов и дельфинов, а на побережье огромные песчаные дюны как в африке, к сожалению облюбованные лицами нетрадиционной ориентации.</p>
-<h2>Пятница</h2>
-<h2>45 морских миль.</h2>
-<p>Небольшой, но очень тяжелый поход на яхте. Если вам сильно повезет и ветер будет дуть южный воспользуйтесь им в любое время. При преобладающих северо-восточных ветрах вам придеться весь переход совершить против ветра или в лучшем случае в крутой бейдвинд. Укачаются все кто еще не укачивался поэтому сомневающимся лучше проделать этот путь до Лас Пальмаса на автобусе всего лишь за 1 час. Остров круглый и высокий ветер с северо-востока огибает побережье с двух сторон если вы увидете встречную яхту они будут идти по ветру и не ощущать его, а для вас волн будет в два раза больше. Остановиться для купания скорее всего не захочется. Берега достаточно однообразны, вы пройдете аэропорт и зону ветряных электростанций, на подходе к Лас Пальмасу будет несколько якорных стоянок для больших судов. И особые ощущения когда лодка заходит за волнолом и исчезает океанская волна. В марину на</p>
-<p>до встать к 17 часам, а до этого времени еще заправиться поэтому выходить лучше рано утром.</p>
-<h2>Суббота</h2>
-<p>Ночевка на яхте в базовой марине. Ранний подьем и завтрак. Прощальное Фотографирование. В 09.00 освобождение яхты.</p>
-<p>Вторая неделя позволит нам зайти еще на два Канарских острова:</p>
-<h2>Иерро</h2>
-<p>Одной из самых интересных особенностей Йерро является его вулканический ландшафт, который включает в себя большое количество кратеров, потоков лавы и вулканических конусов. Фактически, центральная часть острова является биосферным заповедником ЮНЕСКО с разнообразными экосистемами и разнообразием эндемичной флоры и фауны.</p>
-<p>Йерро также известен своей потрясающей береговой линией с впечатляющими скалами и уединенными бухтами, которые идеально подходят для купания и подводного плавания. На острове также находится несколько живописных деревень, где посетители могут познакомиться с местным образом жизни и насладиться вкусной канарской кухней.</p>
-<p>Если вы хотите отправиться в Йерро под парусом, у вас есть несколько вариантов. На острове есть небольшая пристань, расположенная в городке Ла Рестинга, которая может принимать лодки длиной до 20 метров. Марина хорошо оборудована всеми необходимыми удобствами, включая воду и электричество, душевые и туалеты, а также небольшой магазин.</p>
-<p>Чтобы добраться до Иерро на парусной лодке, вам нужно взять курс с одного из близлежащих островов, например, с Ла Гомеры</p>
-<p>. Путешествие может занять от нескольких часов до целого дня, в зависимости от отправной точки и условий на море. По пути вы сможете насладиться потрясающим видом на океан и окружающие острова, а также увидеть дельфинов и других морских обитателей.</p>
-<p>В целом, Йерро — это действительно уникальное и увлекательное место, которое стоит посетить всем, кто любит природную красоту, приключения и отдых. Поплавать на острове — это отличный способ испытать его прелести и открыть для себя все, что он может предложить.</p>
-<h2>Ла-Пальма</h2>
-<p>красивый и уникальный остров в архипелаге Канарских островов, известный своей пересеченной местностью, потрясающей природной красотой и богатым культурным наследием. Некоторые из самых интересных вещей, которые можно увидеть и сделать на острове, включают в себя:</p>
-<p>Национальный парк Кальдера-де-Табуриенте — это место, которое обязательно нужно посетить любителям природы, туристам и фотографам. Парк может похвастаться массивным вулканическим кратером, красивыми сосновыми лесами и многочисленными пешеходными тропами.</p>
-<p>Обсерватория дель Роке-де-лос-Мучачос. Это одна из ведущих астрономических обсерваторий мира и отличное место для изучения ночного неба.</p>
-<p>Лес Лос-Тилос. Этот пышный субтропический тропический лес является домом для разнообразной уникальной флоры и фауны, в том числе редкого лаврового дерева.</p>
-<p>Винный маршрут Ла-Пальмы. Ла-Пальма известна своим превосходным вином, а посещение одной из многочисленных виноделен острова — отличный способ попробовать местные продукты.</p>
-<p>Чтобы добраться до Ла-Пальмы с острова Йерро на парусной яхте, вам нужно будет проплыть примерно 40 морских миль на северо-восток. Путешествие должно занять около 6</p>
-<p>часов, в зависимости от погодных условий. Важно тщательно планировать свой маршрут и проверять прогнозы погоды, прежде чем отправиться в путь. Вы также можете узнать у местных властей о любых разрешениях или правилах, которым вы должны следовать.</p>
-<h2>© 2026</h2>
-
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">🌺</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Юг острова · Пасито Бланко и Моган</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">Пасито Бланко — тихая марина на юге, хорошая точка перед переходом на запад. Puerto de Mogán — «маленькая Венеция» Канар: белые домики, бугенвилия, каналы. Обязательная остановка.</div></div>
 </div>
+<h2 style="font-size:1.05rem;font-weight:700;color:#1a2f45;border-bottom:2px solid var(--gold);padding-bottom:.4rem;margin:2rem 0 1rem">Западный маршрут — Тенерифе и Гомера</h2>
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">🌋</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Тенерифе · Вулкан Тейде 3715 м 🌋</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">Переход 60 миль. Вулкан Тейде — высшая точка Испании, виден за 100 миль в ясную погоду. Санта-Крус: паромный хаб, прокат машин прямо у марины. Юг острова — марина Сан-Мигель, солнечные пляжи, дешевле и тише.</div></div>
 </div>
-</section>
-<div class="as-bot-bar">
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">🐋</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Ла-Гомера · Киты и субтропические леса 🐋</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">«Остров, где живут киты» — встреча с косатками, кашалотами и дельфинами почти гарантирована. Субтропические леса Гарахонай — ЮНЕСКО. Маленький уютный порт Сан-Себастьян. Именно отсюда Колумб отплыл в свой первый поход к Америке в 1492 году.</div></div>
+</div>
+<h2 style="font-size:1.05rem;font-weight:700;color:#1a2f45;border-bottom:2px solid var(--gold);padding-bottom:.4rem;margin:2rem 0 1rem">Восточный маршрут — Лансароте и Фуэртевентура</h2>
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">🏄</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Фуэртевентура · 150 км пляжей, кайтсёрфинг 🏄</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">150 км непрерывных пляжей — лучший кайтсёрфинг Европы. Корралехо — красивые дюны, бирюзовая лагуна. Полуостров Хандия — дикие пустынные пляжи у самого южного мыса острова.</div></div>
+</div>
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">🌋</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Лансароте · Лунный пейзаж ЮНЕСКО 🌋</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">Вулканический рельеф как с другой планеты. Национальный парк Тиманфайя — лава, гейзеры, горячая земля. Дизайн Сезара Манрике везде на острове. Лагерта — самое красивое рыбацкое село архипелага.</div></div>
+</div>
+<div style="display:flex;gap:1rem;margin:.8rem 0;padding:.9rem 1rem;background:var(--ocean);border-radius:6px;border-left:3px solid var(--gold)">
+  <div style="min-width:36px;text-align:center;font-size:1.2rem">🏝️</div>
+  <div><div style="font-weight:700;color:#1a2f45;font-size:.88rem;margin-bottom:.25rem">Грасиоза · Нетронутый остров без асфальта 🏝️</div>
+  <div style="font-size:.84rem;color:#3a5a6a;line-height:1.6">Маленький необитаемый остров к северу от Лансароте — без асфальта, без толп, белые деревушки и чистейшая вода. Единственный транспорт — лодки и велосипеды.</div></div>
+</div>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=440&q=80&fit=crop" alt="Лансароте Фуэртевентура яхта океан" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:6px;margin:1rem 0"/>
+<div style="background:#e8f4fd;border-left:3px solid var(--gold);padding:1rem 1.2rem;border-radius:0 4px 4px 0;margin:2rem 0;font-size:.88rem">
+  <strong>Хочешь пройти этот маршрут?</strong> Напиши нам — подберём даты и место.<br>
+  <a href="plan-2026.html" style="color:var(--gold-d);font-weight:600">Расписание 2026 →</a>
+</div>
+<div style="text-align:center;margin:1.5rem 0">
+  <a href="https://wa.me/34603192089?text=%D0%9A%D0%B0%D0%BD%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B5+%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0" target="_blank" class="as-btn as-btn-primary">💬 Хочу этот маршрут</a>
+  <a href="prajs.html" class="as-btn as-btn-outline" style="margin-left:.8rem">Прайс →</a>
+</div>
+</div></div></section><div class="as-bot-bar">
 <p>Задайте вопрос капитану прямо в Telegram — ответим быстро!</p>
 <a class="as-btn as-btn-telegram" href="https://t.me/captainatlanticbot" target="_blank">
-<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg>
-    @CaptainAtlanticBot
-  </a>
+<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>@CaptainAtlanticBot</a>
 </div>
 <footer class="as-footer">
 <div class="as-footer-inner">
@@ -204,24 +140,12 @@
 <a href="https://www.instagram.com/capitankosta/" target="_blank">Instagram</a>
 <a href="contact.html">Контакты</a>
 <a href="prajs.html">Прайс</a>
-</div>
-</div>
-</footer>
+</div></div></footer>
 <script>
-const hbg = document.getElementById('hbg');
-const mob = document.getElementById('mobMenu');
-function toggleMenu() {
-  hbg.classList.toggle('open');
-  mob.classList.toggle('open');
-  document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
-}
-function toggleMobSub(el) {
-  const sub = el.nextElementSibling;
-  sub.classList.toggle('open');
-}
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); }), {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mobMenu');
+function toggleMenu(){hbg.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':'';}
+function toggleMobSub(el){el.nextElementSibling.classList.toggle('open');}
+document.querySelectorAll('.r26-card').forEach(function(c){c.addEventListener('click',function(){if(window.innerWidth<=768)this.classList.toggle('open');});});
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
+</body></html>

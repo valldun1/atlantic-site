@@ -1,276 +1,218 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<title>Наши базы | Atlantic Sail</title>
-  <meta name="description" content="Базы флота Atlantic Sail по всему миру. Лас-Пальмас, Тиват, Мартиника."/>
-  <meta name="keywords" content="базы Atlantic Sail, яхтенные базы"/>
-  <meta property="og:title" content="Наши базы | Atlantic Sail"/>
-  <meta property="og:description" content="Базы флота Atlantic Sail по всему миру. Лас-Пальмас, Тиват, Мартиника."/>
-  <meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
-  <meta name="robots" content="index, follow"/>
-<meta content="Аренда яхт с капитаном. Атлантика, Канары, Средиземноморье, Карибы." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');
-    }
-  </script>
-  <link rel="canonical" href="https://atlanticsail.net/nashi-bazy.html"/>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-  <link rel="shortcut icon" href="favicon.svg"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Наши базы | Майорка, Сардиния, Корсика, Бриндизи | Atlantic Sail</title>
+<meta name="description" content="Промежуточные базы Atlantic Sail: Майорка, Менорка, Сардиния, Корсика, Бриндизи. Марины на маршруте Канары–Черногория с координатами и описаниями."/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="shortcut icon" href="favicon.svg"/>
+<link rel="canonical" href="https://atlanticsail.net/nashi-bazy.html"/>
+<meta property="og:title" content="Наши базы | Майорка, Сардиния, Корсика, Бриндизи | Atlantic Sail"/>
+<meta property="og:description" content="Промежуточные базы Atlantic Sail: Майорка, Менорка, Сардиния, Корсика, Бриндизи. Марины на маршруте Канары–Черногория с координатами и описаниями."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
+<meta property="og:url" content="https://atlanticsail.net/nashi-bazy.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
+<link rel="stylesheet" href="style.css"/>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');}</script>
+<style>
+.r26-grid{display:flex;flex-direction:column;gap:0}
+.r26-card{position:relative;overflow:hidden;border-bottom:1px solid rgba(26,47,69,0.1);background:#fff;cursor:default;transition:background 0.2s}
+.r26-card:hover{background:#f7fbff}
+.r26-header{display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:1rem;padding:1.1rem 1.5rem}
+.r26-dates{font-size:.82rem;font-weight:700;color:#c9a84c;white-space:nowrap}
+.r26-route-name{font-size:.92rem;font-weight:600;color:#1a2f45}
+.r26-route-short{font-size:.78rem;color:#5a7a8a;margin-top:.15rem}
+.r26-price{font-size:1rem;font-weight:700;color:#1a2f45;white-space:nowrap;text-align:right}
+.r26-price span{font-size:.72rem;font-weight:400;color:#5a7a8a;display:block}
+.r26-popup{display:none;position:absolute;left:0;right:0;top:100%;z-index:100;background:#fff;box-shadow:0 8px 32px rgba(26,47,69,.18);border-top:2px solid #c9a84c;animation:fadeDown .18s ease}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.r26-card:hover .r26-popup{display:flex}
+.r26-popup-img{width:260px;flex-shrink:0;object-fit:cover}
+.r26-popup-body{padding:1.4rem 1.6rem;flex:1}
+.r26-popup-title{font-size:.95rem;font-weight:700;color:#1a2f45;margin-bottom:.6rem}
+.r26-popup-desc{font-size:.84rem;color:#3a5a6a;line-height:1.65;margin-bottom:.8rem}
+.r26-popup-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.r26-tag{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:#9a7830;font-size:.72rem;font-weight:600;padding:.2rem .6rem;border-radius:20px}
+.r26-section-title{padding:.8rem 1.5rem;background:#1a2f45;color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+@media(max-width:768px){.r26-header{grid-template-columns:1fr auto}.r26-dates{grid-column:1/-1}.r26-popup{position:static;display:none;flex-direction:column}.r26-popup-img{width:100%;height:160px}.r26-card.open .r26-popup{display:flex}}
+</style>
 </head>
 <body>
 <header class="as-header">
-<a class="as-logo" href="index.html">
-<span class="as-logo-icon">⚓</span>
-    Atlantic <span>Sail</span>
-</a>
+<a class="as-logo" href="index.html"><span class="as-logo-icon">⚓</span>Atlantic <span>Sail</span></a>
 <ul class="as-nav">
 <li><a href="index.html">Главная</a></li>
-<li>
-<span>Наш флот <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="lipari41.html">Катамаран Липари 41</a>
-<a href="oceanis-473.html">Океанис 473 Клипер</a>
-<a href="dufour405.html">Дюфур 405</a>
-<a href="lucia40.html">Люсия 40</a>
-</div>
-</li>
-<li>
-<span>Маршруты <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="plan-2026.html">Переходы 2026</a>
-<a href="plan-2025.html">Переходы 2025</a>
-<a href="plan-2024.html">Переходы 2024</a>
-<a href="kanarskie-ostrova.html">Канарские острова</a>
-<a href="caribs.html">Карибские острова</a>
-<a href="malaga-mallorca.html">Малага — Майорка</a>
-<a href="montenegro.html">Черногория</a>
-<a href="croatia.html">Хорватия</a>
-<a href="sailing.html">Парусный спорт</a>
-<a href="yachtingtravel.html">Яхтинг путешествия</a>
-<a href="otchet-o-perehodah.html">Отчёт о переходах</a>
-</div>
-</li>
-<li>
-<span>Базирование <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="rekomenduemye-mariny.html">Канарские острова</a>
-<a href="mariny-v-chernogorii.html">Черногория</a>
-<a href="marina-karibes.html">Карибы</a>
-</div>
-</li>
+<li><span>Наш флот <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="lipari41.html">Катамаран Липари 41</a><a href="oceanis-473.html">Океанис 473 Клипер</a><a href="dufour405.html">Дюфур 405</a><a href="lucia40.html">Люсия 40</a></div></li>
+<li><span>Маршруты <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="plan-2026.html">Переходы 2026</a><a href="plan-2025.html">Переходы 2025</a><a href="plan-2024.html">Переходы 2024</a><a href="kanarskie-ostrova.html">Канарские острова</a><a href="caribs.html">Карибские острова</a><a href="malaga-mallorca.html">Малага — Майорка</a><a href="montenegro.html">Черногория</a><a href="montenegro-summer.html">🇲🇪 Лето 2026</a><a href="sailing.html">Парусный спорт</a><a href="otchet-o-perehodah.html">Отчёт о переходах</a></div></li>
+<li><span>Базирование <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="rekomenduemye-mariny.html">Канарские острова</a><a href="mariny-v-chernogorii.html">Черногория</a><a href="marina-karibes.html">Карибы</a></div></li>
 <li><a href="prajs.html">Прайс</a></li>
 <li><a href="contact.html">Контакты</a></li>
 </ul>
 <div class="as-header-right">
-<div class="as-translate-wrap">
-<button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button>
-<div id="google_translate_element"></div>
-</div>
-<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg> Написать</a>
+<div class="as-translate-wrap"><button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button><div id="google_translate_element"></div></div>
+<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg> Написать</a>
 <button class="as-hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </div>
 </header>
 <div class="as-mobile-menu" id="mobMenu">
-<div class="as-mob-item">
-<a href="index.html">Главная</a>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Наш флот ▾</span>
-<div class="as-mob-sub">
-<a href="lipari41.html">Катамаран Липари 41</a>
-<a href="oceanis-473.html">Океанис 473 Клипер</a>
-<a href="dufour405.html">Дюфур 405</a>
-<a href="lucia40.html">Люсия 40</a>
-</div>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Маршруты ▾</span>
-<div class="as-mob-sub">
-<a href="plan-2026.html">Переходы 2026</a>
-<a href="plan-2025.html">Переходы 2025</a>
-<a href="plan-2024.html">Переходы 2024</a>
-<a href="kanarskie-ostrova.html">Канарские острова</a>
-<a href="caribs.html">Карибские острова</a>
-<a href="malaga-mallorca.html">Малага — Майорка</a>
-<a href="montenegro.html">Черногория</a>
-<a href="croatia.html">Хорватия</a>
-<a href="sailing.html">Парусный спорт</a>
-<a href="otchet-o-perehodah.html">Отчёт о переходах</a>
-</div>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Базирование ▾</span>
-<div class="as-mob-sub">
-<a href="rekomenduemye-mariny.html">Канарские острова</a>
-<a href="mariny-v-chernogorii.html">Черногория</a>
-<a href="marina-karibes.html">Карибы</a>
-</div>
-</div>
+<div class="as-mob-item"><a href="index.html">Главная</a></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Наш флот ▾</span><div class="as-mob-sub"><a href="lipari41.html">Катамаран Липари 41</a><a href="oceanis-473.html">Океанис 473 Клипер</a><a href="dufour405.html">Дюфур 405</a><a href="lucia40.html">Люсия 40</a></div></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Маршруты ▾</span><div class="as-mob-sub"><a href="plan-2026.html">Переходы 2026</a><a href="plan-2025.html">Переходы 2025</a><a href="plan-2024.html">Переходы 2024</a><a href="kanarskie-ostrova.html">Канарские острова</a><a href="caribs.html">Карибские острова</a><a href="montenegro.html">Черногория</a><a href="montenegro-summer.html">🇲🇪 Лето 2026</a></div></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Базирование ▾</span><div class="as-mob-sub"><a href="rekomenduemye-mariny.html">Канарские острова</a><a href="mariny-v-chernogorii.html">Черногория</a><a href="marina-karibes.html">Карибы</a></div></div>
 <div class="as-mob-item"><a href="prajs.html">Прайс</a></div>
 <div class="as-mob-item"><a href="contact.html">Контакты</a></div>
-<div class="as-mob-actions">
-<a class="as-btn as-btn-telegram" href="https://t.me/captainatlanticbot" target="_blank">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg>
-    Написать капитану
-  </a>
+<div class="as-mob-actions"><a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>Написать капитану</a></div>
 </div>
-</div>
-<div class="as-page-hero">
-<h1>Наши <em>базы</em></h1>
-<p>Места базирования флота</p>
-</div>
-<section class="as-section">
+<div class="as-page-hero"><h1>Наши <em>базы</em></h1><p>Майорка · Сардиния · Корсика · Бриндизи</p></div>
+<section class="as-section" style="padding-top:1.5rem">
 <div class="as-container">
-<div class="as-content">
-<h2>Балеарские острова</h2>
-<h2>Mallorca  (Майорка)</h2>
-<p>Real Club Náutico de Palma (Королевский яхт-клуб Пальмы де Майорка)</p>
-<p>Телефон: +34 971 123 962</p>
-<h2>Координаты для яхт: 39º 34′N 2º 38′Е</h2>
-<h2>Сайт: rcnp.es</h2>
-<h2>Club de Mar (Клуб де Мар)</h2>
-<p>Телефон: +34 971 403 611</p>
-<h2>Координаты для яхт:  39º 33′ 5″ N 2º 38′ 5″Е</h2>
-<h2>Сайт: clubdemar-mallorca.com</h2>
-<h2>Marina Port de Mallorca (Марина Порт де Майорка)</h2>
-<p>Телефон: +34 971 220 024</p>
-<h2>Координаты для яхт:  39º 34′N 2º 38′Е</h2>
-<h2>Сайт: portdemallorca.com</h2>
-<p>Puerto de Colonia de Sant Jordi (Порт Колония де Сант Джорди)</p>
-<p>Телефон: +34 971 123 962</p>
-<h2>Координаты для яхт: 39º 18′ 57.05″ N 2º 59′ 57.29″Е</h2>
-<h2>Сайт: portsib.es</h2>
-<h2>Club Náutico Sa Rapita   (Яхт-клуб Са Рапита)</h2>
-<p>Телефон: +34 971 640 001</p>
-<h2>Координаты для яхт: 39º 21′ 36.81″ N 2º 57′ 12.95″Е</h2>
-<h2>Сайт: cnrapita.com</h2>
-<h2>Club Náutico S’Estanyol (Яхт-клуб дель Аренал)</h2>
-<p>Телефон: +34 971 440 142</p>
-<h2>Координаты для яхт: 39º 30.2″N 2º 44.8′Е</h2>
-<h2>Сайт: cnamoorings.com</h2>
-<p>Club Marítimo San Antonio de la Playa (Морской Клуб Сан Антонио де ла Плайа)</p>
-<p>Телефон: +34 971 745 076</p>
-<h2>Координаты для яхт:  39º 31′ 55.10″ N 2º 42′ 57.36″Е</h2>
-<h2>Сайт: cmsap.com</h2>
-<h2>Club Náutico Cala Gamba ( Яхт-клуб Кала Гамба)</h2>
-<p>Телефон: +34 971 261 849</p>
-<h2>Координаты для яхт:  39º 32′ 44.64″ N 2º 41′ 41.23″Е</h2>
-<h2>Сайт: cncg.es</h2>
-<p>Club Marítimo Molinar de Levante (Морской клуб Молинар де Леванте)</p>
-<p>Телефон: +34 971 249 460</p>
-<h2>Координаты для яхт:  39º 33′ 27.74″ N 2º 40′ 30.67″Е</h2>
-<h2>Сайт: cmmolinardelevante.com</h2>
-<h2>Club Náutico Portitxol (Яхт-клуб Портитчол)</h2>
-<p>Телефон: +34 971 242 424</p>
-<h2>Координаты для яхт:  39º 33′ 30.88″ N 2º 40′ 7.87″Е</h2>
-<h2>Сайт: cnportitxol.com</h2>
-<h2>Port Calanova (Порт Каланова)</h2>
-<p>Телефон: +34 971 402 512</p>
-<h2>Координаты для яхт:  39º 33′N 2º 36′Е</h2>
-<h2>Сайт: portcalanova.com</h2>
-<h2>Puerto Portals (Порт Порталс)</h2>
-<p>Телефон: +34 971 171 100</p>
-<h2>Координаты для яхт:  39º 32′N 2º 35′Е</h2>
-<h2>Сайт: puertoportals.com</h2>
-<h2>Port Adriano (Порт Адриано)</h2>
-<p>Телефон: +34 971 232 566</p>
-<h2>Координаты для яхт:  39º 29′ 6″ N 2º 28′ 3″Е</h2>
-<h2>Сайт: portadriano.com</h2>
-<h2>Club Náutico Santa Ponsa (Яхт-клуб Санта Понса)</h2>
-<p>Телефон: +34 971 694 950</p>
-<h2>Координаты для яхт:  39º 31′N 2º 28′ 5″Е</h2>
-<h2>Сайт: cnsantaponsa.com</h2>
-<h2>Port d’Andratx (Порт Андратч)</h2>
-<p>Телефон: +34 971 674 216</p>
-<h2>Координаты для яхт:  39º 32′ 5″N 2º 22′ 5″Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/port-dandratx</p>
-<h2>Port Soller (Порт Сойер)</h2>
-<p>Телефон: +34 971 186 129</p>
-<h2>Координаты для яхт:  39º 47,7′ N 2º 41.1′ Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/port-de-soller</p>
-<h2>Club Náutico Puerto de Pollensa (Яхт-клуб Порт-де-Польенса</h2>
-<p>Телефон: +34 971 864 635</p>
-<h2>Координаты для яхт:  39º 54′ 4″N 003º 05′ 2″ Е</h2>
-<h2>Сайт: rcnpp.es</h2>
-<p>Puerto Deportivo Marina de Bonaire (Спортивный порт Марина де Бонайре)</p>
-<p>Телефон: +34 971 546 955</p>
-<h2>Координаты для яхт:  39º 51′ 9″N 003º 08′7″Е</h2>
-<h2>Сайт: marinadebonaire.com</h2>
-<h2>Alcudiamar  (Порт Алкудиамар)</h2>
-<p>Телефон: +34 971 546 000</p>
-<h2>Координаты для яхт:  39º 50′ N 003º 08′ 5″ Е</h2>
-<h2>Сайт: alcudiamar.es</h2>
-<h2>Club Nàutic Ca’n Picafort (Яхт-клуб Кан Пикафорт)</h2>
-<p>Телефон: +34 971 850 185</p>
-<h2>Координаты для яхт:  39º 46′ 01″ N 003º 09′ 06″ Е</h2>
-<h2>Сайт: cncanpicafort.com</h2>
-<h2>Club Náutico Serranova (Яхт-клуб Серранова)</h2>
-<p>Телефон: +34 971 854 182</p>
-<h2>Координаты для яхт:  39º 44.36′ N 003º 13.24′ Е</h2>
-<h2>Сайт: cnserranova.com</h2>
-<p>Club Náutico Colonia de Sant Pere  (Яхт-клуб Колония де Сант Пере)</p>
-<p>Телефон: +34 971 589 118</p>
-<h2>Координаты для яхт:  39º 44′ 13″ N 003º 16′ 04″ Е</h2>
-<h2>Сайт: cncoloniasp.com</h2>
-<h2>Port de Cala Rajada (Порт де Ка ла Раджада)</h2>
-<p>Телефон: +34 971 565 067</p>
-<h2>Координаты для яхт:  39º 42.6′N 003º 27.9′ Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/todos-los-puertos/port-de-cala-rajada</p>
-<h2>Port de Cala Bona (Порт Кала Бона)</h2>
-<p>Телефон: +34 971 586 256</p>
-<h2>Координаты для яхт:  39º 36′ 51.33″N 3º 23′ 32.91″Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/todos-los-puertos/port-de-cala-bona</p>
-<h2>Porto Cristo  (Порто Кристо)</h2>
-<p>Телефон: +34 971 820 419</p>
-<h2>Координаты для яхт:  39º 32′ 25.12″N 3º 20′ 9.02″Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/todos-los-puertos/port-de-porto-cristo</p>
-<h2>Club Náutico Porto Cristo (Яхт-клуб Порто Кристо)</h2>
-<p>Телефон: +34 971 821 253</p>
-<h2>Координаты для яхт:  39º 32′ 25.12″N 3º 20′ 9.02″Е</h2>
-<h2>Сайт: cnportocristo.com</h2>
-<h2>Club Náutico Portocolom (Яхт-клуб Портоколом)</h2>
-<p>Телефон: +34 971 824 658</p>
-<h2>Координаты для яхт:  39º 25.4′ N 3º 15.8′ Е</h2>
-<h2>Сайт: cnportocolom.com</h2>
-<h2>Port de Portocolom (Портоколом)</h2>
-<p>Телефон: +34 971 824 683</p>
-<h2>Координаты для яхт:  39º 25′ 17.97″ N 3º 15′ 44.00″ Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/todos-los-puertos/port-de-portocolom</p>
-<h2>Marina Cala d’Or (Марина Кала д’Ор)</h2>
-<p>Телефон: +34 971 657 070</p>
-<h2>Координаты для яхт:  39º 22′ 5.23″ N 3º 13′ 40.13″ Е</h2>
-<h2>Сайт: marinacalador.es</h2>
-<h2>Portopetro  (Портопетро)</h2>
-<p>Телефон: +34 971 643 476</p>
-<h2>Координаты для яхт:  39º 21′ 0″ N 3º 12′ 0″ Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/todos-los-puertos/port-de-portopetro</p>
-<p>Reial Club Nàutic Portopetro (Королевский яхт-клуб Портопетро)</p>
-<p>Телефон: +34 971 657 657</p>
-<h2>Координаты для яхт:  39º 21′ 52″ N 3º 13′ 0″ Е</h2>
-<h2>Сайт: rcnportopetro.com</h2>
-<h2>Puerto de Cala Figuera (Порт де Кала Фигера)</h2>
-<p>Телефон: +34 971 645 242</p>
-<h2>Координаты для яхт:  39º 19′ 48″ N 3º 10′ 30″ Е</h2>
-<p>Сайт: portsib.es/es/paginas/inicio/puertos-y-amarres/todos-los-puertos/port-de-cala-figuera</p>
-<h2>© 2026</h2>
-
+<style>
+.mrn-grid{display:flex;flex-direction:column;gap:0}
+.mrn-card{position:relative;overflow:hidden;border-bottom:1px solid rgba(26,47,69,0.1);background:#fff;cursor:default;transition:background .2s}
+.mrn-card:hover{background:#f7fbff}
+.mrn-header{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:1rem;padding:1rem 1.5rem}
+.mrn-icon{font-size:1.6rem;text-align:center}
+.mrn-name{font-size:.95rem;font-weight:700;color:#1a2f45}
+.mrn-sub{font-size:.78rem;color:#5a7a8a;margin-top:.1rem}
+.mrn-coords{font-size:.78rem;color:#c9a84c;font-weight:600;white-space:nowrap;text-align:right}
+.mrn-popup{display:none;position:absolute;left:0;right:0;top:100%;z-index:100;background:#fff;box-shadow:0 8px 32px rgba(26,47,69,.18);border-top:2px solid #c9a84c;animation:fadeDown .18s ease}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.mrn-card:hover .mrn-popup{display:flex}
+.mrn-popup-img{width:220px;flex-shrink:0;object-fit:cover}
+.mrn-popup-body{padding:1.2rem 1.4rem;flex:1}
+.mrn-popup-title{font-size:.9rem;font-weight:700;color:#1a2f45;margin-bottom:.5rem}
+.mrn-popup-desc{font-size:.83rem;color:#3a5a6a;line-height:1.65;margin-bottom:.7rem}
+.mrn-popup-meta{display:flex;flex-wrap:wrap;gap:.4rem}
+.mrn-badge{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:#9a7830;font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:20px}
+.mrn-section{padding:.7rem 1.5rem;background:#1a2f45;color:#fff;font-size:.82rem;font-weight:700}
+@media(max-width:768px){.mrn-header{grid-template-columns:36px 1fr};.mrn-coords{display:none}.mrn-popup{position:static;display:none;flex-direction:column}.mrn-popup-img{width:100%;height:140px}.mrn-card.open .mrn-popup{display:flex}}
+</style>
+<p style="color:var(--gray);font-size:.9rem;margin-bottom:1.5rem;line-height:1.7">Промежуточные базы Atlantic Sail на маршруте Канары — Черногория. Проверенные марины где мы останавливаемся каждый сезон.</p>
+<div class="mrn-grid">
+<div class="mrn-section">🇪🇸 Майорка — весенний хаб</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">🏆</div>
+    <div><div class="mrn-name">Real Club Náutico de Palma</div><div class="mrn-sub">Пальма, Майорка · Королевский яхт-клуб</div></div>
+    <div class="mrn-coords">39°34′N 2°38′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=440&q=80&fit=crop" alt="Real Club Náutico de Palma" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Real Club Náutico de Palma</div>
+      <div class="mrn-popup-desc">Один из старейших и престижных яхт-клубов Средиземноморья. Центр Пальмы — 10 минут пешком.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">+34 971 726 848</span><span class="mrn-badge">rcnp.es</span></div>
+    </div>
+  </div>
+</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">⛵</div>
+    <div><div class="mrn-name">Club de Mar Mallorca</div><div class="mrn-sub">Пальма · крупнейшая марина острова</div></div>
+    <div class="mrn-coords">39°33′N 2°38′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=440&q=80&fit=crop" alt="Club de Mar Mallorca" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Club de Mar Mallorca</div>
+      <div class="mrn-popup-desc">Крупнейшая яхтенная марина Майорки. Полный сервис, рядом центр города и старый порт.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">+34 971 403 611</span><span class="mrn-badge">clubdemar-mallorca.com</span></div>
+    </div>
+  </div>
+</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">🏔️</div>
+    <div><div class="mrn-name">Puerto de Sóller</div><div class="mrn-sub">Северо-запад Майорки · горная долина у моря</div></div>
+    <div class="mrn-coords">39°47′N 2°41′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=440&q=80&fit=crop" alt="Puerto de Sóller" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Puerto de Sóller</div>
+      <div class="mrn-popup-desc">Уютная бухта в горах Serra de Tramuntana (ЮНЕСКО). Трамвай до деревни Сольер. Апельсиновые рощи. Дешёвая стоянка до июня.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">+34 971 631 706</span><span class="mrn-badge">gorы ЮНЕСКО</span></div>
+    </div>
+  </div>
+</div>
+<div class="mrn-section">🇮🇹 Сардиния</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">💎</div>
+    <div><div class="mrn-name">Porto Cervo</div><div class="mrn-sub">Коста Смеральда · пафосная марина Сардинии</div></div>
+    <div class="mrn-coords">41°08′N 9°32′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=440&q=80&fit=crop" alt="Porto Cervo" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Porto Cervo</div>
+      <div class="mrn-popup-desc">Марина миллиардеров — суперяхты, бутики, цены соответствующие. Зато заправка водой и стоянка на 2–3 часа бывает бесплатно. Изумрудная вода рядом.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">Коста Смеральда</span><span class="mrn-badge">суперяхты</span></div>
+    </div>
+  </div>
+</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">⚓</div>
+    <div><div class="mrn-name">Marina di Olbia</div><div class="mrn-sub">Север Сардинии · удобный транзит</div></div>
+    <div class="mrn-coords">40°55′N 9°31′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=440&q=80&fit=crop" alt="Marina di Olbia" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Marina di Olbia</div>
+      <div class="mrn-popup-desc">Хорошая транзитная стоянка на севере Сардинии. Город Ольбия рядом — аэропорт, супермаркеты.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">+39 0789 27927</span><span class="mrn-badge">транзит</span></div>
+    </div>
+  </div>
+</div>
+<div class="mrn-section">🇫🇷 Корсика</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">🏔️</div>
+    <div><div class="mrn-name">Bonifacio</div><div class="mrn-sub">Южная Корсика · белый город на скалах</div></div>
+    <div class="mrn-coords">41°23′N 9°09′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=440&q=80&fit=crop" alt="Bonifacio" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Bonifacio</div>
+      <div class="mrn-popup-desc">Бонифачо — белый город на 70-метровых известняковых скалах. Одно из красивейших мест Средиземноморья. Марина узкая, с продольным ветром — вход только для опытных.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">+33 495 730 093</span><span class="mrn-badge">ЮНЕСКО окрестности</span></div>
+    </div>
+  </div>
+</div>
+<div class="mrn-section">🇮🇹 Италия — транзит</div>
+<div class="mrn-card">
+  <div class="mrn-header">
+    <div class="mrn-icon">🇮🇹</div>
+    <div><div class="mrn-name">Brindisi</div><div class="mrn-sub">Адриатика · выход/вход из ЕС</div></div>
+    <div class="mrn-coords">40°39′N 17°58′E</div>
+  </div>
+  <div class="mrn-popup">
+    <img class="mrn-popup-img" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=440&q=80&fit=crop" alt="Brindisi" loading="lazy"/>
+    <div class="mrn-popup-body">
+      <div class="mrn-popup-title">Brindisi</div>
+      <div class="mrn-popup-desc">Конечная точка Аппиевой дороги из Рима. Здесь оформляем выход из зоны ЕС перед Черногорией. Наш знакомый винодел — закупаем местное вино. Старый город очень красив.</div>
+      <div class="mrn-popup-meta"><span class="mrn-badge">+39 0831 560 260</span><span class="mrn-badge">выход из ЕС</span><span class="mrn-badge">хорошее вино</span></div>
+    </div>
+  </div>
 </div>
 </div>
-</section>
-<div class="as-bot-bar">
+<div style="text-align:center;margin:2rem 0">
+  <a href="https://wa.me/34603192089?text=%D0%9D%D0%B0%D1%88%D0%B8+%D0%B1%D0%B0%D0%B7%D1%8B" target="_blank" class="as-btn as-btn-primary">💬 Написать капитану</a>
+  <a href="plan-2026.html" class="as-btn as-btn-outline" style="margin-left:.8rem">Маршруты 2026 →</a>
+</div>
+<script>document.querySelectorAll('.mrn-card').forEach(c=>c.addEventListener('click',function(){if(window.innerWidth<=768)this.classList.toggle('open');}))</script>
+</div></section><div class="as-bot-bar">
 <p>Задайте вопрос капитану прямо в Telegram — ответим быстро!</p>
 <a class="as-btn as-btn-telegram" href="https://t.me/captainatlanticbot" target="_blank">
-<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg>
-    @CaptainAtlanticBot
-  </a>
+<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>@CaptainAtlanticBot</a>
 </div>
 <footer class="as-footer">
 <div class="as-footer-inner">
@@ -282,24 +224,12 @@
 <a href="https://www.instagram.com/capitankosta/" target="_blank">Instagram</a>
 <a href="contact.html">Контакты</a>
 <a href="prajs.html">Прайс</a>
-</div>
-</div>
-</footer>
+</div></div></footer>
 <script>
-const hbg = document.getElementById('hbg');
-const mob = document.getElementById('mobMenu');
-function toggleMenu() {
-  hbg.classList.toggle('open');
-  mob.classList.toggle('open');
-  document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
-}
-function toggleMobSub(el) {
-  const sub = el.nextElementSibling;
-  sub.classList.toggle('open');
-}
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); }), {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mobMenu');
+function toggleMenu(){hbg.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':'';}
+function toggleMobSub(el){el.nextElementSibling.classList.toggle('open');}
+document.querySelectorAll('.r26-card').forEach(function(c){c.addEventListener('click',function(){if(window.innerWidth<=768)this.classList.toggle('open');});});
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
+</body></html>
