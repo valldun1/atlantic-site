@@ -1,220 +1,378 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<title>Маршруты яхт 2024 | Atlantic Sail</title>
-  <meta name="description" content="Расписание яхтенных переходов 2024: Карибы, Канары, Средиземноморье, Атлантика."/>
-  <meta name="keywords" content="маршруты яхт 2024, яхтенные переходы 2024"/>
-  <meta property="og:title" content="Маршруты яхт 2024 | Atlantic Sail"/>
-  <meta property="og:description" content="Расписание яхтенных переходов 2024: Карибы, Канары, Средиземноморье, Атлантика."/>
-  <meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
-  <meta name="robots" content="index, follow"/>
-<meta content="Аренда яхт с капитаном. Атлантика, Канары, Средиземноморье, Карибы." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');
-    }
-  </script>
-  <link rel="canonical" href="https://atlanticsail.net/plan-2024.html"/>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-  <link rel="shortcut icon" href="favicon.svg"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Маршруты яхт 2024 | Архив переходов | Atlantic Sail</title>
+<meta name="description" content="Архив яхтенных маршрутов Atlantic Sail 2024: Карибы, Тихий океан, Галапагосы, трансатлантика, Средиземноморье."/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="shortcut icon" href="favicon.svg"/>
+<link rel="canonical" href="https://atlanticsail.net/plan-2024.html"/>
+<meta property="og:title" content="Маршруты яхт 2024 | Архив переходов | Atlantic Sail"/>
+<meta property="og:description" content="Архив яхтенных маршрутов Atlantic Sail 2024: Карибы, Тихий океан, Галапагосы, трансатлантика, Средиземноморье."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
+<meta property="og:url" content="https://atlanticsail.net/plan-2024.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
+<link rel="stylesheet" href="style.css"/>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');}</script>
+<style>
+.r26-grid{display:flex;flex-direction:column;gap:0}
+.r26-card{position:relative;overflow:hidden;border-bottom:1px solid rgba(26,47,69,0.1);background:#fff;cursor:default;transition:background 0.2s}
+.r26-card:hover{background:#f7fbff}
+.r26-header{display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:1rem;padding:1.1rem 1.5rem}
+.r26-dates{font-size:.82rem;font-weight:700;color:#c9a84c;white-space:nowrap}
+.r26-route-name{font-size:.92rem;font-weight:600;color:#1a2f45}
+.r26-route-short{font-size:.78rem;color:#5a7a8a;margin-top:.15rem}
+.r26-price{font-size:1rem;font-weight:700;color:#1a2f45;white-space:nowrap;text-align:right}
+.r26-price span{font-size:.72rem;font-weight:400;color:#5a7a8a;display:block}
+.r26-popup{display:none;position:absolute;left:0;right:0;top:100%;z-index:100;background:#fff;box-shadow:0 8px 32px rgba(26,47,69,.18);border-top:2px solid #c9a84c;animation:fadeDown .18s ease}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.r26-card:hover .r26-popup{display:flex}
+.r26-popup-img{width:260px;flex-shrink:0;object-fit:cover}
+.r26-popup-body{padding:1.4rem 1.6rem;flex:1}
+.r26-popup-title{font-size:.95rem;font-weight:700;color:#1a2f45;margin-bottom:.6rem}
+.r26-popup-desc{font-size:.84rem;color:#3a5a6a;line-height:1.65;margin-bottom:.8rem}
+.r26-popup-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.r26-tag{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:#9a7830;font-size:.72rem;font-weight:600;padding:.2rem .6rem;border-radius:20px}
+.r26-section-title{padding:.8rem 1.5rem;background:#1a2f45;color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+@media(max-width:768px){.r26-header{grid-template-columns:1fr auto}.r26-dates{grid-column:1/-1}.r26-popup{position:static;display:none;flex-direction:column}.r26-popup-img{width:100%;height:160px}.r26-card.open .r26-popup{display:flex}}
+</style>
 </head>
 <body>
 <header class="as-header">
-<a class="as-logo" href="index.html">
-<span class="as-logo-icon">⚓</span>
-    Atlantic <span>Sail</span>
-</a>
+<a class="as-logo" href="index.html"><span class="as-logo-icon">⚓</span>Atlantic <span>Sail</span></a>
 <ul class="as-nav">
 <li><a href="index.html">Главная</a></li>
-<li>
-<span>Наш флот <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="lipari41.html">Катамаран Липари 41</a>
-<a href="oceanis-473.html">Океанис 473 Клипер</a>
-<a href="dufour405.html">Дюфур 405</a>
-<a href="lucia40.html">Люсия 40</a>
-</div>
-</li>
-<li>
-<span>Маршруты <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="plan-2026.html">Переходы 2026</a>
-<a href="plan-2025.html">Переходы 2025</a>
-<a href="plan-2024.html">Переходы 2024</a>
-<a href="kanarskie-ostrova.html">Канарские острова</a>
-<a href="caribs.html">Карибские острова</a>
-<a href="malaga-mallorca.html">Малага — Майорка</a>
-<a href="montenegro.html">Черногория</a>
-<a href="croatia.html">Хорватия</a>
-<a href="sailing.html">Парусный спорт</a>
-<a href="yachtingtravel.html">Яхтинг путешествия</a>
-<a href="otchet-o-perehodah.html">Отчёт о переходах</a>
-</div>
-</li>
-<li>
-<span>Базирование <span class="as-caret">▾</span></span>
-<div class="as-dropdown">
-<a href="rekomenduemye-mariny.html">Канарские острова</a>
-<a href="mariny-v-chernogorii.html">Черногория</a>
-<a href="marina-karibes.html">Карибы</a>
-</div>
-</li>
+<li><span>Наш флот <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="lipari41.html">Катамаран Липари 41</a><a href="oceanis-473.html">Океанис 473 Клипер</a><a href="dufour405.html">Дюфур 405</a><a href="lucia40.html">Люсия 40</a></div></li>
+<li><span>Маршруты <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="plan-2026.html">Переходы 2026</a><a href="plan-2025.html">Переходы 2025</a><a href="plan-2024.html">Переходы 2024</a><a href="kanarskie-ostrova.html">Канарские острова</a><a href="caribs.html">Карибские острова</a><a href="malaga-mallorca.html">Малага — Майорка</a><a href="montenegro.html">Черногория</a><a href="montenegro-summer.html">🇲🇪 Лето 2026</a><a href="sailing.html">Парусный спорт</a><a href="otchet-o-perehodah.html">Отчёт о переходах</a></div></li>
+<li><span>Базирование <span class="as-caret">▾</span></span><div class="as-dropdown"><a href="rekomenduemye-mariny.html">Канарские острова</a><a href="mariny-v-chernogorii.html">Черногория</a><a href="marina-karibes.html">Карибы</a></div></li>
 <li><a href="prajs.html">Прайс</a></li>
 <li><a href="contact.html">Контакты</a></li>
 </ul>
 <div class="as-header-right">
-<div class="as-translate-wrap">
-<button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button>
-<div id="google_translate_element"></div>
-</div>
-<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg> Написать</a>
+<div class="as-translate-wrap"><button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button><div id="google_translate_element"></div></div>
+<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg> Написать</a>
 <button class="as-hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </div>
 </header>
 <div class="as-mobile-menu" id="mobMenu">
-<div class="as-mob-item">
-<a href="index.html">Главная</a>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Наш флот ▾</span>
-<div class="as-mob-sub">
-<a href="lipari41.html">Катамаран Липари 41</a>
-<a href="oceanis-473.html">Океанис 473 Клипер</a>
-<a href="dufour405.html">Дюфур 405</a>
-<a href="lucia40.html">Люсия 40</a>
-</div>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Маршруты ▾</span>
-<div class="as-mob-sub">
-<a href="plan-2026.html">Переходы 2026</a>
-<a href="plan-2025.html">Переходы 2025</a>
-<a href="plan-2024.html">Переходы 2024</a>
-<a href="kanarskie-ostrova.html">Канарские острова</a>
-<a href="caribs.html">Карибские острова</a>
-<a href="malaga-mallorca.html">Малага — Майорка</a>
-<a href="montenegro.html">Черногория</a>
-<a href="croatia.html">Хорватия</a>
-<a href="sailing.html">Парусный спорт</a>
-<a href="otchet-o-perehodah.html">Отчёт о переходах</a>
-</div>
-</div>
-<div class="as-mob-item">
-<span onclick="toggleMobSub(this)">Базирование ▾</span>
-<div class="as-mob-sub">
-<a href="rekomenduemye-mariny.html">Канарские острова</a>
-<a href="mariny-v-chernogorii.html">Черногория</a>
-<a href="marina-karibes.html">Карибы</a>
-</div>
-</div>
+<div class="as-mob-item"><a href="index.html">Главная</a></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Наш флот ▾</span><div class="as-mob-sub"><a href="lipari41.html">Катамаран Липари 41</a><a href="oceanis-473.html">Океанис 473 Клипер</a><a href="dufour405.html">Дюфур 405</a><a href="lucia40.html">Люсия 40</a></div></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Маршруты ▾</span><div class="as-mob-sub"><a href="plan-2026.html">Переходы 2026</a><a href="plan-2025.html">Переходы 2025</a><a href="plan-2024.html">Переходы 2024</a><a href="kanarskie-ostrova.html">Канарские острова</a><a href="caribs.html">Карибские острова</a><a href="montenegro.html">Черногория</a><a href="montenegro-summer.html">🇲🇪 Лето 2026</a></div></div>
+<div class="as-mob-item"><span onclick="toggleMobSub(this)">Базирование ▾</span><div class="as-mob-sub"><a href="rekomenduemye-mariny.html">Канарские острова</a><a href="mariny-v-chernogorii.html">Черногория</a><a href="marina-karibes.html">Карибы</a></div></div>
 <div class="as-mob-item"><a href="prajs.html">Прайс</a></div>
 <div class="as-mob-item"><a href="contact.html">Контакты</a></div>
-<div class="as-mob-actions">
-<a class="as-btn as-btn-telegram" href="https://t.me/captainatlanticbot" target="_blank">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg>
-    Написать капитану
-  </a>
-</div>
+<div class="as-mob-actions"><a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>Написать капитану</a></div>
 </div>
 <div class="as-page-hero">
 <h1>Маршруты <em>2024</em></h1>
-<p>Архив переходов</p>
+<p>Архив переходов — Карибы · Атлантика · Средиземноморье · Тихий океан</p>
 </div>
-<section class="as-section">
+<section class="as-section" style="padding-top:1rem">
 <div class="as-container">
-<div class="as-content">
-<h2>КАРИБЫ:</h2>
-<h2>⛵⛵ (СПОРТ И ОТДЫХ)</h2>
-<p>13 января - 15 апреля, еженедельно старт и финиш о. Мартиника по островам: Сент Люсия, Гренадины до Табако Кейс. Океанис 473 4 каюты, 3 wc и Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте за неделю.</p>
-<p>март - апреля, Мартиника, Доминикана, Гваделупа, Антигуа и Барбуда, Сен Мартен.  Океанис 473 4 каюты, 3 wc и Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте за неделю. ОСТАЛОСЬ 4 МЕСТА</p>
-<h2>КАНАРЫ:</h2>
-<h2>⛵⛵ (СПОРТ И ОТДЫХ)</h2>
-<p>20 января - 30 апреля, старт и финиш Гран Канария г. Лас Пальмас. Маршрут по островам: Фуэртевентура, Лансароте, Грасиоза. Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте за неделю, Катамаран Липари41, 4 каюты, 2 WC, 600 евро место в каюте, 1000 евро каюта.</p>
-<p>20 января - 30 апреля, старт и финиш Гран Канария г. Лас Пальмас. Маршрут по островам: Тенерифе, Ла Гомера. Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте за неделю. Катамаран Липари41, 4 каюты, 2 WC, 600 евро место в каюте, 1000 евро каюта.</p>
-<h2>АТЛАНТИКА И ТРАНСАТЛАНТИКА:</h2>
-<h2>⛵⛵ (ЭКСТРИМ)</h2>
-<h2>15 апреля - 10 мая, Сент Мартен</h2>
-<h2>, Азорские острова.</h2>
-<h2>Океанис 473 4 каюты,</h2>
-<h2>1500 евро место в каюте, 3000 евро каюта.</h2>
-<p>12 мая - 30 мая, Азорские острова, Лагош, Гибралтар (испанский город Ла Линея аэропорт Малага). Океанис 473 4 каюты, 3 wc, 700 евро место в каюте, 1000 евро каюта.</p>
-<p>15 мая - 30 мая, Гран Канария г. Лас Пальмас, Мадейра, Кадис, Гибралтар (испанский город Ла Линея аэропорт Малага). Катамаран Липари41, 4 каюты, 2 WC и Дюфур 405 3 каюты, 2 wc 700/600 евро/место в каюте за весь маршрут.</p>
-<h2>ОСЕНЬ</h2>
-<h2>! 26 октября - ноября</h2>
-<p>, Гибралтар (испанский город Ла Линея аэропорт Малага), Барбата, Кадис, Лагош, Мадейра. Океанис 473 4 каюты, 3 wc. Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте за неделю.</p>
-<h2>СРЕДИЗЕМНОЕ МОРЕ:</h2>
-<h2>⛵⛵ (СПОРТ, ОТДЫХ И РЕЛАКС)</h2>
-<p>01 - 11 июня, Гибралтар (испанский город Ла Линея аэропорт Малага), Бенальмадема, Малага, Альмеримар, Картахена, Торревьеха, Ибица, Майорка. Катамаран Липари41, 4 каюты, 2 WC, Океанис 473 4 каюты, 3 wc, Дюфур 405 3 каюты, 2 wc - 600 евро/место в каюте.</p>
-<p>12 - 22 июня, Майорка г. Пальма, Менока, Сардиния, Корсика г. Бонифачо, Рим (Остия). Катамаран Липари41, 4 каюты, 2 WC, 600 евро/место в каюте. Океанис 473 4 каюты, 3 wc, Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте.</p>
-<p>23 июня - 8 июля, Рим (Остия), о.Понца, о.Капри (или Иския), Амалфийское побережье, вулкан Стромболи, о. Вулкано, Мессина, г. Катания, г. Сиракузы, о. Мальта, г. Роччелла-Йоника, г. Кротон, г. С.Леука, г. Отранто, г. Бриндизи. Катамаран Липари41, 4 каюты, 2 WC, Дюфур 405 3 каюты, 2 wc, Океанис 473 4 каюты, 3 wc, 800 евро/место в каюте.</p>
-<p>14 - 27 сентября, Тиват, Бриндизи, Кротон, Сиракузы, Мессина, Липарские острова, Амальфийское побережье, Понцу, Рим (Остия) . Катамаран Липари41, 4 каюты, 2 WC, Океанис 473 4 каюты, 3 wc,  Дюфур 405 3 каюты, 2 wc, 700 евро/место в каюте.</p>
-<p>28 сентября - 10 октября, Рим (Остия), Корсика, Сардиния, Менорка, Майорка. Катамаран Липари41, 4 каюты, 2 WC, Океанис 473 4 каюты, 3 wc, Дюфур 405 3 каюты, 2 wc, 500 евро/место в каюте.</p>
-<p>12 - 22 октября, Майорка, Ибица, Картахена, Альмеримар, Малага, Гибралтар (Испанская марина Алькаидеса). Катамаран Липари41, 4 каюты, 2 WC, Океанис 473 4 каюты, 3 wc,  Дюфур 405 3 каюты, 2 wc, 500 евро/место в каюте.</p>
-<p>23 октября - 6 ноября, Гибралтар, Кадис, Лагош, Мадейра, Канарские острова, Гран Канария г. Лас Пальмас. Катамаран Липари41, 4 каюты, 2 WC, Океанис 473 4 каюты, 3 wc и Дюфур 405 3 каюты, 2 wc, 600 евро/место в каюте.</p>
-<h2>ТРАНСАТЛАНТИКА (зима 24 - 25)</h2>
-<h2>(ЭКСТРИМ)</h2>
-<p>15 ноября - 12 декабря, Гран Канария г. Лас Пальмас, Кабо Верде, Барбадос, Мартиника. Яхта и катамаран. Стоимость участия 2500 евро. Осталось 4 места.</p>
-<h2>ТРАНСАТЛАНТИКА С РЕГАТОЙ АRC 2024.</h2>
-<h2>(ЭКСТРИМ)</h2>
-<h2>Гран Канария - Сент Лю</h2>
-<h2>чия. 26-18/12. Дю</h2>
-<p>фур405, Океанис 473, катамаран Липари41. 3500 - 4500 евро/место в каюте.</p>
-<h2>Атлантический океан - Тихий океан</h2>
-<p>20 декабря 2024 г. - 24 января 2025 г. о.Мартиника - Панамский канал Гран Канария - Галапагосские острова. Катамаран Липари 41, 4 каюты, 2 WC. 3000 евро/место в каюте.</p>
-<h2>Мест нет.</h2>
-<h2>Тихий океан, Галапагосские острова</h2>
-<p>Февраль 2025 г. Галапагосские острова. Катамаран Липари 41, 4 каюты, 2 WC. Маршрут 14 дней, 900 евро/место в каюте, 6 мест.</p>
-<h2>Тихий океан - Атлантический океан</h2>
-<p>Март - Апрель 2025 г.  - Галапагосские острова, Эквадор, Панама, Ямайка, Куба. Катамаран Липари 41, 4 каюты, 2 WC. Маршруты по 14 дней, 900 евро/место в каюте, 6 мест.</p>
-<h2>ТРАНСАТЛАНТИКА 2025</h2>
-<p>15 апреля - 15 мая, о. Куба, Доминиканская республика, Азорские острова. Катамаран Липари 41, 4 каюты, 2 WC. 2000 евро/место в каюте, 6 мест.</p>
-<p>Дополнительно мы можем предложить: корпоративные мероприятия на наших яхтах, индивидуальные туры при аренде всей лодки, аренда лодки на длительный срок, обучение и повышение квалификации. Условия и стоимость договорные. Все лодки океанские, неоднократно пересекали Атлантику, соответственно укомплектованы навигацией, средствами безопасности и спасения на море по самым высоким требованиям.</p>
-<h2>Раннее бронирование предусматривает скидки!!!</h2>
-<h2>Место в каюте 70% стоимости каюты.</h2>
-<h2>Парам скидка 10%</h2>
-<h2>Наши дополнительные сайты:</h2>
-<p>https://www.lovemile.ru/</p>
-<p>WhatsApp +34603192089</p>
-<h2>Трансатлантический переход на яхте</h2>
-<ul>
-<li>27 ноября - 25 декабря   - о. Гран Канария - о.Гваделупа  - 3500 евро/место -</li>
-</ul>
-<h2>6 мест</h2>
-<ul>
-<li>15 апреля - 25 мая            - о. Мартиника - Малага            - 3000 евро/место - 2 места</li>
-</ul>
-<h2>Фуншал (Азоры)</h2>
-<h2>Зима на Карибах</h2>
-<p>Вы можете провести всю зиму на нашей яхте или катамаране, условия договорные</p>
-<h2>Яхты участвующие в переходе. ТТХ и описание.</h2>
-<h2>Видео</h2>
-<h2>Интерактивная карта перехода</h2>
-<h2>Свяжитесь с нами</h2>
-<h2>записаться в переход можно любым способом:</h2>
-<h2>заполив форму обратной связи</h2>
-<h2>по почте:</h2>
-<p>info@atlantic-sail.com по WhaatsApp +34 603-192-089</p>
-<h2>в личном сообщении в</h2>
-<h2>Facebook</h2>
-<p>Место в каюте | яхта | парус | Италия | Испания |  Средиземное море | парусная регата | парусная яхта</p>
-<h2>© 2026</h2>
-
+<p style="color:var(--gray);font-size:0.88rem;margin-bottom:1.5rem">Это архив переходов 2024 года. Для актуального расписания смотри <a href="plan-2026.html" style="color:var(--gold-d)">Переходы 2026</a>.</p>
+<div class="r26-grid">
+<div class="r26-section-title">🏝️ Карибы — январь–апрель 2024</div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">13 янв – 15 апр</div>
+      <div><div class="r26-route-name">Мартиника → Сент-Люсия → Гренадины → Табако Кейс</div><div class="r26-route-short">Еженедельно, старт и финиш Мартиника</div></div>
+      <div class="r26-price">600 €<span>/ место/неделя</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=520&q=80&fit=crop" alt="Еженедельные карибские рейсы · 3 месяца" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Еженедельные карибские рейсы · 3 месяца</div>
+        <div class="r26-popup-desc">Лучшая зима в жизни — острова Малых Антил каждую неделю. Сент-Люсия с вулканическими Пиками, Гренадины с Табако Кейс — самыми фотогеничными рифами Карибов.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Океанис 473</span><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Гренадины</span><span class="r26-tag">Сент-Люсия</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">март – апрель</div>
+      <div><div class="r26-route-name">Мартиника → Доминикана → Гваделупа → Антигуа → Сен-Мартен</div><div class="r26-route-short">Расширенная программа севернее</div></div>
+      <div class="r26-price">600 €<span>/ место/неделя</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=520&q=80&fit=crop" alt="Северные Карибы · март–апрель" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Северные Карибы · март–апрель</div>
+        <div class="r26-popup-desc">Больше островов — Гваделупа с Национальным парком и водопадами, Антигуа с 365 пляжами (по одному на каждый день), Сен-Мартен — разделённый остров Франции и Нидерландов.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Океанис 473</span><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Антигуа</span><span class="r26-tag">Гваделупа</span></div>
+      </div>
+    </div>
+  </div><div class="r26-section-title">⛵ Канарские острова — январь–апрель 2024</div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">20 янв – 30 апр</div>
+      <div><div class="r26-route-name">Лас-Пальмас → Фуэртевентура → Лансароте → Грасиоза</div><div class="r26-route-short">Еженедельные выходы, старт/финиш Гран-Канария</div></div>
+      <div class="r26-price">600 €<span>/ место/неделя</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=520&q=80&fit=crop" alt="Восточные Канары · еженедельно" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Восточные Канары · еженедельно</div>
+        <div class="r26-popup-desc">Фуэртевентура — 150 км пляжей, лучший кайтсёрфинг Европы. Лансароте — лунный вулканический пейзаж, дизайн Сезара Манрике. Грасиоза — нетронутый островок без асфальта.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Липари 41</span><span class="r26-tag">Канарские острова</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">20 янв – 30 апр</div>
+      <div><div class="r26-route-name">Лас-Пальмас → Тенерифе → Ла-Гомера</div><div class="r26-route-short">Западные острова, Тейде</div></div>
+      <div class="r26-price">600 €<span>/ место/неделя</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=520&q=80&fit=crop" alt="Западные Канары · еженедельно" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Западные Канары · еженедельно</div>
+        <div class="r26-popup-desc">Тенерифе — вулкан Тейде (3715 м), самая высокая точка Испании. Ла-Гомера — субтропические леса Гарахонай, ЮНЕСКО. Чистые бухты без массового туризма.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Липари 41</span><span class="r26-tag">Тенерифе</span><span class="r26-tag">Ла-Гомера</span></div>
+      </div>
+    </div>
+  </div><div class="r26-section-title">🌊 Атлантика — апрель–май 2024</div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">15 апр – 10 мая</div>
+      <div><div class="r26-route-name">Сен-Мартен → Азорские острова</div><div class="r26-route-short">Обратная трансатлантика с Карибов</div></div>
+      <div class="r26-price">1 500 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=520&q=80&fit=crop" alt="Сен-Мартен → Азоры · ~25 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Сен-Мартен → Азоры · ~25 дней</div>
+        <div class="r26-popup-desc">Трансатлантика с Карибов на северо-восток. Азорские острова — архипелаг вулканических гор посреди Атлантики, горячие источники, синие гидрангии.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Океанис 473</span><span class="r26-tag">Азоры</span><span class="r26-tag">Трансатлантика</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">12–30 мая</div>
+      <div><div class="r26-route-name">Азоры → Лагож → Гибралтар</div><div class="r26-route-short">Лагош, Мыс Сан-Висенте, Гибралтар</div></div>
+      <div class="r26-price">700 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=520&q=80&fit=crop" alt="Азоры → Гибралтар · 18 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Азоры → Гибралтар · 18 дней</div>
+        <div class="r26-popup-desc">По Португалии вдоль Алгарве — золотые скалы Лагоша, Сагреш с навигационной школой Генриха Мореплавателя.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Океанис 473</span><span class="r26-tag">Алгарве</span><span class="r26-tag">Гибралтар</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">15–30 мая</div>
+      <div><div class="r26-route-name">Лас-Пальмас → Мадейра → Кадис → Гибралтар</div><div class="r26-route-short">Перегон флота в Средиземноморье</div></div>
+      <div class="r26-price">600 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=520&q=80&fit=crop" alt="Канары → Гибралтар · 15 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Канары → Гибралтар · 15 дней</div>
+        <div class="r26-popup-desc">Мадейра, Кадис (родина испанского флота), Гибралтар. Перегон Липари и Дюфура из зимней базы.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Мадейра</span><span class="r26-tag">Кадис</span></div>
+      </div>
+    </div>
+  </div><div class="r26-section-title">☀️ Средиземноморье — июнь–октябрь 2024</div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">1–11 июня</div>
+      <div><div class="r26-route-name">Гибралтар → Малага → Картахена → Ибица → Майорка</div><div class="r26-route-short">Испанское побережье</div></div>
+      <div class="r26-price">600 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=520&q=80&fit=crop" alt="Маршрут А · 11 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Маршрут А · 11 дней</div>
+        <div class="r26-popup-desc">Средиземноморский старт: Малага с музеем Пикассо, Картахена с 2800-летней историей, Ибица, Майорка.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Океанис 473</span><span class="r26-tag">Дюфур 405</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">12–22 июня</div>
+      <div><div class="r26-route-name">Майорка → Менорка → Сардиния → Корсика → Рим</div><div class="r26-route-short">Острова Западного Средиземноморья</div></div>
+      <div class="r26-price">600 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=520&q=80&fit=crop" alt="Маршрут Б · 11 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Маршрут Б · 11 дней</div>
+        <div class="r26-popup-desc">Менорка, Коста Смеральда (Сардиния), Бонифачо на скалах Корсики, Рим (Остия).</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Океанис 473</span><span class="r26-tag">Дюфур 405</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">23 июня – 8 июля</div>
+      <div><div class="r26-route-name">Рим → Понца → Капри → Амальфи → Стромболи → Сицилия → Мальта → Бриндизи → Тиват</div><div class="r26-route-short">Самый красивый маршрут года</div></div>
+      <div class="r26-price">800 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=520&q=80&fit=crop" alt="Маршрут В: Рим → Тиват · 15 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Маршрут В: Рим → Тиват · 15 дней</div>
+        <div class="r26-popup-desc">Понца с гротами Тиберия, Голубой грот Капри, Амальфи, Стромболи ночью, Этна, Сиракузы, Мальта, финиш в Porto Montenegro.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Океанис 473</span><span class="r26-tag">Капри</span><span class="r26-tag">Стромболи</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">14–27 сентября</div>
+      <div><div class="r26-route-name">Тиват → Бриндизи → Сицилия → Липарские о-ва → Амальфи → Рим</div><div class="r26-route-short">Осенний обратный маршрут</div></div>
+      <div class="r26-price">700 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=520&q=80&fit=crop" alt="Осенний маршрут В обратно · 14 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Осенний маршрут В обратно · 14 дней</div>
+        <div class="r26-popup-desc">В бархатный сезон — те же жемчужины, но без летних толп. Добавляются все Липарские острова: Панарея, Салина, Алликуди.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Океанис 473</span><span class="r26-tag">Дюфур 405</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">28 сент – 10 окт</div>
+      <div><div class="r26-route-name">Рим → Корсика → Сардиния → Майорка</div><div class="r26-route-short">Обратный западный маршрут</div></div>
+      <div class="r26-price">500 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=520&q=80&fit=crop" alt="Обратный маршрут Б · 13 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Обратный маршрут Б · 13 дней</div>
+        <div class="r26-popup-desc">Октябрь — лучший сезон для Западного Средиземноморья.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Все три яхты</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">12–22 октября</div>
+      <div><div class="r26-route-name">Майорка → Ибица → Картахена → Малага → Гибралтар</div><div class="r26-route-short">Осенняя Испания</div></div>
+      <div class="r26-price">500 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=520&q=80&fit=crop" alt="Обратный маршрут А · 11 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Обратный маршрут А · 11 дней</div>
+        <div class="r26-popup-desc">Ибица и Майорка в тишине октября.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Все три яхты</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">23 окт – 6 нояб</div>
+      <div><div class="r26-route-name">Гибралтар → Кадис → Лагож → Мадейра → Лас-Пальмас</div><div class="r26-route-short">Возврат на зимнюю базу</div></div>
+      <div class="r26-price">600 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=520&q=80&fit=crop" alt="Гибралтар → Канары · 15 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Гибралтар → Канары · 15 дней</div>
+        <div class="r26-popup-desc">Осенний атлантический переход домой. Кадис, Лагож, Мадейра.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Все три яхты</span><span class="r26-tag">Мадейра</span><span class="r26-tag">Канары</span></div>
+      </div>
+    </div>
+  </div><div class="r26-section-title">🌍 Трансатлантика — зима 2024–2025</div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">15 нояб – 12 дек</div>
+      <div><div class="r26-route-name">Лас-Пальмас → Кабо Верде → Барбадос → Мартиника</div><div class="r26-route-short">2 800 миль · 18–25 дней</div></div>
+      <div class="r26-price">2 500 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=520&q=80&fit=crop" alt="Трансатлантика · 18–25 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Трансатлантика · 18–25 дней</div>
+        <div class="r26-popup-desc">Пассаты, звёздное небо, летучие рыбы и дельфины. Одно из главных событий в жизни любого яхтсмена.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Яхта + катамаран</span><span class="r26-tag">Кабо Верде</span><span class="r26-tag">Барбадос</span><span class="r26-tag">Мартиника</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">26 нояб – 18 дек</div>
+      <div><div class="r26-route-name">Лас-Пальмас → Сент-Люсия (ARC 2024)</div><div class="r26-route-short">Официальная регата через Атлантику</div></div>
+      <div class="r26-price">3 500–4 500 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=520&q=80&fit=crop" alt="ARC 2024 · Регата" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">ARC 2024 · Регата</div>
+        <div class="r26-popup-desc">240+ яхт стартуют одновременно. Дух соревнования и океанского братства. Финиш в Родни Бей.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Дюфур 405</span><span class="r26-tag">Океанис 473</span><span class="r26-tag">Липари 41</span></div>
+      </div>
+    </div>
+  </div><div class="r26-section-title">🌊 Тихий океан — декабрь 2024 · март 2025</div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">20 дек 2024 – 24 янв 2025</div>
+      <div><div class="r26-route-name">Мартиника → Панамский канал → Галапагосские острова</div><div class="r26-route-short">Из Атлантики в Тихий океан</div></div>
+      <div class="r26-price">3 000 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=520&q=80&fit=crop" alt="Атлантика → Тихий океан · 35 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Атлантика → Тихий океан · 35 дней</div>
+        <div class="r26-popup-desc">Легендарный Панамский канал, потом через Тихий океан на Галапагосы. Маршрут мечты любого яхтсмена.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Панама</span><span class="r26-tag">Галапагосы</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">Февраль 2025</div>
+      <div><div class="r26-route-name">Галапагосские острова</div><div class="r26-route-short">14 дней, 6 мест</div></div>
+      <div class="r26-price">900 €<span>/ место</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=520&q=80&fit=crop" alt="Галапагосы · 14 дней" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Галапагосы · 14 дней</div>
+        <div class="r26-popup-desc">Черепахи, игуаны, голубоногие олуши — эволюция в действии. Самые уникальные острова планеты.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Галапагосы</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="r26-card">
+    <div class="r26-header">
+      <div class="r26-dates">Март – апрель 2025</div>
+      <div><div class="r26-route-name">Галапагосы → Эквадор → Панама → Ямайка → Куба</div><div class="r26-route-short">Тихий → Атлантика обратно</div></div>
+      <div class="r26-price">900 €<span>/ место/2 недели</span></div>
+    </div>
+    <div class="r26-popup">
+      <img class="r26-popup-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=520&q=80&fit=crop" alt="Тихий океан → Куба · 2 месяца" loading="lazy"/>
+      <div class="r26-popup-body">
+        <div class="r26-popup-title">Тихий океан → Куба · 2 месяца</div>
+        <div class="r26-popup-desc">Обратный путь через Панаму, Карибы. Ямайка с её ромом и регги, Куба — застывший 1960-й год.</div>
+        <div class="r26-popup-tags"><span class="r26-tag">Липари 41</span><span class="r26-tag">Панама</span><span class="r26-tag">Куба</span><span class="r26-tag">Ямайка</span></div>
+      </div>
+    </div>
+  </div></div><div style="background:#e8f4fd;border-left:3px solid var(--gold);padding:0.9rem 1rem;margin:2rem 0;border-radius:0 4px 4px 0;font-size:0.88rem">
+<strong>🎁 Раннее бронирование — скидки!</strong> Место в каюте — 70% стоимости каюты. Парам — скидка 10%.<br>
+<strong>WhatsApp:</strong> +34 603-192-089 · <strong>Telegram:</strong> @CaptainAtlanticBot
 </div>
+<div style="text-align:center;margin:1.5rem 0">
+<a class="as-btn as-btn-primary" href="https://wa.me/34603192089?text=%D0%A5%D0%BE%D1%87%D1%83+%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C+%D0%BC%D0%B5%D1%81%D1%82%D0%BE" target="_blank">💬 Написать в WhatsApp</a>
+<a class="as-btn as-btn-outline" href="prajs.html" style="margin-left:0.8rem">Прайс →</a>
 </div>
-</section>
-<div class="as-bot-bar">
+</div></section><div class="as-bot-bar">
 <p>Задайте вопрос капитану прямо в Telegram — ответим быстро!</p>
 <a class="as-btn as-btn-telegram" href="https://t.me/captainatlanticbot" target="_blank">
-<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg>
-    @CaptainAtlanticBot
-  </a>
+<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>@CaptainAtlanticBot</a>
 </div>
 <footer class="as-footer">
 <div class="as-footer-inner">
@@ -226,24 +384,12 @@
 <a href="https://www.instagram.com/capitankosta/" target="_blank">Instagram</a>
 <a href="contact.html">Контакты</a>
 <a href="prajs.html">Прайс</a>
-</div>
-</div>
-</footer>
+</div></div></footer>
 <script>
-const hbg = document.getElementById('hbg');
-const mob = document.getElementById('mobMenu');
-function toggleMenu() {
-  hbg.classList.toggle('open');
-  mob.classList.toggle('open');
-  document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
-}
-function toggleMobSub(el) {
-  const sub = el.nextElementSibling;
-  sub.classList.toggle('open');
-}
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); }), {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mobMenu');
+function toggleMenu(){hbg.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':'';}
+function toggleMobSub(el){el.nextElementSibling.classList.toggle('open');}
+document.querySelectorAll('.r26-card').forEach(function(c){c.addEventListener('click',function(){if(window.innerWidth<=768)this.classList.toggle('open');});});
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
+</body></html>
