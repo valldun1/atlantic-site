@@ -1,63 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atlantic Sail — Трек</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Трекер яхт Atlantic Sail — где сейчас наши капитаны</title>
+  <meta name="description" content="Трекер яхт Atlantic Sail в реальном времени. Следи за маршрутами капитанов Кости и Юры на карте."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="shortcut icon" href="favicon.svg"/>
+  <link rel="canonical" href="https://atlanticsail.net/track.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
+
   <style>
+    :root {
+      --navy: #1a2f45;
+      --navy-dark: #0d1f3c;
+      --gold: #c9a84c;
+      --gold-d: #9a7830;
+      --ocean: #e8f4fd;
+      --blue-track: #4a9eff;
+      --orange-track: #ff6b35;
+      --border: rgba(255,255,255,0.08);
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: sans-serif; background: #0a1628; color: #fff; }
-    #header {
-      padding: 16px 20px;
-      background: #0d1f3c;
-      border-bottom: 1px solid #1e3a5f;
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #0a1628;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .tr-header {
+      background: var(--navy-dark);
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 12px;
+      padding: 0 1.2rem;
+      height: 56px;
+      gap: 1rem;
+      flex-shrink: 0;
+      z-index: 10;
     }
-    #header h1 { font-size: 18px; font-weight: 600; }
-    #header span { font-size: 13px; color: #7a9cc0; }
-    #map { width: 100%; height: calc(100vh - 60px); }
-    #status {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(13,31,60,0.9);
-      border: 1px solid #1e3a5f;
-      border-radius: 8px;
-      padding: 10px 18px;
-      font-size: 13px;
-      color: #7a9cc0;
-      pointer-events: none;
-      line-height: 1.8;
-      text-align: center;
+    .tr-logo {
+      display: flex; align-items: center; gap: 0.5rem;
+      text-decoration: none; color: #fff;
+      font-weight: 700; font-size: 1rem; white-space: nowrap;
+    }
+    .tr-logo-anchor { color: var(--gold); font-size: 1.2rem; }
+    .tr-logo span { color: var(--gold); }
+
+    /* NAV */
+    .tr-nav {
+      display: flex; align-items: center; gap: 0.2rem;
+      flex: 1; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tr-nav::-webkit-scrollbar { display: none; }
+    .tr-nav a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.8rem; font-weight: 500;
+      padding: 0.35rem 0.7rem;
+      border-radius: 4px;
       white-space: nowrap;
+      transition: color 0.2s, background 0.2s;
+    }
+    .tr-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .tr-nav a.active { color: var(--gold); }
+
+    /* STATUS BAR */
+    .tr-status-bar {
+      background: rgba(13,31,60,0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .tr-captain {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .tr-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .tr-dot-blue { background: var(--blue-track); box-shadow: 0 0 6px var(--blue-track); }
+    .tr-dot-orange { background: var(--orange-track); box-shadow: 0 0 6px var(--orange-track); }
+    .tr-captain-name { font-weight: 600; color: #fff; }
+    .tr-captain-pos { color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+    .tr-sep { width: 1px; height: 20px; background: var(--border); }
+    .tr-updated {
+      font-size: 0.72rem; color: rgba(255,255,255,0.35);
+      margin-left: auto;
+    }
+
+    /* MAP */
+    #map {
+      flex: 1;
+      width: 100%;
+    }
+
+    /* MOBILE */
+    @media(max-width: 600px) {
+      .tr-nav a { font-size: 0.72rem; padding: 0.3rem 0.5rem; }
+      .tr-logo { font-size: 0.9rem; }
+      .tr-status-bar { gap: 0.8rem; }
     }
   </style>
 </head>
 <body>
 
-<div id="header">
-  <span>⛵</span>
-  <h1>Atlantic Sail</h1>
-  <span id="info">Загрузка трека...</span>
+<!-- HEADER -->
+<header class="tr-header">
+  <a href="index.html" class="tr-logo">
+    <span class="tr-logo-anchor">⚓</span>
+    Atlantic <span>Sail</span>
+  </a>
+
+  <nav class="tr-nav">
+    <a href="index.html">Главная</a>
+    <a href="yacht-charter.html">Флот</a>
+    <a href="plan-2026.html">Маршруты</a>
+    <a href="montenegro-summer.html">🇲🇪 Лето 2026</a>
+    <a href="prajs.html">Цены</a>
+    <a href="contact.html">Контакты</a>
+    <a href="track.html" class="active">📡 Трекер</a>
+  </nav>
+
+  <a href="https://wa.me/34603192089?text=%D0%A5%D0%BE%D1%87%D1%83+%D0%B2+%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B5" target="_blank"
+     style="background:var(--gold);color:var(--navy-dark);font-weight:700;font-size:0.78rem;padding:0.4rem 0.9rem;border-radius:4px;text-decoration:none;white-space:nowrap;flex-shrink:0;display:none"
+     id="wa-btn">
+    WhatsApp
+  </a>
+</header>
+
+<!-- STATUS BAR -->
+<div class="tr-status-bar">
+  <div class="tr-captain">
+    <div class="tr-dot tr-dot-blue"></div>
+    <div>
+      <div class="tr-captain-name">Костя</div>
+      <div class="tr-captain-pos" id="pos-kostya">загрузка...</div>
+    </div>
+  </div>
+  <div class="tr-sep"></div>
+  <div class="tr-captain">
+    <div class="tr-dot tr-dot-orange"></div>
+    <div>
+      <div class="tr-captain-name">Юра</div>
+      <div class="tr-captain-pos" id="pos-yura">загрузка...</div>
+    </div>
+  </div>
+  <div class="tr-updated" id="updated">обновление...</div>
 </div>
 
+<!-- MAP -->
 <div id="map"></div>
-<div id="status">🛰 Загрузка данных...</div>
 
 <script>
-  // ── НАСТРОЙКИ ─────────────────────────────────────────────
-  // Замени SHEET_ID на ID своей таблицы "Atlantic Tracker"
-  // Найти: открой таблицу → URL вида docs.google.com/spreadsheets/d/SHEET_ID/edit
+  // Показать WA кнопку на десктопе
+  if (window.innerWidth > 600) {
+    document.getElementById('wa-btn').style.display = 'block';
+  }
+
   const SHEET_ID = "15uqQA-ankTrNN8U52t9E53dlhPHMof0yb5-2_OFpj7Y";
   const SHEET_NAME = "track";
   const JSON_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
-  // ─────────────────────────────────────────────────────────
 
-  let map, polyline, marker;
+  let map;
 
   async function loadTrack() {
     try {
@@ -92,14 +214,6 @@
         }
       });
 
-      const points = [...byKostya, ...byYura];
-
-      if (points.length === 0) {
-        document.getElementById("status").textContent = "📭 Точек пока нет";
-        document.getElementById("info").textContent = "Точек: 0";
-        return;
-      }
-
       function drawTrack(pts, color, label) {
         if (pts.length === 0) return;
         new google.maps.Polyline({
@@ -117,7 +231,7 @@
           title: label,
           icon: {
             path: google.maps.SymbolPath.CIRCLE,
-            scale: 8,
+            scale: 9,
             fillColor: color,
             fillOpacity: 1,
             strokeColor: "#fff",
@@ -129,53 +243,57 @@
       drawTrack(byKostya, "#4a9eff", "Костя");
       drawTrack(byYura, "#ff6b35", "Юра");
 
-      const bounds = new google.maps.LatLngBounds();
-      points.forEach(p => bounds.extend(p));
-      if (points.length > 0) map.fitBounds(bounds);
-
-      function formatPos(data, name, icon) {
-        if (!data) return `${icon} ${name}: нет данных`;
-        const ts = data.timestamp ? ` · ${data.timestamp.slice(11,16)} UTC` : "";
-        return `${icon} ${name}: ${data.lat.toFixed(4)}, ${data.lon.toFixed(4)}${ts}`;
+      const points = [...byKostya, ...byYura];
+      if (points.length > 0) {
+        const bounds = new google.maps.LatLngBounds();
+        points.forEach(p => bounds.extend(p));
+        map.fitBounds(bounds);
       }
 
-      document.getElementById("info").textContent =
-        `⚓ Костя: ${byKostya.length} pts  🚢 Юра: ${byYura.length} pts`;
-      document.getElementById("status").innerHTML =
-        `${formatPos(lastKostya, "Костя", "🔵")}<br>${formatPos(lastYura, "Юра", "🟠")}`;
+      function formatPos(data) {
+        if (!data) return "нет данных";
+        const ts = data.timestamp ? data.timestamp.slice(0, 16).replace("T", " ") : "";
+        return `${parseFloat(data.lat).toFixed(4)}, ${parseFloat(data.lon).toFixed(4)}${ts ? " · " + ts : ""}`;
+      }
+
+      document.getElementById("pos-kostya").textContent = formatPos(lastKostya) + (byKostya.length ? ` (${byKostya.length} pts)` : "");
+      document.getElementById("pos-yura").textContent = formatPos(lastYura) + (byYura.length ? ` (${byYura.length} pts)` : "");
+
+      const now = new Date();
+      document.getElementById("updated").textContent =
+        "обновлено " + now.toLocaleTimeString("ru-RU", {hour:"2-digit", minute:"2-digit"});
 
     } catch (e) {
       console.error(e);
-      document.getElementById("status").textContent = "❌ Ошибка загрузки трека";
+      document.getElementById("pos-kostya").textContent = "ошибка загрузки";
+      document.getElementById("pos-yura").textContent = "ошибка загрузки";
     }
   }
 
   function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
       zoom: 5,
-      center: { lat: 28.1, lng: -15.4 }, // Gran Canaria по умолчанию
+      center: { lat: 28.1, lng: -15.4 },
       mapTypeId: "hybrid",
       styles: [
         { elementType: "labels.text.fill", stylers: [{ color: "#8ec3e0" }] },
         { featureType: "water", elementType: "geometry", stylers: [{ color: "#0a1e35" }] },
       ],
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+      },
+      zoomControl: true,
+      streetViewControl: false,
+      fullscreenControl: true,
     });
     loadTrack();
   }
 
   // Автообновление каждые 5 минут
-  setInterval(() => {
-    if (polyline) polyline.setMap(null);
-    if (marker) marker.setMap(null);
-    loadTrack();
-  }, 5 * 60 * 1000);
+  setInterval(loadTrack, 5 * 60 * 1000);
 </script>
 
-<!--
-  Замени YOUR_GOOGLE_MAPS_API_KEY на свой ключ Google Maps JavaScript API.
-  Получить бесплатно: https://console.cloud.google.com → APIs → Maps JavaScript API
-  Ограничь ключ доменом atlanticsail.net для безопасности.
--->
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5lsK0jjMceIO43iC3v_JS-nec6r1lzig&callback=initMap"
   async defer>
