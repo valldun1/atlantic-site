@@ -151,19 +151,19 @@
 <p>Люсия 40 — современный парусный катамаран 2019 года постройки. Просторный, комфортный и надёжный: 4 отдельные каюты с собственными санузлами, большой кокпит для отдыха, богатое оснащение для дальних переходов. Идеально подходит для семей, компаний и всех, кто ценит комфорт в море.</p>
 
 <div style="margin-bottom:1.5rem">
-  <img src="img/lucia40_main.jpg" alt="Катамаран Люсия 40 — Atlantic Sail" style="width:100%;border-radius:6px;max-height:440px;object-fit:cover;object-position:center 60%"/>
+  <img loading="lazy" src="img/lucia40_main.jpg" alt="Катамаран Люсия 40 — Atlantic Sail" style="width:100%;border-radius:6px;max-height:440px;object-fit:cover;object-position:center 60%"/>
 </div>
 <div class="as-grid as-grid-3" style="margin:1.2rem 0">
   <div>
-    <img src="img/lucia40_salon.jpg" alt="Камбуз катамарана Люсия 40" style="width:100%;border-radius:4px;aspect-ratio:4/3;object-fit:cover"/>
+    <img loading="lazy" src="img/lucia40_salon.jpg" alt="Камбуз катамарана Люсия 40" style="width:100%;border-radius:4px;aspect-ratio:4/3;object-fit:cover"/>
     <p style="font-size:0.75rem;color:var(--gray);text-align:center;margin-top:0.3rem">Камбуз</p>
   </div>
   <div>
-    <img src="img/lucia40_cabin.jpg" alt="Каюта катамарана Люсия 40" style="width:100%;border-radius:4px;aspect-ratio:4/3;object-fit:cover"/>
+    <img loading="lazy" src="img/lucia40_cabin.jpg" alt="Каюта катамарана Люсия 40" style="width:100%;border-radius:4px;aspect-ratio:4/3;object-fit:cover"/>
     <p style="font-size:0.75rem;color:var(--gray);text-align:center;margin-top:0.3rem">Каюта</p>
   </div>
   <div>
-    <img src="img/lucia40_lounge.jpg" alt="Салон катамарана Люсия 40" style="width:100%;border-radius:4px;aspect-ratio:4/3;object-fit:cover"/>
+    <img loading="lazy" src="img/lucia40_lounge.jpg" alt="Салон катамарана Люсия 40" style="width:100%;border-radius:4px;aspect-ratio:4/3;object-fit:cover"/>
     <p style="font-size:0.75rem;color:var(--gray);text-align:center;margin-top:0.3rem">Салон</p>
   </div>
 </div>
@@ -237,6 +237,6 @@ function toggleMobSub(el) {
 const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); }), {threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body>
 </html>
