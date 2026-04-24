@@ -1,104 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Блог капитана Кости | Atlantic Sail</title>
-  <meta name="description" content="Реальные истории с переходов Atlantic Sail. Капитан Костя рассказывает о плаваниях через Атлантику, Канары, Карибы и Средиземноморье."/>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
-  <link rel="shortcut icon" href="../favicon.svg"/>
-  <link rel="canonical" href="https://atlanticsail.net/blog/"/>
-  <meta property="og:title" content="Блог капитана Кости | Atlantic Sail"/>
-  <meta property="og:description" content="Реальные истории с переходов Atlantic Sail. Капитан Костя рассказывает о плаваниях."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
-  <meta property="og:url" content="https://atlanticsail.net/blog/"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
-  <link rel="stylesheet" href="../style.css"/>
-  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,de,fr,es,it',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');}</script>
-  <link rel="stylesheet" href="../style.css"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://atlanticsail.net/"},
-    {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://atlanticsail.net/blog/"}
-  ]
-}
-</script>
-  <style>
-    .blog-list { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
-    .blog-list h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .blog-list > p { color: var(--text-muted); margin-bottom: 2rem; }
-    .blog-card { display: block; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s; text-decoration: none; color: inherit; }
-    .blog-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
-    .blog-card h2 { font-size: 1.3rem; margin: 0 0 0.5rem; color: var(--heading); }
-    .blog-card .meta { font-size: 0.85rem; color: var(--gold-d); margin-bottom: 0.5rem; }
-    .blog-card p { font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
-    .blog-empty { text-align: center; padding: 4rem 1rem; color: var(--text-muted); }
-    .blog-empty h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог — Atlantic Sail</title>
+    <meta name="description" content="Хроники Atlantic Sail: выход в океан, Мадейра, Гибралтар и Средиземка. Репортажи с борта.">
+    <meta property="og:title" content="Блог — Atlantic Sail">
+    <meta property="og:description" content="Хроники Atlantic Sail: выход в океан, Мадейра, Гибралтар и Средиземка.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atlanticsail.net/blog/">
+    <meta property="og:image" content="https://atlanticsail.net/blog/FB_IMG_1777038982551.jpg">
+    <link rel="canonical" href="https://atlanticsail.net/blog/">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body { font-family: 'Jost', sans-serif; margin: 0; padding: 0; background: #f4f7fa; color: #1a2a3a; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .post { background: #fff; border-radius: 12px; padding: 40px; margin: 30px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .post h1 { font-size: 2em; margin-top: 0; color: #0d1b2a; }
+        .post .date { color: #6b7b8d; font-size: 0.9em; margin-bottom: 20px; }
+        .post p { line-height: 1.7; font-size: 1.1em; margin: 16px 0; }
+        .post .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 24px 0; }
+        .post .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+        .post .gallery img:hover { transform: scale(1.02); }
+        .post .gallery img.hero { height: 400px; grid-column: 1 / -1; }
+        .post .highlight { background: #f0f4f8; border-left: 4px solid #1a5a8a; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .post .route-list { display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+        .post .route-card { flex: 1; min-width: 250px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; }
+        .post .route-card h3 { margin-top: 0; color: #1a5a8a; }
+        .post .route-card .dates { color: #6b7b8d; font-size: 0.9em; margin-bottom: 10px; }
+        .nav { text-align: center; margin: 20px 0; }
+        .nav a { color: #1a5a8a; text-decoration: none; font-weight: 500; margin: 0 10px; }
+        .nav a:hover { text-decoration: underline; }
+        .back-link { display: inline-block; margin: 20px 0; color: #1a5a8a; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .placeholder { text-align: center; padding: 60px 20px; color: #6b7b8d; font-size: 1.2em; }
+        @media (max-width: 600px) {
+            .post { padding: 20px; }
+            .post h1 { font-size: 1.5em; }
+            .post .gallery img.hero { height: 250px; }
+        }
+    </style>
 </head>
 <body>
-<header class="as-header">
-  <a href="../index.html" class="as-logo"><span class="as-logo-icon">⚓</span>Atlantic <span>Sail</span></a>
-  <ul class="as-nav">
-    <li><a href="../index.html">Главная</a></li>
-    <li><a href="../yacht-charter.html" style="font-weight:600">Наш флот <span class="as-caret">▾</span></a></li>
-    <li><a href="../plan-2026.html" style="font-weight:600">Маршруты <span class="as-caret">▾</span></a></li>
-    <li><span>Базирование <span class="as-caret">▾</span></span></li>
-    <li><a href="../faq.html">FAQ</a></li>
-    <li><a href="../blog/" style="font-weight:700;color:var(--gold-d);">📝 Блог</a></li>
-    <li><a href="../prajs.html">Прайс</a></li>
-    <li><a href="../contact.html">Контакты</a></li>
-  </ul>
-</header>
-
-<div class="as-page-hero">
-  <h1>Блог капитана <em>Кости</em></h1>
-  <p>Реальные истории с переходов Atlantic Sail</p>
-</div>
-
-<section class="as-section">
-  <div class="as-container">
-    <div class="blog-list">
-      <div class="blog-empty">
-        <h2>Скоро здесь появятся первые записи</h2>
-        <p>Капитан Костя уже в пути. Как только будет связь — он пришлёт свежие истории с борта.</p>
-        <p style="margin-top:1.5rem;font-size:0.9rem;">Подписывайся на <a href="https://t.me/captainatlanticbot" style="color:var(--gold-d);">@CaptainAtlanticBot</a> — не пропустишь новые посты.</p>
-      </div>
+    <div class="container">
+        <a href="/" class="back-link">← На главную</a>
+        
+        <article class="post">
+            <h1>Выход в океан: Гибралтар, Мадейра и мадейра 🍷</h1>
+            <div class="date">24 апреля 2026</div>
+            
+            <div class="gallery">
+                <img src="FB_IMG_1777038982551.jpg" alt="Atlantic Sail выходит в океан" class="hero" loading="eager">
+            </div>
+            
+            <p>Мы вышли в океан!</p>
+            
+            <p>Для яхты испытание началось сразу на выходе из порта. Соседний понтон ремонтируют, и ремонтники натянули трос, привязавшись к нашему понтону. Яхта при выходе зацепилась килем!</p>
+            
+            <p>Я стоял на катамаране и не мог помочь. Провожающие на пирсе замерли…</p>
+            
+            <p>Но профессионализм команды и капитана Юрия Личко позволил решить вопрос без посторонней помощи. Заплыв с препятствиями преодолели за 5 минут! 💪</p>
+            
+            <p>Для первого дня ветер крепковат — под 30 узлов на порывах. Но мы вышли!</p>
+            
+            <p>На катамаране тоже были «танцы с бубном» — стояли носом к понтону, и на выходе пришлось выходить дрейфуя между двумя рядами яхт. Но вышли аккуратно.</p>
+            
+            <p>Идём в сторону Гибралтара, а там посмотрим, куда занесёт стихия. Постараемся заглянуть на Мадейру и в Танжер.</p>
+            
+            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">
+            
+            <h2>Мадейра встречает мадейрой</h2>
+            
+            <div class="gallery">
+                <img src="FB_IMG_1777038991664.jpg" alt="Мадейра с якоря" loading="lazy">
+                <img src="FB_IMG_1777038998498.jpg" alt="Вид на Мадейру" loading="lazy">
+                <img src="FB_IMG_1777039030076.jpg" alt="Команда Atlantic Sail" loading="lazy">
+                <img src="FB_IMG_1777039034111.jpg" alt="Бутылки мадейры" loading="lazy">
+                <img src="FB_IMG_1777039040504.jpg" alt="Закат на Мадейре" loading="lazy">
+                <img src="FB_IMG_1777039056073.jpg" alt="Мадейра виды" loading="lazy">
+                <img src="IMG_20260424_145800.jpg" alt="Мадейра панорама" loading="lazy">
+                <img src="IMG_20260424_145847_735.jpg" alt="Мадейра берег" loading="lazy">
+            </div>
+            
+            <p>Зашли на Мадейру. Давненько я тут не был — и, как оказалось, соскучился 🙂</p>
+            
+            <p>Вечерний приход в марину получился с приключением: мест для катамарана не оказалось. Встали на якорь совсем рядом — прямо напротив пляжа.</p>
+            
+            <p>Но всё быстро встало на свои места: ребята с яхты, где капитан Юра, которые пришли раньше, уже успели сбегать в магазин и принесли нам полдюжины бутылок мадейры.</p>
+            
+            <p>Согласитесь, с таким «приёмом» обиды на марину и игнор в Navily как-то быстро уходят 😄</p>
+            
+            <p>Стоим на якоре — вид отличный, атмосфера правильная. Всё, как и должно быть.</p>
+            
+            <div class="gallery">
+                <img src="FB_IMG_1777038985971.jpg" alt="Мадейра якорная стоянка" loading="lazy">
+            </div>
+            
+            <p>На Мадейре я был уже много раз, поэтому на экскурсию, которую любезно организовала Светлана, не поехал. Зато делюсь фотографиями от нашей «береговой команды».</p>
+            
+            <p>С погодой, правда, пришлось побороться — шли через сильный и неприятный ветер. Но дальше будет лучше. Не сегодня — но будет.</p>
+            
+            <p>После обеда выходим в сторону Гибралтара.</p>
+            
+            <p>Пару дней — остро к ветру, потом он «скиснет», и у берегов Марокко, скорее всего, пойдём под мотором. Зато там обычно отличная рыбалка — будем ловить 🙂</p>
+            
+            <p>План простой и красивый: Танжер → Алькаидеса → Гибралтар → и дальше уже Средиземное море.</p>
+            
+            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">
+            
+            <h2>Есть места на борт!</h2>
+            
+            <p>У нас ещё есть места на два, без преувеличения, лучших участка всего перехода от Канар до Черногории:</p>
+            
+            <div class="route-list">
+                <div class="route-card">
+                    <h3>Майорка — Рим</h3>
+                    <div class="dates">1–10 мая</div>
+                    <p>Пальма, Сольер, Калобра, Менорка, Сардиния, Корсика, Бонифачо, Порто-Черво… и финал в Риме.</p>
+                </div>
+                <div class="route-card">
+                    <h3>Рим — Мальта</h3>
+                    <div class="dates">11–21 мая</div>
+                    <p>Понца, Капри, Амальфи, Стромболи, Липари, Вулкано, Мессинский пролив, Сиракузы… и Валлетта.</p>
+                </div>
+            </div>
+            
+            <p>Если вы бывали в этих местах — вы понимаете, о чём я.</p>
+            <p>Если нет — это как раз тот случай, когда стоит увидеть всё сразу и с моря.</p>
+            <p>Это не просто маршрут. Это концентрат Средиземки.</p>
+            
+            <div class="highlight">
+                <strong>Хотите присоединиться?</strong><br>
+                Пишите — места ещё есть. Такие переходы запоминаются надолго.<br>
+                <a href="/plan-2026.html" style="color: #1a5a8a;">Подробнее о маршруте →</a>
+            </div>
+            
+            <p style="margin-top: 30px; text-align: center;">
+                <a href="/track.html" style="color: #1a5a8a;">📍 Следить за треком в реальном времени</a>
+            </p>
+        </article>
+        
+        <div class="nav">
+            <a href="/">На главную</a>
+            <a href="/plan-2026.html">Маршрут 2026</a>
+            <a href="/track.html">Трек</a>
+        </div>
     </div>
-  </div>
-</section>
-
-<div class="as-bot-bar">
-  <p>Задайте вопрос капитану прямо в Telegram — ответим быстро!</p>
-  <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>
-    @CaptainAtlanticBot
-  </a>
-</div>
-
-<footer class="as-footer">
-  <div class="as-footer-inner">
-    <div class="as-logo">⚓ Atlantic <span style="color:var(--gold)">Sail</span></div>
-    <p class="as-footer-copy">© 2026 Atlantic Sail · Las Palmas de Gran Canaria</p>
-    <div class="as-footer-links">
-      <a href="https://t.me/captainatlanticbot" target="_blank">Telegram</a>
-      <a href="mailto:atlantic.sail.rent@gmail.com">Email</a>
-      <a href="../prajs.html">Прайс</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-function toggleMob(){const hbg=document.querySelector('.as-hamburger'),mob=document.getElementById('mobMenu');hbg.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':'';}
-function toggleMobSub(el){const sub=el.nextElementSibling;sub.classList.toggle('open');}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body>
 </html>
