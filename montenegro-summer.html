@@ -262,7 +262,7 @@
 
 <!-- ══ HERO С РЕАЛЬНЫМ ФОТО ══ -->
 <div class="mne-hero-real">
-  <img class="mne-hero-img" 
+  <img loading="lazy" class="mne-hero-img" 
        src="img/mne_rainbow.jpg" 
        alt="Двойная радуга над Боко-Которским заливом — яхтинг в Черногории"
        fetchpriority="high"/>
@@ -587,5 +587,5 @@ function toggleMenu(){hbg.classList.toggle('open');mob.classList.toggle('open');
 function toggleMobSub(el){el.nextElementSibling.classList.toggle('open');}
 document.querySelectorAll('.r26-card').forEach(function(c){c.addEventListener('click',function(){if(window.innerWidth<=768)this.classList.toggle('open');});});
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body></html>
