@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <title>Блог Atlantic Sail</title>
+  <meta name="description" content="Блог Atlantic Sail. Истории с моря."/>
+  <link rel="canonical" href="https://atlanticsail.net/blog/"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <style>
+    .blog-empty{text-align:center;padding:4rem 1rem;max-width:600px;margin:0 auto}
+    .blog-empty h2{font-size:1.5rem;margin-bottom:1rem;color:var(--navy)}
+    .blog-empty p{color:var(--text-light);margin-bottom:1.5rem}
+  </style>
+</head>
+<body>
+
+<header class="as-header">
+  <a href="index.html" class="as-logo">
+    <span class="as-logo-icon">⚓</span>
+    Atlantic <span>Sail</span>
+  </a>
+  
+<ul class="as-nav">
+  <li><a href="index.html">Главная</a></li>
+  <li>
+    <a href="yacht-charter.html" style="font-weight:600">Наш флот <span class="as-caret">▾</span></a>
+    <div class="as-dropdown">
+      <a href="yacht-charter.html" style="font-weight:700;color:var(--gold-d)">⛵ Весь флот</a>
+      <a href="lipari41.html">Катамаран Липари 41</a>
+      <a href="lucia40.html">Люсия 40</a>
+      <a href="dufour44.html">Катамаран Бали 4.6</a>
+      <a href="oceanis-473.html">Океанис 473 Клипер</a>
+      <a href="dufour405.html">Дюфур 405</a>
+    </div>
+  </li>
+  <li>
+    <a href="plan-2026.html" style="font-weight:600">Маршруты <span class="as-caret">▾</span></a>
+    <div class="as-dropdown">
+      <a href="plan-2026.html" style="font-weight:700;color:var(--gold-d)">📅 Переходы 2026</a>
+      <a href="plan-2025.html">Переходы 2025</a>
+      <a href="plan-2024.html">Переходы 2024</a>
+      <a href="kanarskie-ostrova.html">Канарские острова</a>
+      <a href="caribs.html">Карибские острова</a>
+      <a href="malaga-mallorca.html">Малага — Майорка</a>
+      <a href="montenegro.html">Черногория</a>
+      <a href="montenegro-summer.html">🇲🇪 Лето 2026</a>
+      <a href="croatia.html">Хорватия</a>
+      <a href="yachtingtravel.html">Яхтинг путешествия</a>
+      <a href="otchet-o-perehodah.html">Отчёт о переходах</a>
+    </div>
+  </li>
+  <li>
+    <span>Базирование <span class="as-caret">▾</span></span>
+    <div class="as-dropdown">
+      <a href="rekomenduemye-mariny.html">Канарские острова</a>
+      <a href="mariny-v-chernogorii.html">Черногория</a>
+      <a href="marina-karibes.html">Карибы</a>
+      <a href="nashi-bazy.html">Наши базы</a>
+    </div>
+  </li>
+  <li><a href="faq.html">FAQ</a></li>
+  <li><a href="blog/">📝 Блог</a></li>
+  <li><a href="prajs.html">Прайс</a></li>
+  <li><a href="contact.html">Контакты</a></li>
+</ul>
+
+  <div class="as-header-right">
+    <div class="as-translate-wrap">
+      <button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button>
+      <div id="google_translate_element"></div>
+    </div>
+    <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn-tg"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg> Написать</a>
+    <button class="as-hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="as-mobile-menu" id="mobMenu">
+
+<div class="as-mob-item"><a href="/index.html">Главная</a></div>
+<div class="as-mob-item">
+  <span onclick="toggleMobSub(this)">Наш флот ▾</span>
+  <div class="as-mob-sub">
+    <a href="/yacht-charter.html" style="font-weight:700">⛵ Весь флот</a>
+    <a href="/lipari41.html">Катамаран Липари 41</a>
+    <a href="/lucia40.html">Люсия 40</a>
+    <a href="/dufour44.html">Бали 4.6</a>
+    <a href="/oceanis-473.html">Океанис 473</a>
+    <a href="/dufour405.html">Дюфур 405</a>
+  </div>
+</div>
+<div class="as-mob-item">
+  <span onclick="toggleMobSub(this)">Маршруты ▾</span>
+  <div class="as-mob-sub">
+    <a href="/plan-2026.html" style="font-weight:700">📅 Переходы 2026</a>
+    <a href="/plan-2025.html">Переходы 2025</a>
+    <a href="/plan-2024.html">Переходы 2024</a>
+    <a href="/kanarskie-ostrova.html">Канарские острова</a>
+    <a href="/caribs.html">Карибские острова</a>
+    <a href="/malaga-mallorca.html">Малага — Майорка</a>
+    <a href="/montenegro.html">Черногория</a>
+    <a href="/montenegro-summer.html">🇲🇪 Лето 2026</a>
+    <a href="/croatia.html">Хорватия</a>
+    <a href="/otchet-o-perehodah.html">Отчёт о переходах</a>
+  </div>
+</div>
+<div class="as-mob-item">
+  <span onclick="toggleMobSub(this)">Базирование ▾</span>
+  <div class="as-mob-sub">
+    <a href="/rekomenduemye-mariny.html">Канарские острова</a>
+    <a href="/mariny-v-chernogorii.html">Черногория</a>
+    <a href="/marina-karibes.html">Карибы</a>
+    <a href="/nashi-bazy.html">Наши базы</a>
+  </div>
+</div>
+<div class="as-mob-item"><a href="/blog/">📝 Блог</a></div>
+<div class="as-mob-item"><a href="/prajs.html">Прайс</a></div>
+<div class="as-mob-item"><a href="/contact.html">Контакты</a></div>
+<div class="as-mob-actions">
+  <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>
+    Написать капитану
+  </a>
+</div>
+
+</div>
+
+<section class="as-section as-section-alt" style="padding-top:3rem;padding-bottom:1rem;">
+  <div class="as-container">
+    <div style="text-align:center">
+      <p class="as-section-label">Atlantic Sail</p>
+      <h1 class="as-section-title">Блог <em>капитана Кости</em></h1>
+      <div class="as-divider" style="margin:1rem auto"></div>
+    </div>
+  </div>
+</section>
+
+<section class="as-section">
+  <div class="as-container">
+    <div class="blog-empty">
+      <h2>Скоро здесь появятся первые записи</h2>
+      <p>Капитан Костя уже в пути. Как только будет связь — он пришлёт свежие истории с борта.</p>
+      <p>Подписывайся на <a href="https://t.me/captainatlanticbot" style="color:var(--gold);font-weight:600;">@CaptainAtlanticBot</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="as-footer">
+  <div class="as-footer-inner">
+    <div class="as-logo">⚓ Atlantic <span style="color:var(--gold)">Sail</span></div>
+    <p class="as-footer-copy">© 2026 Atlantic Sail</p>
+    <div class="as-footer-links">
+      <a href="https://t.me/captainatlanticbot" target="_blank">Telegram</a>
+      <a href="https://youtube.com/@capitankosta" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/capitankosta/" target="_blank">Instagram</a>
+      <a href="/contact.html">Контакты</a>
+      <a href="/prajs.html">Прайс</a>
+      <a href="/faq.html">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hbg = document.getElementById('hbg');
+const mob = document.getElementById('mobMenu');
+function toggleMenu() {
+  hbg.classList.toggle('open');
+  mob.classList.toggle('open');
+  document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
+}
+function toggleMobSub(el) {
+  const sub = el.nextElementSibling;
+  sub.classList.toggle('open');
+}
+</script>
+</body>
+</html>
