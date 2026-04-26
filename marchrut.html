@@ -24,23 +24,14 @@
   <link rel="canonical" href="https://atlanticsail.net/marchrut.html"/>
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="shortcut icon" href="favicon.svg"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://atlanticsail.net/"},
-    {"@type": "ListItem", "position": 2, "name": "Маршрут", "item": "https://atlanticsail.net/marchrut.html"}
-  ]
-}
-</script>
 </head>
 <body>
 <header class="as-header">
-<a class="as-logo" href="index.html">
-<span class="as-logo-icon">⚓</span>
+  <a href="index.html" class="as-logo">
+    <span class="as-logo-icon">⚓</span>
     Atlantic <span>Sail</span>
-</a>
+  </a>
+  
 <ul class="as-nav">
   <li><a href="index.html">Главная</a></li>
   <li>
@@ -79,17 +70,20 @@
       <a href="nashi-bazy.html">Наши базы</a>
     </div>
   </li>
+  <li><a href="faq.html">FAQ</a></li>
+  <li><a href="blog/">📝 Блог</a></li>
   <li><a href="prajs.html">Прайс</a></li>
   <li><a href="contact.html">Контакты</a></li>
 </ul>
-<div class="as-header-right">
-<div class="as-translate-wrap">
-<button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button>
-<div id="google_translate_element"></div>
-</div>
-<a class="as-btn-tg" href="https://t.me/captainatlanticbot" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"></path></svg> Написать</a>
-<button class="as-hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-</div>
+
+  <div class="as-header-right">
+    <div class="as-translate-wrap">
+      <button class="as-btn-translate" onclick="document.getElementById('google_translate_element').style.display=document.getElementById('google_translate_element').style.display==='none'?'block':'none'">🌐 EN</button>
+      <div id="google_translate_element"></div>
+    </div>
+    <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn-tg"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg> Написать</a>
+    <button class="as-hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
 </header>
 <div class="as-mobile-menu" id="mobMenu">
 
@@ -129,7 +123,6 @@
     <a href="nashi-bazy.html">Наши базы</a>
   </div>
 </div>
-<div class="as-mob-item"><a href="blog/">📝 Блог</a></div>
 <div class="as-mob-item"><a href="prajs.html">Прайс</a></div>
 <div class="as-mob-item"><a href="contact.html">Контакты</a></div>
 <div class="as-mob-actions">
@@ -333,6 +326,6 @@ function toggleMobSub(el) {
 const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); }), {threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
