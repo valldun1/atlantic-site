@@ -34,16 +34,6 @@
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://atlanticsail.net/img/20160604_195317.jpg"/>
   <meta property="og:url" content="https://atlanticsail.net/montenegro.html"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://atlanticsail.net/"},
-    {"@type": "ListItem", "position": 2, "name": "Черногория", "item": "https://atlanticsail.net/montenegro.html"}
-  ]
-}
-</script>
 </head>
 <body>
 
@@ -91,6 +81,8 @@
       <a href="nashi-bazy.html">Наши базы</a>
     </div>
   </li>
+  <li><a href="faq.html">FAQ</a></li>
+  <li><a href="blog/">📝 Блог</a></li>
   <li><a href="prajs.html">Прайс</a></li>
   <li><a href="contact.html">Контакты</a></li>
 </ul>
@@ -144,11 +136,9 @@
     <a href="nashi-bazy.html">Наши базы</a>
   </div>
 </div>
-<div class="as-mob-item"><a href="blog/">📝 Блог</a></div>
 <div class="as-mob-item"><a href="prajs.html">Прайс</a></div>
 <div class="as-mob-item"><a href="contact.html">Контакты</a></div>
 <div class="as-mob-actions">
-
   <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.25-2.01 9.46c-.15.66-.54.82-1.08.51l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12L7.16 14.24l-2.95-.92c-.64-.2-.65-.64.14-.95l11.52-4.44c.53-.19 1 .13.69.32z"/></svg>
     Написать капитану
@@ -157,9 +147,9 @@
 
 </div>
 
-<div class="as-page-hero" style="background-image:linear-gradient(rgba(10,22,40,0.4),rgba(10,22,40,0.3)),url('img/mne_rainbow.jpg');background-size:cover;background-position:center;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;">
-  <h1 style="color:#fff;">Яхтинг в <em>Черногории</em> 🇲🇪</h1>
-  <p style="color:#fff;">Боко-Которский залив · Тиват · Котор · Будва · Герцег Нови</p>
+<div class="as-page-hero" style="background-image:linear-gradient(rgba(10,22,40,0.7),rgba(10,22,40,0.5)),url('https://images.unsplash.com/photo-1601134467661-3d775b999c4b?w=1400&q=70&fit=crop');background-size:cover;background-position:center;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;">
+  <h1>Яхтинг в <em>Черногории</em> 🇲🇪</h1>
+  <p>Боко-Которский залив · Тиват · Котор · Будва · Герцег Нови</p>
 </div>
 
 <section class="as-section">
@@ -233,10 +223,6 @@
   </div>
 </section>
 
-<div style="text-align:center;margin:30px 0;">
-  <a href="https://www.weather-in-tivat.com/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%B2-%D1%82%D0%B8%D0%B2%D0%B0%D1%82%D0%B5/" target="_blank" rel="nofollow" style="color:var(--gold-d);text-decoration:underline;">🌤 Погода в Тивате</a>
-</div>
-
 <div class="as-bot-bar">
   <p>Задайте вопрос капитану прямо в Telegram — ответим быстро!</p>
   <a href="https://t.me/captainatlanticbot" target="_blank" class="as-btn as-btn-telegram">
@@ -245,9 +231,6 @@
   </a>
 </div>
 
-  <div style="text-align:center;margin:30px 0;">
-    <a href="https://www.weather-in-tivat.com/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%B2-%D1%82%D0%B8%D0%B2%D0%B0%D1%82%D0%B5/" target="_blank" rel="nofollow" style="color:var(--gold-d);text-decoration:underline;">🌤 Погода в Тивате</a>
-  </div>
 <footer class="as-footer">
   <div class="as-footer-inner">
     <div class="as-logo">⚓ Atlantic <span style="color:var(--gold)">Sail</span></div>
@@ -277,6 +260,6 @@ function toggleMobSub(el) {
 const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); }), {threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
