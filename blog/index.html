@@ -148,6 +148,12 @@
 .as-post-full.open { display: block; }
 .as-read-more { color: var(--gold); font-weight: 600; cursor: pointer; padding: 0.5rem 0; font-size: 0.95rem; display: inline-block; }
 .as-read-more:hover { text-decoration: underline; }
+
+    .as-post-full { display: none; padding-top: 0.8rem; border-top: 1px solid rgba(0,0,0,0.05); margin-top: 0.5rem; }
+    .as-post-full.open { display: block; }
+    .as-read-more { color: var(--gold); font-weight: 700; cursor: pointer; font-size: 0.9rem; display: inline-block; margin: 0.5rem 0 0.3rem; }
+    .as-read-more:hover { text-decoration: underline; }
+
 </style>
 </head>
 <body>
@@ -440,6 +446,7 @@ function toggleMenu(){
   document.getElementById('mobMenu').classList.toggle('open');
   document.getElementById('hbg').classList.toggle('open');
 }
+function togglePost(btn){ var full = btn.previousElementSibling; full.classList.toggle('open'); btn.textContent = full.classList.contains('open') ? '📖 Свернуть' : '📖 Читать далее'; }
 function toggleMobSub(el){
   el.nextElementSibling.classList.toggle('open');
 }
