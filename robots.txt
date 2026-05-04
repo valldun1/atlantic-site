@@ -4,8 +4,6 @@ Allow: /
 Disallow: /blog.html
 Disallow: /blog_fresh.html
 Disallow: /blog_placeholder.html
-Disallow: /adventure2021.html
-Disallow: /kopiya-grafik-marshrutov-2019.html
 Disallow: /marchrut.html
 Disallow: /marina.html
 Disallow: /sailing.html
