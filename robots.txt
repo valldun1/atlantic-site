@@ -1,9 +1,6 @@
 User-agent: *
 Allow: /
 
-Disallow: /blog.html
-Disallow: /blog_fresh.html
-Disallow: /blog_placeholder.html
 Disallow: /marchrut.html
 Disallow: /marina.html
 Disallow: /sailing.html
