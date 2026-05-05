@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 — Страница не найдена | Atlantic Sail</title>
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://atlanticsail.net/404.html">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 — Шторм унёс страницу | Atlantic Sail</title>
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    .as-404 { text-align: center; padding: 80px 20px; }
-    .as-404 h1 { font-size: 72px; margin: 0; color: var(--gold-d); }
-    .as-404 h2 { font-size: 24px; margin: 10px 0 30px; color: var(--text); }
-    .as-404 p { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; }
-    .as-404 .as-btn { display: inline-block; padding: 12px 30px; }
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 2rem; background: #f8f6f1; }
+    .as-404 { max-width: 600px; }
+    .as-404 h1 { font-size: 6rem; color: var(--gold); margin: 0; line-height: 1; }
+    .as-404 h2 { font-size: 1.5rem; margin: 1rem 0; color: #333; }
+    .as-404 p { color: #666; margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.6; }
+    .as-404 .as-btn { display: inline-block; padding: 0.8rem 2rem; background: var(--gold); color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.2s; }
+    .as-404 .as-btn:hover { background: #b8860b; }
   </style>
 </head>
 <body>
-  <header class="as-header">
-    <a href="index.html" class="as-logo"><span class="as-logo-icon">⚓</span>Atlantic <span>Sail</span></a>
-    <nav><a href="index.html">Главная</a> <a href="yacht-charter.html">Наш флот</a> <a href="contact.html">Контакты</a></nav>
-  </header>
-  <main class="as-404">
+  <div class="as-404">
     <h1>404</h1>
-    <h2>Страница не найдена</h2>
-    <p>Возможно, она была перемещена или удалена. Попробуйте начать с главной.</p>
-    <a href="index.html" class="as-btn as-btn-primary">На главную</a>
-  </main>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://atlanticsail.net/"},
-      {"@type": "ListItem", "position": 2, "name": "404", "item": "https://atlanticsail.net/404.html"}
-    ]
-  }
-  </script>
+    <h2>Шторм унёс эту страницу 🌊</h2>
+    <p>Кажется, девятый вал оказался сильнее — карту смыло за борт.<br>Но мы на связи, капитан. Давайте вернёмся на главную и продолжим путь.</p>
+    <a href="/" class="as-btn">⛵ На главную</a>
+  </div>
 </body>
 </html>
