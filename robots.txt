@@ -3,7 +3,6 @@ Allow: /
 
 Disallow: /marchrut.html
 Disallow: /marina.html
-Disallow: /sailing.html
 Disallow: /track.html
 
 User-agent: GPTBot
