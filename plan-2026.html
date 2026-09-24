@@ -462,5 +462,39 @@ const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) 
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// AS-006: временной статус по дате старта рейса
+(function(){
+  var now = new Date('2026-09-24');
+  var months = {января:0,февраля:1,марта:2,апреля:3,мая:4,июня:5,июля:6,августа:7,сентября:8,октября:9,ноября:10,декабря:11};
+  var short = {янв:0,фев:1,мар:2,апр:3,мая:4,июн:5,июл:6,авг:7,сен:8,окт:9,ноя:10,дек:11};
+  function parseStart(txt){
+    var m = txt.match(/(\d{1,2})\s*[–-]\s*(\d{1,2})\s+(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)/);
+    if(m) return new Date(2026, months[m[3]], parseInt(m[1],10));
+    var m2 = txt.match(/(\d{1,2})\s*(сент|сен|окт|ноя|дек|янв|фев|мар|апр|мая|июн|июл|авг)[а-я]*\s*[–-]/);
+    if(m2) return new Date(2026, short[m2[2]], parseInt(m2[1],10));
+    var m3 = txt.match(/(\d{1,2})\s*(сент|сен|окт|ноя|дек|янв|фев|мар|апр|мая|июн|июл|авг)[а-я]*$/);
+    if(m3) return new Date(2026, short[m3[2]], parseInt(m3[1],10));
+    return null;
+  }
+  document.querySelectorAll('.r26-card').forEach(function(c){
+    var datesEl = c.querySelector('.r26-dates');
+    if(!datesEl) return;
+    var txt = datesEl.textContent.trim();
+    if(/Июнь – сентябрь/.test(txt)){ // летний блок — архивируем целиком
+      var price = c.querySelector('.r26-price');
+      if(price) price.innerHTML = '<span style="color:#5d7680;font-size:.78rem">Сезон завершён</span>';
+      return;
+    }
+    var start = parseStart(txt);
+    if(start && start < now){
+      var price = c.querySelector('.r26-price');
+      if(price) price.innerHTML = '<span style="color:#5d7680;font-size:.78rem">⏳ Рейс начался / завершён — уточняйте</span>';
+    }
+  });
+})();
+</script>
+
+<script src="chat-widget.js" defer></script>
 </body>
 </html>

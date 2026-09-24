@@ -617,4 +617,37 @@ function toggleMobSub(el){el.nextElementSibling.classList.toggle('open');}
 document.querySelectorAll('.r26-card').forEach(function(c){c.addEventListener('click',function(){if(window.innerWidth<=768)this.classList.toggle('open');});});
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// AS-006: временной статус недель. Прошедшие недели не продаём как доступные.
+(function(){
+  var now = new Date('2026-09-24'); // дата генерации; при сборке можно заменить на new Date()
+  var weeks = document.querySelectorAll('.mne-week');
+  weeks.forEach(function(w){
+    var datesEl = w.querySelector('.mne-week-dates');
+    if(!datesEl) return;
+    var endMatch = datesEl.textContent.match(/(\d{1,2})\s*[–-]\s*(\d{1,2})\s*(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)/);
+    if(!endMatch) return;
+    var months = {января:0,февраля:1,марта:2,апреля:3,мая:4,июня:5,июля:6,августа:7,сентября:8,октября:9,ноября:10,декабря:11};
+    var end = new Date(2026, months[endMatch[3]], parseInt(endMatch[2],10));
+    if(end < now){
+      w.style.opacity = '0.55';
+      var price = w.querySelector('.mne-week-price');
+      if(price){
+        price.innerHTML = '<span style="color:#5d7680;font-size:.8rem">✔ Завершён</span>';
+      }
+    }
+  });
+  // Заголовки месяцев тоже погасить для прошедших
+  document.querySelectorAll('.mne-month-header').forEach(function(mh){
+    var txt = mh.textContent;
+    var past = /Июнь 2026|Июль 2026|Август 2026/.test(txt);
+    if(past){
+      var span = mh.querySelector('span');
+      if(span) span.textContent = 'Сезон завершён';
+    }
+  });
+})();
+</script>
+
+<script src="chat-widget.js" defer></script>
 </body></html>
