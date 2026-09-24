@@ -211,5 +211,11 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="chat-widget.js" defer></script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="t.me"], a[href*="tel:"]') : null;
+  if (a && typeof umami !== 'undefined') { umami.track('click_contact', { channel: a.href.indexOf('wa.me') > -1 ? 'whatsapp' : (a.href.indexOf('t.me') > -1 ? 'telegram' : 'phone') }); }
+});
+</script>
 </body>
 </html>
