@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Аренда яхт с капитаном | Atlantic Sail | Канарские острова</title>
-  <meta name="description" content="Аренда парусных яхт с профессиональным капитаном. Канарские острова, Средиземноморье, Карибы, Атлантика. 300 000 морских миль опыта. Пишите @CaptainAtlanticBot"/>
+  <title>Морские переходы и яхтенные путешествия | Atlantic Sail</title>
+  <meta name="description" content="Морские переходы под парусом: Канарские острова, Средиземноморье, Карибы, трансатлантика. Аренда яхты с капитаном, даты и условия переходов. Уточните наличие мест у организатора." />/>
   <meta name="keywords" content="аренда яхты с капитаном, яхтенный чартер Канары, парусные путешествия, Atlantic Sail"/>
   <meta property="og:title" content="Аренда яхт с капитаном | Atlantic Sail | Канарские острова"/>
   <meta property="og:description" content="Аренда парусных яхт с профессиональным капитаном. Канарские острова, Средиземноморье, Карибы, Атлантика. 300 000 морских миль опыта. Пишите @CaptainAtlanticBot"/>
@@ -383,6 +383,8 @@
         <div class="as-yt-embed">
           <iframe src="https://www.youtube.com/embed/peALP5OGfCU" allowfullscreen loading="lazy" title="Капитан Костя — жизнь под парусом"></iframe>
         </div>
+        <img loading="lazy" src="img/life-aboard.webp" width="1600" height="900" alt="Жизнь на борту: команда в кокпите утром — иллюстративное изображение" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-top:1rem"/>
+        <p style="font-size:0.72rem;color:#8aa0ad;margin-top:0.3rem">Иллюстративное изображение</p>
       </div>
     </div>
   </div>
@@ -459,7 +461,7 @@
       <textarea id="req-msg" class="as-input as-textarea" placeholder="Расскажите подробнее: пожелания, вопросы..."></textarea>
       <div style="text-align:center;margin-top:1rem">
         <button onclick="sendRequest()" class="as-btn as-btn-primary" style="min-width:220px">
-          💬 Продолжить в WhatsApp
+          Продолжить в WhatsApp
         </button>
       </div>
       <p id="req-status" style="text-align:center;margin-top:1rem;font-size:0.85rem;color:var(--gold-d);display:none"></p>
@@ -493,7 +495,7 @@ function sendRequest() {
   var text = encodeURIComponent('🚀 Заявка с сайта Atlantic Sail\n' + parts.join('\n'));
   status.style.display = 'block';
   status.style.color = 'var(--gold-d)';
-  status.textContent = '✅ Открываем WhatsApp — нажмите «Отправить» в чате, чтобы мы получили заявку. Ваши данные сохранены на странице.';
+  status.textContent = 'Откроется WhatsApp с подготовленным текстом. Нажмите «Отправить», чтобы мы получили сообщение. Ваши данные остаются на странице.';
   window.open('https://wa.me/34603192089?text=' + text, '_blank');
 }
 </script>
