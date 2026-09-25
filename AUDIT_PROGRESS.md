@@ -41,3 +41,7 @@
 - canonical ×6, H1=1, title/desc — в норме; umami view_route ×5 routes, click_contact на всех страницах кроме google-верификации.
 - Подписи «иллюстративное изображение» — index + 5 routes.
 - Тиват→Рим 15–27.09.2026 = 13 дней, 800 €; цены 800/650/650/700; sitemap: 5 routes.
+## Прогон 06:56 (2026-09-25) — повторная сверка, изменений не требуется
+- verify_fast.py: 34 файла, 0 issues.
+- DOM-валидация html.parser (с корректным handle_startendtag): все файлы сбалансированы.
+- Меню без эмодзи; canonical/H1=1/title/desc — в норме; umami view_route ×5, click_contact ×28; подписи «иллюстративное изображение» есть; Тиват→Рим 15–27.09.2026 = 13 дней, 800 €; цены 800/650/650/700; sitemap: 5 routes/.
