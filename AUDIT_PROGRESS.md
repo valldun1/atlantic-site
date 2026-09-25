@@ -54,3 +54,7 @@
 - verify_fast.py: 34 файла, 0 issues; DOM html.parser: все файлы сбалансированы.
 - view_route ×5 routes, click_contact ×33 страниц; меню без эмодзи (0 плохих <nav>); canonical/H1=1/title/desc в норме.
 - Тиват→Рим 15–27.09.2026 = 13 дней; цены 800/650/650/700 в plan-2026; sitemap: 5 routes/.
+## Прогон 07:26 (2026-09-25) — повторная сверка, изменений не требуется
+- verify_fast.py: 34 файла, 0 issues; DOM html.parser сбалансирован.
+- Меню без эмодзи; canonical/H1=1/title/desc в норме; umami view_route ×5, click_contact ×33; подписи «иллюстративное изображение» (alt + видимый кэпшн на index) присутствуют.
+- Тиват→Рим 15–27.09.2026 = 13 дней, 800 €; цепочка 800/650/650/700 в plan-2026; sitemap: 5 routes/; форм нет (Telegram/WhatsApp, честный текст); битых ссылок 0.
