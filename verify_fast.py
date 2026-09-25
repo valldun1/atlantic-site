@@ -57,7 +57,7 @@ for p in sorted(pages):
     base=os.path.dirname(p)
     for h in re.findall(r'href="([^"#]+?\.html[^"]*)"',s):
         h2=h.split("#")[0]
-        if h2.startswith("http") or h2.startswith("//"): continue
+        if h2.startswith("http") or h2.startswith("//") or h2.startswith("/"): continue  # site-root absolute (valid on live)
         tgt=os.path.normpath(os.path.join(base,h2))
         if not os.path.exists(tgt): issues.append(f"{rel}: broken {h}")
 # routes view_route
