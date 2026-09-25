@@ -27,6 +27,10 @@ def get(path,key):
     s=open(path,encoding="utf-8",errors="replace").read()
     m=re.search(key+r'\s*=\s*"([^"]*)"',s)
     return m.group(1) if m else None
+def meta_desc(path):
+    s=open(path,encoding="utf-8",errors="replace").read()
+    m=re.search(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']*)["\']',s)
+    return m.group(1) if m else None
 
 pages=glob.glob(ROOT+"/*.html")+glob.glob(ROOT+"/routes/*.html")+glob.glob(ROOT+"/blog/*.html")+glob.glob(ROOT+"/posts/*.html")
 pages=[p for p in pages if "google7d" not in p]
@@ -46,7 +50,7 @@ for p in sorted(pages):
     if len(re.findall(r'<h1\b',s,re.I))!=1: issues.append(f"{rel}: H1={len(re.findall(r'<h1\b',s,re.I))}")
     # title/description
     if not re.search(r'<title>',s): issues.append(f"{rel}: no title")
-    if not get(p,'name="description"') and not get(p,"name='description'"): issues.append(f"{rel}: no description")
+    if not meta_desc(p): issues.append(f"{rel}: no description")
     # click_contact
     if "click_contact" not in s: issues.append(f"{rel}: no click_contact")
     # broken hrefs
