@@ -52,9 +52,9 @@ for f in files:
     src = open(f, encoding='utf-8', errors='replace').read()
     for m in re.finditer(r'href="([^"#]+?)(?:#[^"]*)?"', src):
         href = m.group(1)
-        if href.startswith(('http','mailto:','tel:','/', 'data:')): continue
-        if href.endswith('.html') or '/' in href:
-            target = href.split('#')[0]
+        if href.startswith(('http','mailto:','tel:','/', 'data:','javascript:')): continue
+        if href.endswith('.html') or '/' in href or '.' in href:
+            target = os.path.normpath(os.path.join(os.path.dirname(f), href.split('#')[0]))
             if not os.path.exists(target): broken.append((f, href))
 
 # menu emoji check
@@ -80,7 +80,7 @@ vr = [f for f in glob.glob('routes/*.html') if os.path.basename(f) not in SKIP]
 vr_miss = [f for f in vr if 'view_route' not in open(f, encoding='utf-8', errors='replace').read()]
 
 # caption
-cap_miss = [f for f in vr if 'Иллюстративное изображение' not in open(f, encoding='utf-8', errors='replace').read()]
+cap_miss = [f for f in vr if 'иллюстративное изображение' not in open(f, encoding='utf-8', errors='replace').read().lower()]
 
 # plan-2026 prices
 p = open('plan-2026.html', encoding='utf-8').read()
@@ -88,7 +88,7 @@ prices = re.findall(r'(\d{3,4})\s*€', p)
 price_ok = ('800' in re.findall(r'800', p)) and ('650' in p) and ('700' in p)
 
 # tivat-rim dates
-tr_ok = '2026-09-15' in open('routes/rim-2026.html', encoding='utf-8').read() if os.path.exists('routes/rim-2026.html') else None
+tr_ok = ('2026-09-15' in open('routes/tivat-rome.html', encoding='utf-8').read() and '2026-09-27' in open('routes/tivat-rome.html', encoding='utf-8').read()) if os.path.exists('routes/tivat-rome.html') else None
 
 print(f'files={len(files)} dom_bad={bad} broken={broken} menu_emoji={menu_bad}')
 print(f'page_miss={miss} view_route_miss={vr_miss} cap_miss={cap_miss}')
